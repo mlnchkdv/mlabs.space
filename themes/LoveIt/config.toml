@@ -156,7 +156,7 @@
     # 是否在搜索索引中使用基于 baseURL 的绝对路径
     absoluteURL = false
     [params.search.algolia]
-      index = ""
+      index = "mlabs.space"
       appID = "LN8DDWA0CN"
       searchKey = "d5d8c010392204bf1408afa3dbb571d5"
 
