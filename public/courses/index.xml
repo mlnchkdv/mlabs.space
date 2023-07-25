@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on MLabs</title>
+    <link>http://example.org/courses/</link>
+    <description>Recent content in Courses on MLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mlnichuk@gmail.com (Dmitriy Melnichuk)</managingEditor>
+    <webMaster>mlnichuk@gmail.com (Dmitriy Melnichuk)</webMaster>
+    <lastBuildDate>Tue, 28 Mar 2023 02:07:26 +0400</lastBuildDate><atom:link href="http://example.org/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IIS</title>
+      <link>http://example.org/courses/iis/</link>
+      <pubDate>Tue, 28 Mar 2023 02:07:26 +0400</pubDate>
+      <author>mlnichuk@gmail.com (Dmitriy Melnichuk)</author>
+      <guid>http://example.org/courses/iis/</guid>
+      <description>Title Text</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MLabs</title>
+        <link>http://example.org/</link>
+        <description>MLabs.Space</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>mlnichuk@gmail.com (Dmitriy Melnichuk)</managingEditor>
+            <webMaster>mlnichuk@gmail.com (Dmitriy Melnichuk)</webMaster><lastBuildDate>Tue, 28 Mar 2023 02:07:26 &#43;0400</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First post</title>
+    <link>http://example.org/posts/first_post/</link>
+    <pubDate>Tue, 28 Mar 2023 01:42:35 &#43;0400</pubDate>
+    <author>Dmitriy Melnichuk</author>
+    <guid>http://example.org/posts/first_post/</guid>
+    <description><![CDATA[Title text $$ f(x) = \sum_i^n x_i $$ text $x_i$.
+title 2 text
+title 3 1 2 3 4 5 6 7 text
+123344
+x = 7 print(x) ❤💛💥💦
+📮
+That is so funny! <i class="far fa-grin-tears" aria-hidden="true"></i>]]></description>
+</item>
+</channel>
+</rss>

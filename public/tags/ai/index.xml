@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>AI - Tag - MLabs</title>
+        <link>http://example.org/tags/ai/</link>
+        <description>AI - Tag - MLabs</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>mlnichuk@gmail.com (Dmitriy Melnichuk)</managingEditor>
+            <webMaster>mlnichuk@gmail.com (Dmitriy Melnichuk)</webMaster><lastBuildDate>Tue, 28 Mar 2023 02:07:26 &#43;0400</lastBuildDate><atom:link href="http://example.org/tags/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>IIS</title>
+    <link>http://example.org/courses/iis/</link>
+    <pubDate>Tue, 28 Mar 2023 02:07:26 &#43;0400</pubDate>
+    <author>Dmitriy Melnichuk</author>
+    <guid>http://example.org/courses/iis/</guid>
+    <description><![CDATA[Title Text]]></description>
+</item>
+</channel>
+</rss>
