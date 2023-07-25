@@ -157,8 +157,8 @@
     absoluteURL = false
     [params.search.algolia]
       index = ""
-      appID = ""
-      searchKey = ""
+      appID = "LN8DDWA0CN"
+      searchKey = "d5d8c010392204bf1408afa3dbb571d5"
 
   # Home page config
   # 主页信息设置
@@ -274,7 +274,7 @@
     HackTheBox = ""
     RootMe= ""
     # Email = "mlnchkdv@gmail.com"
-	Email = "melnichukdv@sgu.ru"
+	  Email = "melnichukdv@sgu.ru"
     Phone = ""
     RSS = ""
 
