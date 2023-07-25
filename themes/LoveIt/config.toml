@@ -158,7 +158,7 @@
     [params.search.algolia]
       index = "mlabs.space"
       appID = "LN8DDWA0CN"
-      searchKey = "d5d8c010392204bf1408afa3dbb571d5"
+      searchKey = "6add19407b995d5371c097840c1cfd85"
 
   # Home page config
   # 主页信息设置
