@@ -375,7 +375,7 @@
     # 文章页面的分享信息设置
     [params.page.share]
       enable = true
-      Twitter = true
+      Twitter = false
       Facebook = false
       Linkedin = false
       Whatsapp = false
