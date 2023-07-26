@@ -3,9 +3,9 @@ weight: 1
 title: Как эффективно читать статьи по машинному обучению
 description: О техниках изучения и источниках научных статей
 author: MLabs
-authorLink: 
+authorLink: null
 date: 2023-07-26T14:55:18.278Z
-lastmod: 
+lastmod: null
 images: []
 resources:
   - name: featured-image
@@ -20,7 +20,7 @@ math: true
 lightgallery: true
 toc:
   auto: false
-draft: true
+draft: false
 keywords:
   - papers
 ---
