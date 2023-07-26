@@ -2,5 +2,10 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.content.publicFolder": "static",
   "frontMatter.framework.id": "hugo",
-  "frontMatter.preview.host": "http://localhost:1313"
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/content/about"
+    }
+  ]
 }
