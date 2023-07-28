@@ -2,7 +2,8 @@ baseURL = 'http://example.org/'
 title = 'MLabs'
 
 
-theme = 'LoveIt'
+# theme = 'LoveIt'
+theme = ['hugo-shortcode-roneo-collection', 'LoveIt']
 
 
 # Language
