@@ -18,7 +18,7 @@ math: true
 lightgallery: true
 toc:
   auto: false
-draft: true
+draft: false
 ---
 
 **Проектирование и разработка интеллектуальных информационных систем**
