@@ -23,4 +23,5 @@
 - [ ] Gallery for multiple images
 - [ ] Page analytics
 - [ ] Evets page with calendar from json + weather
+- [ ] Courses page [[origin](https://codepen.io/Jayasree_0708/pen/bGwqaXK)]
 - [ ] Telegram bot with random questions 
