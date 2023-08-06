@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: Datatory
+title: Datastory или как рассказать историю про данные
 description: ""
 author: MLabs
 authorLink: null
@@ -23,7 +23,7 @@ draft: true
 keywords: []
 ---
 
-Превью
+Как рассказать историю про данные, скрытые артефакты, исследование, и самое главное сделать это эффектно и эффективно, для этого подходит формат Datastory или Datastorytelling. Открытые frontend-инструменты способны реализовать диаграммы и инфографику любой сложности, а доступность и удобный формат изучения, поможет сделать Ваше исследование на данных, более доступным.
 
 <!--more-->
 
@@ -33,19 +33,55 @@ keywords: []
 
 
 
-[:(fa-solid fa-link fa-shake): The bias variance tradeoff](https://mlu-explain.github.io/bias-variance/):
+[:(fa-solid fa-link fa-shake): <u>The bias variance tradeoff</u>](https://mlu-explain.github.io/bias-variance/):
 
 ![](bias_variance.gif "Datastory: the bias variance tradeoff")
 
-[:(fa-solid fa-link fa-shake): Taiwan olympic medals](https://taiwandatastories.com/taiwan-olympic-medals/):
+[:(fa-solid fa-link fa-shake): <u>Taiwan olympic medals</u>](https://taiwandatastories.com/taiwan-olympic-medals/):
 
 ![](taiwan.gif "Datastory: Taiwan olympic medals")
 
-[:(fa-solid fa-link fa-shake): Когда пришел Наполеон](https://1812.tass.ru/):
+[:(fa-solid fa-link fa-shake): <u>Когда пришел Наполеон</u>](https://1812.tass.ru/):
 
 ![](1812.gif "Datastory: Когда пришел Наполеон")
 
 
+
+## Инструменты
+
+Рассмотрим основыное frontend-инструменты которые лежат в основе реализации шаблона: [Scrollama.js](https://pudding.cool/process/introducing-scrollama/), [D3.js](https://d3js.org/), [Three.js](https://threejs.org/).
+
+
+
+### Scrollama.js
+
+![]()
+
+{{< image src="clishes.png" height="350" caption="Logo scrollama.js" >}}
+
+
+
+Для удобстава представим весь код в одном листинге и его результат:
+
+```html
+
+```
+
+codepen
+
+### D3.js
+
+![]()
+
+{{< image src="clishes.png" height="350" caption=" " >}}
+
+
+
+### Three.js
+
+![]()
+
+{{< image src="clishes.png" height="350" caption=" " >}}
 
 
 
