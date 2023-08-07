@@ -36,17 +36,93 @@ draft: false
 
 ## Критерии оценки
 
-{{< mermaid >}}
-pie
-    "Удовлетворительно" : 386
-    "Хорошо" : 85
-    "Отлично" : 15
-{{< /mermaid >}}
+##### Оценка за курс
 
-[<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестированием.</div>]()
+Конечная оценка за весь курс, суммируется по следующей формуле:
+
+- [*Project*] Сумма всех баллов за проектные задания (<u>минимум 2 проекта</u>);
+- [*Test*] Баллы за тестирование (один правильный ответ = 2 балла);
+- [*Other*] Достижения – при защите, разработке и т.д. (до 50 баллов);
+- [*Exam*] Экзамен (до 50 баллов);
+- [*Rate*] Коэффициент посещаемости (от 1 до 1,9 из расчета 3 посещения = 0,1).
+
+$$
+\bf{\text{Grade}} = \frac{\left [ \sum{(\text{Project})} + \text{Test} + \text{Exam} + \text{Other} \right ] \cdot \text{Rate}}{1000} \cdot 100
+$$
+В результате, конечная оценка, будет соответствовать:
+
+- 0-39 – **Неудовлетворительно**
+- 40-59 – **Удовлетворительно** 🥉
+- 60-79 – **Хорошо** 🥈
+- 80-100 – **Отлично** 🥇
+
+##### Оценка проектного задания
+
+Для оценки проектного задания используются следующие критерии, от 0 до 10 баллов за каждый:
+
+| Баллы |      |      |      |      |      |
+| :---: | ---- | ---- | ---- | ---- | ---- |
+|  1-3  |      |      |      |      |      |
+|  4-6  |      |      |      |      |      |
+|  7-9  |      |      |      |      |      |
+|  10   |      |      |      |      |      |
 
 {{< echarts >}}
-{  "title": {   "text": "Basic Radar Chart"  },  "legend": {   "data": ["Allocated Budget", "Actual Spending"]  },  "radar": {   "indicator": [    { "name": "Sales", "max": 6500 },    { "name": "Administration", "max": 16000 },    { "name": "Information Technology", "max": 30000 },    { "name": "Customer Support", "max": 38000 },    { "name": "Development", "max": 52000 },    { "name": "Marketing", "max": 25000 }   ]  },  "series": [   {    "name": "Budget vs spending",    "type": "radar",    "data": [     {      "value": [4200, 3000, 20000, 35000, 50000, 18000],      "name": "Allocated Budget"     },     {      "value": [5000, 14000, 28000, 26000, 42000, 21000],      "name": "Actual Spending"     }    ]   }  ] }
+
+title:
+  text: Basic Radar Chart
+tooltip:
+  trigger: axis
+legend:
+  data:
+    - Allocated Budget
+    - Actual Spending
+radar:
+  indicator:
+    - name: Sales
+      max: 10
+    - name: Administration
+      max: 10
+    - name: Information Technology
+      max: 10
+    - name: Customer Support
+      max: 10
+    - name: Development
+      max: 10
+    - name: Marketing
+      max: 10
+series:
+  - name: Budget vs spending
+    type: radar
+    tooltip:
+      trigger: item
+    areaStyle: {}
+    data:
+      - value:
+          - 4
+          - 3
+          - 2
+          - 3
+          - 5
+          - 8
+        name: Allocated Budget
+      - value:
+          - 5
+          - 4
+          - 8
+          - 2
+          - 4
+          - 2
+        name: Actual Spending
+
 {{< /echarts >}}
+
+
+
+##### Тестирование
+
+Тестирование по теоретическим основам курса:
+
+[<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестирования</div>]()
 
 ## Источники
