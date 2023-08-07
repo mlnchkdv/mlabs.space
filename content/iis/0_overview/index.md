@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: Описание курса
-description: Интеллектуальные Информационные Сисеимы
+description: Интеллектуальные Информационные Системы
 author: MLabs
 authorLink: null
 date: 2023-08-03T14:48:57.920Z
@@ -16,7 +16,7 @@ toc:
 draft: false
 ---
 
-# <div style="text-align: center; font-family: 'NewtonC';">Проектирование и разработка интеллектуальных информационных систем</div>
+# <div style="text-align: center;">Проектирование и разработка интеллектуальных информационных систем</div>
 
 {{< admonition info "Рейтинги" false >}}
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTICDRgyAbFdmeEzz9fLQlqDrnkQgoJI9OwcHLyuTjdjrVgaoiiwYoYuSnywafxN67nEHYppcQPCGo8/pubhtml?gid=555074868&range=B1:S30&single=true&widget=false&chrome=false&headers=false" width="684px" height="514px" frameborder="0" scrolling="no"></iframe>
@@ -75,8 +75,8 @@ tooltip:
   trigger: axis
 legend:
   data:
-    - Allocated Budget
-    - Actual Spending
+    - Project 1
+    - Project 2
 radar:
   indicator:
     - name: Sales
@@ -88,8 +88,6 @@ radar:
     - name: Customer Support
       max: 10
     - name: Development
-      max: 10
-    - name: Marketing
       max: 10
 series:
   - name: Budget vs spending
@@ -104,16 +102,14 @@ series:
           - 2
           - 3
           - 5
-          - 8
-        name: Allocated Budget
+        name: Project 1
       - value:
           - 5
           - 4
           - 8
           - 2
           - 4
-          - 2
-        name: Actual Spending
+        name: Project 2
 
 {{< /echarts >}}
 
