@@ -49,3 +49,9 @@
         </div>
     </footer>
 {{- end -}}
+
+
+<!-- javascript -->
+{{ range .Site.Params.loading_js -}}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
