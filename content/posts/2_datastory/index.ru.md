@@ -14,7 +14,8 @@ slug: datastory
 categories:
   - Blog
 tags:
-  - web
+  - Web
+  - Visualization
 math: true
 lightgallery: true
 toc:
