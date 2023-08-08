@@ -4,7 +4,7 @@ title: Описание курса
 description: Интеллектуальные Информационные Системы
 author: MLabs
 authorLink: null
-date: 2023-08-03T14:48:57.920Z
+date: 2023-08-05T14:48:57.920Z
 lastmod: null
 slug: overview
 categories:
