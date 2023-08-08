@@ -133,6 +133,10 @@
     # Windows v8-11 磁贴颜色
     tileColor = "#da532c"
 
+  [params.meta]
+    favicon = true
+    svg = true
+
   # Search config
   # 搜索配置
   [params.search]
