@@ -6,7 +6,7 @@ author: MLabs
 authorLink: null
 date: 2023-08-03T14:48:57.920Z
 lastmod: null
-slug: 1_intro
+slug: intro
 categories:
   - IIS
 math: true
