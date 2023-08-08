@@ -48,5 +48,6 @@
 
 <!-- css -->
 {{ range .Site.Params.loading_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <!-- <link rel="stylesheet" href="{{ . | absURL }}"> -->
+	<link rel="stylesheet" href="/css/loading.css">
 {{- end }}

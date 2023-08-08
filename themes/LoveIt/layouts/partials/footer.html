@@ -53,5 +53,6 @@
 
 <!-- javascript -->
 {{ range .Site.Params.loading_js -}}
-    <script type="text/javascript" src="{{ . | absURL }}"></script>
+    <!-- <script type="text/javascript" src="{{ . | absURL }}"></script> -->
+	<script type="text/javascript" src="{{ relURL "js/loading.js" }}"></script>
 {{- end }}
