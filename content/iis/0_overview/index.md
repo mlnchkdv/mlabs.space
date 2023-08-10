@@ -36,43 +36,37 @@ draft: false
 >
 > Разработка проектов на языке Python, хранение и извлечнеие данных.
 
-[:(fa-solid fa-flag-checkered): Введение](https://mlabs.space/iis/intro/)
-
-[:(fa-brands fa-python): Пишем отличный код](https://mlabs.space/iis/codestyle/)
-
-[:(fa-solid fa-database):]()
+- [:(fa-solid fa-flag-checkered): Введение](https://mlabs.space/iis/intro/)
+- [:(fa-brands fa-python): Пишем отличный код](https://mlabs.space/iis/codestyle/)
+- [:(fa-solid fa-database):]()
 
 [**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
 
 > Базовые возможности ИИС на примерах задач оптимизации и анализа данных, сравнение эффективности реализаций.
 
-[:(fa-solid fa-chart-line):]()
-
-[:(fa-solid fa-chart-pie):]()
-
-[:(fa-solid fa-circle-nodes):]()
-
-[:(fa-solid fa-magnifying-glass-chart):]()
-
-[:(fa-solid fa-network-wired):]()
+- [:(fa-solid fa-chart-line):]()
+- [:(fa-solid fa-chart-pie):]()
+- [:(fa-solid fa-circle-nodes):]()
+- [:(fa-solid fa-magnifying-glass-chart):]()
+- [:(fa-solid fa-network-wired):]()
 
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
 
 > Обзор на классические задачи машинного обучения и разбор ключевых алгоритмов, с точки зрения их принципа работы и сравнения при помощи базовых метрик оценки.
 
-[:(fa-solid fa-robot):]()
+- [:(fa-solid fa-robot):]()
 
 [**NLP**] Техники и Модели обработки естественного языка (NLP).
 
 > Формирование понятийного аппарата и обзор открытых инструментов в области анализа естественного языка, навыки поиска и использования готовых NLP-моделей, и создание исследовательского цикла от исходных текстовых данных до отчета с артефактами. 
 
-[:(fa-solid fa-paragraph):]()
+- [:(fa-solid fa-paragraph):]()
 
 [**LLM**] Большие языковые модели (LLM) для ИИС.
 
 > На основе OpenAI API и комбинации запросов, создание приложений для генеративной текстовой модели (>GPT-3.5).
 
-[:(fa-solid fa-brain):]()
+- [:(fa-solid fa-brain):]()
 
 ## Вопросы и задания
 
