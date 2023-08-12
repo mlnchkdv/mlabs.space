@@ -28,7 +28,7 @@ draft: false
 
 ## Базовые темы
 
-![](plan.png " ")
+![](plan.png "Course roadmap")
 
 [**Intro**] Введение в ИИС и выравнивание знаний.
 
