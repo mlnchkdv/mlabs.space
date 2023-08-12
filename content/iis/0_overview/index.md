@@ -220,3 +220,19 @@ series:
 [<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестирования</div>]()
 
 ## Источники
+
+[**Intro**] Введение в ИИС и выравнивание знаний.
+
+![](cover_intro.png " ")
+
+[1] - 
+[2] 
+[[3](./books/LeanDS_Managing_ML_products.pdf)] *Асхат Уразбаев – Управление DS проектами и продуктами при помощи Lean Data Science, 2020.*
+[[4](./books/Автостопом_по_Python_-_Кеннет_Рейтц,_Таня_Шлюссер.pdf)] *Кеннет Рейтц, Таня Шлюссер – Автостопом по Python, 2017.*
+
+[**NLP**] Техники и Модели обработки естественного языка (NLP).
+
+![]()
+
+[1] NLP Course | For You – https://lena-voita.github.io/nlp_course.html
+[2] 

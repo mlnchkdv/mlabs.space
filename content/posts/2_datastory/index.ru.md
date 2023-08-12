@@ -52,8 +52,6 @@ keywords: []
 
 Рассмотрим основыное frontend-инструменты которые лежат в основе реализации шаблона: [Scrollama.js](https://pudding.cool/process/introducing-scrollama/), [D3.js](https://d3js.org/), [Three.js](https://threejs.org/).
 
-
-
 ### Scrollama.js
 
 ![]()
