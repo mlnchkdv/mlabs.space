@@ -51,3 +51,7 @@
     <!-- <link rel="stylesheet" href="{{ . | absURL }}"> -->
 	<link rel="stylesheet" href="/css/loading.css">
 {{- end }}
+{{ range .Site.Params.mark_css -}}
+    <!-- <link rel="stylesheet" href="{{ . | absURL }}"> -->
+	<link rel="stylesheet" href="/css/mark.css">
+{{- end }}
