@@ -225,14 +225,20 @@ series:
 
 ![](cover_intro.png " ")
 
-[1] - 
+[1] 
+
 [2] 
+
 [[3](./books/LeanDS_Managing_ML_products.pdf)] *Асхат Уразбаев – Управление DS проектами и продуктами при помощи Lean Data Science, 2020.*
+
 [[4](./books/Автостопом_по_Python_-_Кеннет_Рейтц,_Таня_Шлюссер.pdf)] *Кеннет Рейтц, Таня Шлюссер – Автостопом по Python, 2017.*
+
+<div style="text-align: center;">***</div>
 
 [**NLP**] Техники и Модели обработки естественного языка (NLP).
 
-![]()
+![](cover_nlp.png " ")
 
-[1] NLP Course | For You – https://lena-voita.github.io/nlp_course.html
-[2] 
+[1] *NLP Course | For You – https://lena-voita.github.io/nlp_course.html*
+
+[[2](./books/Обработка_естественного_языка_в_действии.pdf)] *Хобсон Лейн, Ханнес Хапке, Коул Ховард – Обработка естественного языка в действии, 2020.*
