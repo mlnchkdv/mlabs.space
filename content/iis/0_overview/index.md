@@ -19,7 +19,7 @@ draft: false
 # <div style="text-align: center;">Проектирование и разработка интеллектуальных информационных систем</div>
 
 {{< admonition info "Рейтинги" false >}}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTICDRgyAbFdmeEzz9fLQlqDrnkQgoJI9OwcHLyuTjdjrVgaoiiwYoYuSnywafxN67nEHYppcQPCGo8/pubhtml?gid=555074868&range=B1:S30&single=true&widget=false&chrome=false&headers=false" width="684px" height="514px" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQzrzoTnnXC7iszTCoCmujs903jVUV1tZc8FTPioC8kA6_EVCooT8cwGhnvV-rjLHFbp0Vi2TNGCM5e/pubhtml?gid=0&amp;range=B1:I20&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
 {{< /admonition >}}
 
 **Целью курса** является изучение базовых парадигм разработки интеллектуальных информационных систем (ИИС), т.е. систем обладающих способностью собирать, обрабатывать и анализировать большое количество данных, на основе которых она может автоматически принимать решения и выполнять задачи. Такие системы могут быть использованы для широкого круга задач в различных отраслях, включая финансы, здравоохранение, транспорт, производство и множество других областей.
