@@ -327,6 +327,8 @@ series:
 
 [[1](./books/Alghoritmy_DataScience.pdf)] *Протодьяконов А.В. – Алгоритмы DataScience и их практическая реализация на Python, 2022.* 
 
+[2] *labml.ai: Annotated PyTorch Paper Implementations – https://nn.labml.ai*
+
 {{< /admonition >}}
 
 <div style="text-align: center;">***</div>
