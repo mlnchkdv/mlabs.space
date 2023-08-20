@@ -317,6 +317,10 @@ series:
 
 [[3](./books/Алгоритмы_для_начинающих.pdf)] *Луридас Панос – Алгоритмы для начинающих: теория и практика для разработчика, 2018.*
 
+[4] *LeetCode: Online Programming Learning Platform – https://leetcode.com*
+
+[5] *LeetCode & Coding Interview Guide – https://doocs.github.io/leetcode/#/README_EN*
+
 {{< /admonition >}}
 
 <div style="text-align: center;">***</div>
