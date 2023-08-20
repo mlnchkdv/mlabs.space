@@ -191,6 +191,7 @@ keywords:
 - [**QuillBot**](https://quillbot.com/summarize) – помимо суммаризации способен исправлять грамматические ошибки, переводить и проверять на плагиат.
 - [**Perplexity**](https://www.perplexity.ai/) – суммаризация и поиск по прикрепленному файлу, а также удобный поисковик.
 - [**PDFai**](https://pdf.ai/) – чат с pdf-файлами и обобщение информации, а также расширения для браузера.
+- [{{< ico "brand-github" >}}**Quivr**](https://github.com/StanGirard/quivr) – инструмент, который использует генеративный ИИ (GPT 3.5/4, Private, Anthropic, VertexAI) и позволяет пользователю общаться со своими файлами (Text, Markdown, PDF, Powerpoint, Excel, Word, Audio, Video,  фрагменты кода).
 
 {{< /admonition >}}
 
