@@ -271,13 +271,13 @@ series:
 
 {{< /echarts >}}
 
-##### Тестирование
+<!-- ##### Тестирование
 
 Тестирование по теоретическим основам курса:
 
-[<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестирования</div>]()
+[<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестирования</div>]() -->
 
-##### Рекомендации
+## Рекомендации
 
 {{< admonition info "Про online IDE" false >}}
 
@@ -288,6 +288,8 @@ series:
 {{< /admonition >}}
 
 {{< admonition info "Про хостинг" false >}}
+
+![](bot_hosting.png "Возможный вариант архитектуры")
 
 - [Streamlit Share](https://share.streamlit.io/)
 - [Netlify](https://netlify.com/)
@@ -304,7 +306,7 @@ series:
 
 [1] 
 
-[2] 
+[[2](./books/Остроух-Интеллектуальные_информационные_системы_и_технологии.pdf)] *Остроух Андрей, Николаев Андрей – Интеллектуальные информационные системы и технологии : монография, 2021.*
 
 [[3](./books/LeanDS_Managing_ML_products.pdf)] *Асхат Уразбаев – Управление DS проектами и продуктами при помощи Lean Data Science, 2020.*
 
