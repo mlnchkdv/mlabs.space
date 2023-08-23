@@ -277,6 +277,23 @@ series:
 
 [<div style="text-align: center;">:(fa-solid fa-robot fa-bounce): Telegram-bot для тестирования</div>]()
 
+##### Рекомендации
+
+{{< admonition info "Про online IDE" false >}}
+
+- [Deepnote](https://deepnote.com/) – удобная платформа для командной работы, имеет множество возможностей для интеграции, имеется [educatiaon plan](https://deepnote.com/docs/edu-verification) (`Python`, `R`, `SQL`).
+- [HEX](https://hex.tech/) – мощная онлайн платформа делающая упор на работу с данными, интегрированные инструменты позволяют не только подключить данные из множества источников, но и увидеть множество вариантов визуализации (`Python`, `R`, `SQL`).
+- [GoogleColab](https://colab.research.google.com/) – относительно хорошая производительность бесплатно предоставляемых мощностей (`Python`).
+
+{{< /admonition >}}
+
+{{< admonition info "Про хостинг" false >}}
+
+- [Streamlit Share](https://share.streamlit.io/)
+- [Netlify](https://netlify.com/)
+
+{{< /admonition >}}
+
 ## Источники
 
 [**Intro**] Введение в ИИС и выравнивание знаний.
