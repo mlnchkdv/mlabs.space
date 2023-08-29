@@ -8,7 +8,7 @@
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 8px 13px;
     font-weight: bold;
     /* margin: 20px; */
     position: fixed;
@@ -25,14 +25,22 @@
     position: fixed;
     text-align: center;
     opacity: 0;
-    transform: scale(0);
     visibility: hidden;
+    transform: scale(0);
     transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    /* transform: translate(-100%, 100%); */
+    /* animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; */
 }
 
 .bot .modal-show-inner {
-    position: relative;
-    margin: 100px auto 0px;
+    /* position: relative; */
+    /* margin: 100px auto 0px; */
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     max-width: 600px;
     width: 80%;
     /* color: #fff; */
