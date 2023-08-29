@@ -28,6 +28,7 @@
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = []
 
+  bot_css = ["css/bot.css"]
   mark_css = ["css/mark.css"]
   loading_css = ["css/loading.css"]
   loading_js = ["js/loading.js"]

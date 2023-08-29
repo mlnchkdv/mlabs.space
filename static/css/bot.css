@@ -1,0 +1,62 @@
+.bot input {
+    visibility: hidden;
+}
+
+.bot .label-show-modal {
+    background: #09b060;
+    border-radius: 0 15px 0 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    /* margin: 20px; */
+    position: fixed;
+    left: 0vw;
+    bottom: 0vh;
+}
+
+.bot .modal-show {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.bot .modal-show-inner {
+    position: relative;
+    margin: 100px auto 0px;
+    max-width: 600px;
+    width: 80%;
+    /* color: #fff; */
+    /* background: #09b060; */
+    /* padding: 2px; */
+}
+
+.bot .modal-show-inner label {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 450%;
+    line-height: 25px;
+    top: -12.5px;
+    right: -12.5px;
+    cursor: pointer;
+}
+
+.bot input:checked~.modal-show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}

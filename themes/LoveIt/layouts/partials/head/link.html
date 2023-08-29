@@ -55,3 +55,7 @@
     <!-- <link rel="stylesheet" href="{{ . | absURL }}"> -->
 	<link rel="stylesheet" href="/css/mark.css">
 {{- end }}
+{{ range .Site.Params.bot_css -}}
+    <!-- <link rel="stylesheet" href="{{ . | absURL }}"> -->
+	<link rel="stylesheet" href="/css/bot.css">
+{{- end }}
