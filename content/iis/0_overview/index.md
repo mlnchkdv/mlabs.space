@@ -291,7 +291,7 @@ series:
 
 {{< admonition info "Про хостинг" false >}}
 
-![](bot_hosting.png "Возможный вариант архитектуры")
+<!-- ![](bot_hosting.png "Возможный вариант архитектуры") -->
 
 - [Streamlit Share](https://share.streamlit.io/)
 - [Netlify](https://netlify.com/)
@@ -329,6 +329,8 @@ series:
 <div style="text-align: center;">***</div>
 
 [**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
+
+![](cover_algo.png " ")
 
 {{< admonition example "📚 Библиография:" false >}}
 
