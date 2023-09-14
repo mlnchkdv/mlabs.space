@@ -86,6 +86,10 @@ codepen
 
 ## Реализация
 
+<iframe src="https://trinket.io/embed/python3/f9d55ce3f8" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<iframe width="100%" height="356" frameborder="0" src="https://app.hex.tech/567252a3-d534-4fc8-af40-d7d5d450c842/app/284e86b6-673d-45b6-bd6a-8fc43bdb8093/latest?embedded=true&embeddedStaticCellId=613616b7-b3c8-4aaa-89a7-8b38bca50bb8" ></iframe>
+
 
 
 ```html
