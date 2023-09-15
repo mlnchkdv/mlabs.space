@@ -289,9 +289,9 @@ series:
 
 {{< admonition info "Про IDE" false >}}
 
-[JupyterLab](https://github.com/jupyterlab/jupyterlab/releases) – гибкая, интегрируемая и легко расширяемая среда, поддерживающая одновременную работу с несколькими блокнотами Jupyter (`*.ipynb`), текстовыми файлами, датасетами, терминалами и другими компонентами, поддерживает отображение и редактирование множества форматов данных: изображений, CSV, JSON, Markdown, PDF, Vega, Vega-Lite [и так далее](http://jupyterlab.readthedocs.io/en/latest/user/file_formats.html#file-and-output-formats).
+[JupyterLab](https://github.com/jupyterlab/jupyterlab/releases) – гибкая, интегрируемая и легко расширяемая среда, поддерживающая одновременную работу с несколькими блокнотами Jupyter (`*.ipynb`), текстовыми файлами, датасетами и терминалами (поддерживает  также изображения, CSV, JSON, Markdown, PDF [и другие форматы](http://jupyterlab.readthedocs.io/en/latest/user/file_formats.html#file-and-output-formats)).
 
-[Spyder](https://www.spyder-ide.org/) – бесплатная среда разработки предназначенная для ученых, инженеров и аналитиков данных.
+[Spyder](https://www.spyder-ide.org/) – бесплатная среда разработки предназначенная для ученых, инженеров и аналитиков данных, интерфейс очень похож на RStudio.
 
 {{< /admonition >}}
 
