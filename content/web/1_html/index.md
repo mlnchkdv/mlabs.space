@@ -366,13 +366,13 @@ HTML, или язык разметки гипертекста (HyperTextMarkupLa
 
 Не все теги могут быть включены в `<p>`. Например, внутри абзаца не могут располагаться крупные структурные теги, заголовки, формы, списки, таблицы. Когда браузер встречает неподходящий тег внутри `<p>`, он «выбрасывает» этот тег из `<p>`.
 
+### Резюме
+
 <iframe height="600" style="width: 100%;" scrolling="no" title="HTML" src="https://codepen.io/mlnchkdv/embed/preview/yLGorVW?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/mlnchkdv/pen/yLGorVW">
   HTML</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
-
-### Резюме
 
 1. `<!DOCTYPE html>` Объявление типа документа, указывающее на версию HTML.
 
