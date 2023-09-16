@@ -7,6 +7,8 @@ authorLink: null
 date: 2023-09-11T14:48:57.920Z
 lastmod: null
 slug: intro
+categories:
+  - WEB
 math: true
 lightgallery: true
 toc:
@@ -15,7 +17,6 @@ draft: false
 ---
 
 # <div style="text-align: center;">Основы современной вёрстки</div>
-
 
 
 
