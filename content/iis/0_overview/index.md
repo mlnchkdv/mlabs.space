@@ -129,7 +129,7 @@ draft: false
 
 [**Intro**] Введение в ИИС и выравнивание знаний.
 
-1. Python, Numpy, Pandas: <a href="../tasks/1_python_numpy_pandas_manual.ipynb" download>:(fa-solid fa-book): Manual</a>, <a href="../tasks/1_python_numpy_pandas.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Data](../data/titanic.csv)
+1. Python, Numpy, Pandas: <a href="../tasks/1_python_numpy_pandas_manual.ipynb" download>:(fa-solid fa-book): Manual</a>, <a href="../tasks/1_python_numpy_pandas.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Titanic data](../data/titanic.csv), [:(fa-solid fa-database): Iris data](../data/iris.csv)
 2. Работа с данными: <a href="../tasks/2_data _visualization.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 <!-- [**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
