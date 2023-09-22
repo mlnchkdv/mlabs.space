@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: Теория алгоритмов
+title: Разработка алгоритмов
 description: Интеллектуальные Информационные Системы
 author: MLabs
 authorLink: null

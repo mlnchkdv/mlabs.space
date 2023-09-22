@@ -72,11 +72,14 @@ draft: false
 
 {{< /admonition >}}
 
-<!-- - [:(fa-solid fa-chart-line):]() -->
-<!-- - [:(fa-solid fa-chart-pie):]() -->
-<!-- - [:(fa-solid fa-circle-nodes):]() -->
-<!-- - [:(fa-solid fa-magnifying-glass-chart):]() -->
-<!-- - [:(fa-solid fa-network-wired):]() -->
+- [:(fa-solid fa-route): Разработка алгоритмов](../algo/)
+<!-- - [:(fa-solid fa-code-branch):]()
+- [:(fa-solid fa-code):]()
+- [:(fa-solid fa-chart-line):]()
+- [:(fa-solid fa-chart-pie):]()
+- [:(fa-solid fa-circle-nodes):]()
+- [:(fa-solid fa-magnifying-glass-chart):]()
+- [:(fa-solid fa-network-wired):]() -->
 
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
 
@@ -130,7 +133,8 @@ draft: false
 [**Intro**] Введение в ИИС и выравнивание знаний.
 
 1. Python, Numpy, Pandas: <a href="../tasks/1_python_numpy_pandas_manual.ipynb" download>:(fa-solid fa-book): Manual</a>, <a href="../tasks/1_python_numpy_pandas.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Titanic data](../data/titanic.csv), [:(fa-solid fa-database): Iris data](../data/iris.csv)
-2. Работа с данными: <a href="../tasks/2_data _visualization.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+2. Работа с данными: <a href="../tasks/2_data _sql.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+3. Визуализация данными: <a href="../tasks/3_visualize_data.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 <!-- [**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
 
