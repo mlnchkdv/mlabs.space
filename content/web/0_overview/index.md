@@ -6,7 +6,7 @@ author: MLabs
 authorLink: null
 date: 2023-09-11T14:48:57.920Z
 lastmod: null
-slug: intro
+slug: overview
 categories:
   - WEB
 math: true
@@ -18,7 +18,7 @@ draft: false
 
 # <div style="text-align: center;">Основы современной вёрстки</div>
 
-{{< admonition info "Достижения 321" false >}}
+{{< admonition info "Достижения 321:" false >}}
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=0&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
 
