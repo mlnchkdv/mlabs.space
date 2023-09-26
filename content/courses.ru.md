@@ -17,4 +17,4 @@ draft: false
 
 # [ИИС](../iis/overview/)
 
-# [Web](../web/html/)
+# [Web](../web/overview/)
