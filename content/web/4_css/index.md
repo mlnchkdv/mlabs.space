@@ -121,6 +121,12 @@ p {
 }
 ```
 
+<iframe height="450" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/mlnchkdv/embed/preview/JjwBGZp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/JjwBGZp">
+  Untitled</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 ## Селекторы по атрибуту
 
 Эти селекторы предназначены для выбора элементов по имени атрибута или по атрибуту с указанным значением:
@@ -188,6 +194,12 @@ p {
   background-color: brown;
 }
 ```
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="selectors_by_attribute" src="https://codepen.io/mlnchkdv/embed/preview/ZEVjQjL?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/ZEVjQjL">
+  selectors_by_attribute</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ## Псевдоклассы
 
@@ -280,6 +292,12 @@ input[type="text"]:focus {
 }
 ```
 
+<iframe height="450" style="width: 100%;" scrolling="no" title="pseudo-classes" src="https://codepen.io/mlnchkdv/embed/preview/KKbBVxz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/KKbBVxz">
+  pseudo-classes</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 ### По расположению среди соседей
 
 При выборе элементов можно дополнительно с помощью псевдоклассов задать условие (фильтр) по их расположению (порядковому номеру) в родителе.
@@ -353,7 +371,13 @@ h2:only-child {
 
 #### Псевдокласс :nth-last-child(выражение)
 
-Псевдокласс `:nth-last-child()` выполняет те же действия что и `:nth-child()` за исключением того, что отсчет элементов в родителе вёдется не с начала, а с конца. В псведоклассе `:nth-last-child(выражение)` в качестве выражения можно использовать те же вещи, т.е. число, формулу, или ключевые слова `odd` или `even`
+Псевдокласс `:nth-last-child()` выполняет те же действия что и `:nth-child()` за исключением того, что отсчет элементов в родителе вёдется не с начала, а с конца. В псведоклассе `:nth-last-child(выражение)` в качестве выражения можно использовать те же вещи, т.е. число, формулу, или ключевые слова `odd` или `even`.
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="pseudo-classes_by_neighbors" src="https://codepen.io/mlnchkdv/embed/preview/jOXpqww?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/jOXpqww">
+  pseudo-classes_by_neighbors</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 ### По расположению среди соседей с учётом типа элемента
 
@@ -676,4 +700,66 @@ h3, h4 {
 ## Каких селекторов нет в CSS
 
 В CSS нет селектора для получения родительского элемента. Этот селектор может появиться в новой спецификации CSS, но в CSS3 так выбрать элемент нельзя.
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="selectors_group_ and_relationships" src="https://codepen.io/mlnchkdv/embed/preview/RwEBaLw?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/RwEBaLw">
+  selectors_group_ and_relationships</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+## Резюме
+
+**CSS (Cascading Style Sheets)** - это язык стилей, используемый для оформления веб-страниц. Он позволяет задавать внешний вид и макет элементов HTML-разметки. 
+
+Основные свойства и правила использования CSS:
+
+1. **Селекторы**:
+   - Селекторы определяют, к каким элементам HTML-разметки будут применяться стили. Примеры селекторов:
+     - `h1` - применяет стили ко всем заголовкам первого уровня `<h1>`.
+     - `.class` - применяет стили ко всем элементам с указанным классом, например, `<div class="class">`.
+     - `#id` - применяет стили к элементу с указанным идентификатором, например, `<p id="id">`.
+     - `element1 element2` - применяет стили к элементам `element2`, которые являются потомками `element1`.
+
+2. **Свойства и значения**:
+   - Свойства CSS определяют конкретные аспекты стиля, такие как цвет текста, размер шрифта, отступы и многое другое.
+   - Пример свойства и его значения: `color: red;` (устанавливает цвет текста в красный).
+
+3. **Правила CSS**:
+   - Правила CSS состоят из селектора и объявления.
+   - Селектор указывает, к каким элементам применяется стиль.
+   - Объявление состоит из одного или нескольких свойств, разделенных точкой с запятой, и их значений, заключенных в фигурные скобки.
+   - Пример правила CSS:
+     ```css
+     h1 {
+         color: blue;
+         font-size: 24px;
+     }
+     ```
+
+4. **Каскадирование**:
+   - Каскадирование определяет приоритетность стилей в случае конфликта.
+   - Внешние стили (из внешних файлов CSS) имеют более высокий приоритет, чем внутренние (встроенные в HTML) или встроенные (напрямую указанные в элементах HTML).
+   - Специфичность селектора также влияет на каскадирование.
+
+5. **Инлайн-стили**:
+   - Инлайн-стили определяются непосредственно в атрибуте `style` элемента HTML.
+   - Они имеют наивысший приоритет и переопределяют другие стили.
+
+6. **Box Model (Модель блока)**:
+   - Каждый элемент HTML представляется как прямоугольный блок, имеющий внутреннее содержимое, границу, поля и отступы.
+   - Свойства `width`, `height`, `padding`, `border`, `margin` позволяют управлять размерами и отступами блоков.
+
+7. **Позиционирование**:
+   - CSS позволяет управлять позицией элементов на странице, используя свойства `position`, `top`, `left`, `right`, `bottom`.
+   - Типы позиционирования включают `static`, `relative`, `absolute`, и `fixed`.
+
+8. **Адаптивный дизайн**:
+   - CSS Media Queries позволяют создавать адаптивный дизайн, который реагирует на различные размеры экранов и устройств.
+   - Медиа-запросы позволяют изменять стили в зависимости от разрешения экрана.
+
+9. **Преобразования и анимации**:
+   - CSS предоставляет свойства для создания анимаций и преобразований, таких как `transform`, `transition` и `animation`.
+
+10. **Шрифты и текст**:
+    - CSS позволяет управлять шрифтами и текстом с помощью свойств, таких как `font-family`, `font-size`, `text-align`, `line-height`.
 
