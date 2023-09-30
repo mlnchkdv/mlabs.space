@@ -28,6 +28,7 @@ draft: false
 
 - [:(fa-solid fa-code): HTML и структура Web-документа](../html)
 - [:(fa-solid fa-ellipsis): Глобальные атрибуты HTML](../attributes/)
+- [:(fa-solid fa-palette): Основы CSS](../css/)
 - [:(fa-solid fa-border-top-left): Отображения элементов, Единицы измерения, Работа с цветом](../units/)
 - [:(fa-solid fa-text-height): Оформление текста](../text_style)
 
