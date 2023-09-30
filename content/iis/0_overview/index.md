@@ -136,9 +136,11 @@ draft: false
 2. Работа с данными: <a href="../tasks/2_data _sql.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 3. Визуализация данными: <a href="../tasks/3_visualize_data.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
-<!-- [**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
+[**Algo**] Алгоритмизация стратегий и решений для разработки ИИС.
 
-3. Линейное программирование: -->
+<!-- 3. Линейное программирование: -->
+
+4. Алгоритмы на графах: <a href="../tasks/4_graph.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 ## Проекты
 
