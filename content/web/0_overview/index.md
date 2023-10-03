@@ -18,9 +18,39 @@ draft: false
 
 # <div style="text-align: center;">Основы современной вёрстки</div>
 
+{{< admonition info "Достижения 311:" false >}}
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=1746296934&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
+
+{{< admonition info "Достижения 312:" false >}}
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=657377415&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
+
 {{< admonition info "Достижения 321:" false >}}
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=0&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
+
+{{< admonition info "Достижения 323:" false >}}
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=2000913631&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
+
+{{< admonition info "Достижения 331:" false >}}
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=584294338&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
+
+{{< admonition info "Достижения 332:" false >}}
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=1852629622&amp;range=B1:G30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
 
 {{< /admonition >}}
 
