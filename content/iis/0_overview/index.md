@@ -316,7 +316,7 @@ series:
 
 {{< admonition info "Про табличный формат" false >}}
 
-- [EmEditor](https://en.wikipedia.org/wiki/EmEditor) –  [коммерческий](./Emurasoft_EmEditor_Professional_v18.6.8 Final_2019,_x86_x64_RUS_rutracke.torrent) текстовый редактор для Windows, способный работать с очень большими объемами табличных данных  (до 248 ГБ или 2,1 миллиарда строк).
+- [EmEditor](https://en.wikipedia.org/wiki/EmEditor) –  [коммерческий](./soft/Emurasoft_EmEditor_Professional_v18.6.8_Final_2019_x86_x64_RUS_rutracke.torrent) текстовый редактор для Windows, способный работать с очень большими объемами табличных данных  (до 248 ГБ или 2,1 миллиарда строк).
 
 {{< /admonition >}}
 
