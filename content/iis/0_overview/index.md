@@ -73,12 +73,12 @@ draft: false
 {{< /admonition >}}
 
 - [:(fa-solid fa-route): Разработка алгоритмов](../algo/)
+- [:(fa-solid fa-circle-nodes): Алгоритмы на графах и сетях](../graph/)
 <!-- - [:(fa-solid fa-code-branch):]()
 - [:(fa-solid fa-code):]()
 - [:(fa-solid fa-chart-line):]()
 - [:(fa-solid fa-chart-pie):]()
 - [:(fa-solid fa-circle-nodes):]()
-- [:(fa-solid fa-magnifying-glass-chart):]()
 - [:(fa-solid fa-network-wired):]() -->
 
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
