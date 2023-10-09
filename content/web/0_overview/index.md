@@ -61,6 +61,7 @@ draft: false
 - [:(fa-solid fa-palette): Основы CSS](../css/)
 - [:(fa-solid fa-border-top-left): Отображения элементов, Единицы измерения, Работа с цветом](../units/)
 - [:(fa-solid fa-text-height): Оформление текста](../text_style)
+- [:(fa-solid fa-table-columns): Позиционирование](../position)
 
 ## Критерии оценки проектов
 
