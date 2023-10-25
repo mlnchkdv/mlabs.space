@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: Модели и метрики
-description: Модель машинного обучения и базовые метрики
+description: Модели машинного обучения и базовые метрики
 author: MLabs
 authorLink: null
 date: 2023-07-31T14:48:57.920Z
