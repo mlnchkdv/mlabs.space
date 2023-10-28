@@ -99,7 +99,8 @@ draft: false
 
 <!-- - [:(fa-solid fa-robot):]() -->
 
-- [:(fa-solid fa-diagram-project): Модели и метрики в ML](../models/)
+- [:(fa-solid fa-robot): Модели и метрики в ML](../models/)
+- [:(fa-solid fa-diagram-project): Классификация, деревья решений и k-ближайших соседей](../classification/)
 - [:(fa-solid fa-magnifying-glass-chart): Рекомендательные системы](../)
 
 [**NLP**] Техники и Модели обработки естественного языка (NLP).
@@ -148,7 +149,10 @@ draft: false
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
 
 5. Основы машинного обучения: <a href="../tasks/6_ml_classic.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
- <!--5. Рекомендательные системы: -->
+
+6. Деревья решений (Decision Tree): <a href="../tasks/7_decision_tree-2.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): ans data](../data/ans.csv), [:(fa-solid fa-database): train data](../data/train.csv), [:(fa-solid fa-database): test data](../data/test.csv)
+
+    <!--5. Рекомендательные системы: -->
 
 ## Проекты
 
