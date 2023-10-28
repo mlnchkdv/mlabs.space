@@ -24,7 +24,7 @@ CSS transitions позволяют сделать изменения CSS-сво�
 
 При наведении курсора на квадрат плавно изменяется цвет фона.
 
-<iframe height="265" scrolling="no" title="Exapmple transitions css" src="https://codepen.io/ruslan_khomiak/embed/bBvdMp/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 732px;"></iframe>
+<iframe height="265" scrolling="no" title="Exapmple transitions css" src="https://codepen.io/ruslan_khomiak/embed/bBvdMp/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 Теперь подробнее рассмотрим, как управлять переходами в CSS. У нас на вооружении есть всего 5 свойств, которые позволяют контролировать transition-анимацию:
 
@@ -68,6 +68,12 @@ transition-delay: 500ms;
 
 **transition** — это общее свойство, которое позволяет перечислить первые четыре свойства в порядке: `property`, `duration`, `timing-function`, `delay`.
 
+<iframe height="400" style="width: 100%;" scrolling="no" title="transition" src="https://codepen.io/mlnchkdv/embed/preview/RwvrgNL?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/RwvrgNL">
+  transition</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 Пример:
 
 ```css
@@ -76,11 +82,11 @@ transition: background-color 1s cubic-bezier(0, 0, 1, 1) 500ms;
 
 У нас получилась вот такая простая анимация: при наведении мышкой на квадрат изменяется ширина; продолжительность анимации одна секунда; анимация воспроизводится по линейной функции; задержка перед началом анимации 500 миллисекунд.
 
-<iframe height="265" scrolling="no" title="Animation CSS" src="https://codepen.io/ruslan_khomiak/embed/eBLPbY/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 732px;"></iframe>
+<iframe height="265" scrolling="no" title="Animation CSS" src="https://codepen.io/ruslan_khomiak/embed/eBLPbY/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 С помощью CSS `transitions` можно анимировать почти все свойства и создавать много интересных, красивых, функциональных и даже сложных анимаций, которые будут дополнять и улучшать ваш проект. Например, вот такой Material-FAB на чистом CSS, используя `transitions`:
 
-<iframe height="376" scrolling="no" title="Material fab Pure CSS" src="https://codepen.io/ruslan_khomiak/embed/QGmwMP/?height=376&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 732px;"></iframe>
+<iframe height="376" scrolling="no" title="Material fab Pure CSS" src="https://codepen.io/ruslan_khomiak/embed/QGmwMP/?height=376&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 ## CSS animations
 
@@ -88,7 +94,7 @@ CSS animations позволяют делать более сложные ани�
 
 Наш круг ожил и он как будто пульсирует.
 
-<iframe height="265" scrolling="no" title="Circle Pulsing Animated" src="https://codepen.io/ruslan_khomiak/embed/ObooMV/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 732px;"></iframe>
+<iframe height="265" scrolling="no" title="Circle Pulsing Animated" src="https://codepen.io/ruslan_khomiak/embed/ObooMV/?height=265&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 Есть 9 свойств, которые позволяют контролировать CSS animations:
 
@@ -156,9 +162,15 @@ animation-fill-mode: backwards;
 
 Свойства **animation-duration**, **animation-timing-function**, **animation-delay** работают так же, как аналогичные свойства в CSS `transitions`, о которых я писал раньше, поэтому не буду повторяться.
 
+<iframe height="400" style="width: 100%;" scrolling="no" title="animation" src="https://codepen.io/mlnchkdv/embed/preview/bGzERwQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/mlnchkdv/pen/bGzERwQ">
+  animation</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 С помощью animations CSS можно создавать довольно сложные анимации без использования JavaScript. Яркий пример — это лоадеры, то есть элементы, которые показывают, что на вашей страничке что-то загружается. Вот несколько примеров:
 
-<iframe height="254" scrolling="no" title="Loaders Pure CSS" src="https://codepen.io/ruslan_khomiak/embed/MbqWaK/?height=254&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 732px;"></iframe>
+<iframe height="254" scrolling="no" title="Loaders Pure CSS" src="https://codepen.io/ruslan_khomiak/embed/MbqWaK/?height=254&amp;theme-id=0&amp;default-tab=css,result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 ## Motion Path Module
 
