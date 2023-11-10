@@ -117,7 +117,7 @@ draft: false
 
 {{< /admonition >}}
 
-<!-- - [:(fa-solid fa-paragraph):]() -->
+- <a href="../8_word_embeddings/Word Embeddings.pptx" download>:(fa-solid fa-paragraph): Word Embeddings</a>
 
 [**LLM**] Большие языковые модели (LLM) для ИИС.
 
@@ -153,6 +153,11 @@ draft: false
 6. Деревья решений (Decision Tree): <a href="../tasks/7_decision_tree-2.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): ans data](../data/ans.csv), [:(fa-solid fa-database): train data](../data/train.csv), [:(fa-solid fa-database): test data](../data/test.csv)
 
     <!--5. Рекомендательные системы: -->
+    
+
+[**NLP**] Техники и Модели обработки естественного языка (NLP).
+
+7. Word Embeddings: <a href="../tasks/8_torch_intro.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 ## Проекты
 
