@@ -159,6 +159,8 @@ draft: false
 
 7. Word Embeddings: <a href="../tasks/8_torch_intro.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
+8. Streamlit: <a href="../tasks/9_streamlit_example.py" download>:(fa-solid fa-file-code): Notebook</a>
+
 ## Проекты
 
 {{< admonition success "👶 Простые:" false >}}
