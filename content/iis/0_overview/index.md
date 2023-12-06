@@ -118,6 +118,7 @@ draft: false
 {{< /admonition >}}
 
 - <a href="../8_word_embeddings/Word Embeddings.pptx" download>:(fa-solid fa-paragraph): Word Embeddings</a>
+- [:(fa-solid fa-list-ol): Text Classification](../9_text_classification/text_classification.pdf)
 
 [**LLM**] Большие языковые модели (LLM) для ИИС.
 
