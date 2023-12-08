@@ -161,7 +161,7 @@ draft: false
 
 8. Streamlit: <a href="../tasks/9_streamlit_example.py" download>:(fa-solid fa-file-code): Notebook</a>
 9. Латентное размещение Дирихле (LDA): <a href="../tasks/LDA_topic_models.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Elon Musk data](../data/data_elonmusk.csv)
-
+10. Анализ текста: <a href="../tasks/10_text_analysis_part1.ipynb" download>:(fa-solid fa-file-code): Notebook 1</a>, <a href="../tasks/10_text_analysis_part2.ipynb" download>:(fa-solid fa-file-code): Notebook 2</a>, [:(fa-solid fa-database): Text data](../data/texts.zip)
 
 ## Проекты
 
