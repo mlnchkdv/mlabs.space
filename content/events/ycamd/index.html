@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>YCAMD 2024</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./countdown.css">
+
+    <style>
+        /* .team-heading {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #333;
+        } */
+
+        /* .team-description {
+            width: 66.6667%;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-size: 1rem;
+            color: #666;
+        } */
+
+        /* .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -0.5rem;
+        } */
+
+        /* .team-member {
+            padding: 0.5rem;
+            width: 33.3333%;
+        } */
+
+        .team-member-inner {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 0.6rem 0.7rem;
+            border-radius: 0.25rem;
+            margin: 10px -5px;
+            min-height: 170px;
+            max-height: 200px;
+        }
+
+        .team-member-image {
+            width: 7rem;
+            height: 7rem;
+            background-color: #edf2f7;
+            object-fit: cover;
+            object-position: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .team-member-details {
+            flex-grow: 1;
+        }
+
+        .team-member-name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .team-member-name a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .team-member-role {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .video_bg {
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            object-fit: cover;
+            opacity: 0.65;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- Hero -->
+    <section id="hero">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div id="navbar">
+                    <!-- <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" class="logo"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.3 27.2">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #fff;
+                                }
+
+                                .cls-2 {
+                                    fill: none;
+                                    stroke: #fa496e;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 7px;
+                                }
+
+                                .cls-3 {
+                                    isolation: isolate;
+                                }
+                            </style>
+                        </defs>
+                        <circle class="cls-2" cx="13.6" cy="13.6" r="10.1" />
+                        <g class="cls-3">
+                            <path class="cls-1"
+                                d="M38.2,6.4h5.4c.4,0,.7,0,1,.1,1.1,.1,1.9,.6,2.4,1.3,.6,.7,.8,1.7,.8,2.8,0,.9-.2,1.7-.6,2.3s-.9,1.2-1.6,1.5l2.4,4.9h-2.5l-2.2-4.5h-3.1v4.5h-2.2V6.4h.2Zm5.2,6.4c.3,0,.6,0,.8-.1,.5-.1,.9-.4,1.1-.8,.2-.4,.3-.8,.3-1.3s-.1-.9-.3-1.3c-.2-.4-.6-.7-1.1-.8-.2-.1-.5-.1-.8-.1h-3.1v4.4s3.1,0,3.1,0Z" />
+                        </g>
+                        <g class="cls-3">
+                            <path class="cls-1"
+                                d="M51.5,19c-.8-.4-1.3-1-1.8-1.8-.4-.8-.6-1.6-.6-2.6s.2-2,.6-2.8c.4-.8,1-1.4,1.7-1.8,.8-.4,1.6-.6,2.6-.6,.9,0,1.7,.2,2.4,.6,.7,.4,1.2,1,1.6,1.8,.4,.8,.5,1.7,.5,2.7v.6h-7c.1,.8,.3,1.4,.8,1.8,.4,.4,1,.6,1.7,.6,.5,0,1-.1,1.4-.4,.4-.2,.7-.6,.9-1l2.1,.6c-.2,.6-.6,1.1-1,1.5s-.9,.7-1.5,1c-.6,.2-1.2,.3-1.8,.3-1,.1-1.8-.1-2.6-.5Zm4.8-5.5c-.1-.8-.3-1.3-.7-1.7s-.9-.5-1.6-.5c-1.4,0-2.3,.7-2.5,2.2h4.8Z" />
+                            <path class="cls-1"
+                                d="M71.3,11.9c-.3-.4-.8-.6-1.3-.6-.3,0-.7,.1-.9,.2s-.5,.4-.7,.7-.2,.7-.2,1.1v6h-2.2v-5.9c0-.7-.2-1.2-.5-1.6-.3-.4-.8-.6-1.3-.6-.4,0-.7,.1-1,.3s-.5,.4-.6,.7-.2,.7-.2,1.1v6h-2.2V9.6h1.8v1.1c.3-.4,.7-.7,1.2-1,.5-.2,1-.3,1.6-.3,.7,0,1.2,.1,1.7,.4,.5,.3,.9,.7,1.1,1.1,.3-.5,.7-.9,1.2-1.1,.5-.3,1.1-.4,1.7-.4,.7,0,1.3,.1,1.8,.4s.9,.7,1.1,1.2c.3,.5,.4,1.1,.4,1.8v6.5h-2.2v-5.9c.2-.6,0-1.1-.3-1.5Z" />
+                            <path class="cls-1"
+                                d="M77.8,19c-.8-.4-1.3-1-1.8-1.8-.4-.8-.6-1.6-.6-2.6s.2-2,.6-2.8,1-1.4,1.7-1.8c.7-.4,1.6-.6,2.5-.6s1.7,.2,2.4,.6c.7,.4,1.2,1,1.6,1.8s.5,1.7,.5,2.7v.6h-7c.1,.8,.3,1.4,.8,1.8s1,.6,1.7,.6c.5,0,1-.1,1.4-.4,.4-.2,.7-.6,.9-1l2.1,.6c-.2,.6-.6,1.1-1,1.5s-.9,.7-1.5,1c-.5,.3-1.1,.4-1.7,.4-1,0-1.8-.2-2.6-.6Zm4.8-5.5c-.1-.8-.3-1.3-.7-1.7-.4-.4-.9-.5-1.6-.5-1.4,0-2.3,.7-2.5,2.2h4.8Z" />
+                            <path class="cls-1"
+                                d="M88.2,19c-.7-.4-1.2-1.1-1.6-1.8-.4-.8-.5-1.7-.5-2.6,0-1,.2-1.9,.6-2.6,.4-.8,.9-1.4,1.6-1.8,.7-.4,1.5-.7,2.4-.7s1.7,.2,2.4,.7v-3.8h2.2v13h-1.9v-.8c-.7,.7-1.7,1-2.8,1-.9,0-1.7-.2-2.4-.6Zm.5-2.9c.2,.5,.5,.9,.8,1.1,.4,.3,.8,.4,1.4,.4,.8,0,1.4-.3,1.8-.9s.6-1.3,.6-2.3-.2-1.8-.6-2.3c-.4-.6-1-.9-1.8-.9-.6,0-1,.1-1.4,.4-.4,.3-.7,.7-.9,1.1-.2,.5-.3,1-.3,1.6,.1,.8,.2,1.4,.4,1.8Z" />
+                            <path class="cls-1" d="M100.5,19.3l-4-9.7h2.3l2.7,7,2.6-7h2.2l-5.4,14h-2l1.6-4.3Z" />
+                        </g>
+                    </svg> -->
+                    YCAMD2024
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="#">Главная</a></li>
+                            <li><a href="#trusted">Партнеры</a></li>
+                            <li><a href="#intro">Вопросы</a></li>
+                            <li><a href="#pricing">Комитет</a></li>
+                            <li><a href="#cta">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <p class="kicker">Первая молодежная конференция</p>
+                    <h2 class="jumbo">Молодежная Конференция Прикладного Машинного Обучения <br> и Анализа Данных</h2>
+
+                    <h3 class="jumbo">Youth Conference on Applied Machine Learning and Data Analytics (YCAMD)</h3>
+
+                    <p>Молодежная конференция и площадка для демонстрации возможностей студентов бакалавриата,
+                        магистратуры и аспирантуры в области прикладного и фундаментального машинного обучения и
+                        анализа данных.</p>
+
+                    <a href="#" class="btn btn-primary mr-sm"><i class="fa-solid fa-user-plus" target="_blank"></i>
+                        &nbsp; Зарегистрироваться</a>
+                    <a href="https://t.me/youthscience" class="btn btn-secondary" target="_blank"><i
+                            class="fa-brands fa-telegram"></i> &nbsp; Подпишись на канал</a>
+                </div>
+
+                <div class="col-sm-4 ">
+                    <!-- <img src="https://assets.codepen.io/772926/hero.png" class="hero-img" alt=""> -->
+
+                    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+                    <div style="width: 100%; height: 550px;" class="particles" id="particles-js"></div>
+                    <script>
+                        particlesJS("particles-js", {
+                            "particles": {
+                                "number": {
+                                    "value": 150,
+                                    "density": {
+                                        "enable": true
+                                    },
+
+                                },
+                                "color": {
+                                    "value": ["#fff"]
+                                },
+                                "opacity": {
+                                    "value": 1,
+                                    "random": false,
+                                    "anim": {
+                                        "enable": true,
+                                        "speed": 1,
+                                        "opacity_min": 1,
+                                        "sync": false
+                                    }
+                                },
+                                "shape": {
+                                    "type": "circle"
+                                },
+                                "size": {
+                                    "value": 2.5,
+                                    "random": true
+                                },
+                                "line_linked": {
+                                    "enable": true
+                                },
+                                "move": {
+                                    "enable": true,
+                                    "speed": 2,
+                                    "random": true,
+                                    "direction": "none",
+                                    "straight": false
+                                }
+                            },
+                            "interactivity": {
+                                "detect_on": "canvas",
+                                "events": {
+                                    "onhover": {
+                                        "enable": true
+                                    }
+                                },
+                                "modes": {
+                                    "push": {
+                                        "particles_nb": 1
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <main>
+        <!-- Trusted -->
+
+        <section id="trusted">
+            <div class="container">
+                <div class="row d-flex items-center justify-center">
+                    <div class="col-sm-2">
+                        <a href="https://designcenter.me/">
+                            <img src="./img/dc_claster_logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a href="https://www.cbr.ru/">
+                            <img src="./img/cbr_logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a href="https://www.sberbank.com/">
+                            <img src="./img/sber_logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a href="https://www.rosseti.ru/">
+                            <img src="./img/rosseti_logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="./img/ssu_logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <a href="https://www.neoflex.ru/">
+                            <img src="./img/neoflex_logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Counter -->
+
+        <section class="clock">
+            <!-- <div id="year" class="year"></div> -->
+            <h1>До конференции осталось:</h1>
+            <div id="countdown" class="countdown">
+                <div class="time">
+                    <h2 id="days">00</h2>
+                    <p><small>Дней</small></p>
+                </div>
+                <div class="time">
+                    <h2 id="hours">00</h2>
+                    <p><small>Часов</small></p>
+                </div>
+                <div class="time">
+                    <h2 id="minutes">00</h2>
+                    <p><small>Минут</small></p>
+                </div>
+                <div class="time">
+                    <h2 id="seconds">00</h2>
+                    <p><small>Секунд</small></p>
+                </div>
+            </div>
+            <img src="https://github.com/bradtraversy/vanillawebprojects/blob/master/new-year-countdown/img/spinner.gif?raw=true"
+                alt="Loading..." id="loading" class="loading" />
+
+            <video class="video_bg" src="https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4" muted
+                loop autoplay></video>
+        </section>
+
+        <!-- Content -->
+
+        <section id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="kicker">Как присоединиться?</p>
+                        <h2>Стань участником нашей конференции.</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                        <div class="accordion">
+                            <div class="a-container">
+                                <p class="a-btn">Кто может участвовать? <span></span></p>
+                                <div class="a-panel">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non sint sequi
+                                        ipsa laudantium, a
+                                        iure rem vel nemo soluta temporibus, consectetur at corrupti aspernatur maxime,
+                                        iusto neque
+                                        blanditiis deleniti.</p>
+                                </div>
+                            </div>
+                            <div class="a-container">
+                                <p class="a-btn">Какие требования к статьям? <span></span></p>
+                                <div class="a-panel">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non sint sequi
+                                        ipsa laudantium, a
+                                        iure rem vel nemo soluta temporibus, consectetur at corrupti aspernatur maxime,
+                                        iusto neque
+                                        blanditiis deleniti.</p>
+                                </div>
+                            </div>
+                            <div class="a-container">
+                                <p class="a-btn">Сколько стоит участие? <span></span></p>
+                                <div class="a-panel">
+                                    <p>Для всех студентов <img src="./img/ssu_logo.svg"
+                                            style="width: 27px; margin-bottom: -5px;" alt=""> <i>Саратовского
+                                            национального исследовательского государственного университета имени Н.Г.
+                                            Чернышевского</i>, участие в конференции <span
+                                            class="kicker">БЕСПЛАТНО</span>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <!-- <img src="https://assets.codepen.io/772926/section-img-01.png" class="img-right" alt=""> -->
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+                        <!-- <img src="https://assets.codepen.io/772926/section-img-02.png" class="img-left" alt=""> -->
+
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="kicker">Fully Intergrated</p>
+                        <h2>Work with tools you <br>already use.</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+
+        <section id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <p class="kicker">Кто в комитете?</p>
+                        <h2>Состав программного и организационного комитета</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <div class="row mt-lg">
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/zaharov.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/zaharov-andrey-mihaylovich">Захаров Андрей
+                                        Михайлович</a></h2>
+                                <p class="team-member-role">Декан ф-та Мех-Мат, к.ф.-м.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/mironov.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/mironov-sergey-vladimirovich">Миронов Сергей
+                                        Владимирович</a></h2>
+                                <p class="team-member-role">Декан ф-та КНиИТ, к.ф.-м.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/sidorov.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/sidorov-sergey-petrovich">Сидоров Сергей
+                                        Петрович</a></h2>
+                                <p class="team-member-role">Заведующий каф. ТФиСА, д.ф.-м.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/andreychenko.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/andreychenko-dmitriy-konstantinovich">Андрейченко
+                                        Дмитрий Константинович</a></h2>
+                                <p class="team-member-role">Профессор каф. МОВКиИС, д.ф.-м.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/balash.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/balash-vladimir-alekseevich">Балаш Владимир
+                                        Алексеевич</a></h2>
+                                <p class="team-member-role">Профессор, д.э.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/kozyukin.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a href="https://designcenter.me/team">Козюкин Денис
+                                        Борисович</a></h2>
+                                <p class="team-member-role">Генеральный директор Креативного Кластера «Дизайн Центр»</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/korotkovskaya.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/korotkovskaya-elena-viktorovna">Коротковская
+                                        Елена Викторовна</a></h2>
+                                <p class="team-member-role">Доцент каф. ЭТиНЭ, к.э.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="https://dummyimage.com/84x84/edf2f7/a5afbd">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name">Henry Letham</h2>
+                                <p class="team-member-role">CTO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 team-member">
+                        <div class="team-member-inner">
+                            <img alt="team" class="team-member-image" src="./img/team/melnichuk.jpg">
+                            <div class="team-member-details">
+                                <h2 class="team-member-name"><a
+                                        href="https://www.sgu.ru/person/melnichuk-dmitriy-vadimovich">Мельничук Дмитрий
+                                        Вадимович</a></h2>
+                                <p class="team-member-role">Доцент каф. ТФиСА, к.ф.-м.н.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="row mt-lg">
+                    <div class="col-sm-4">
+                        <div class="card text-center">
+                            <h3>Starter</h3>
+                            <p class="mb-sm">Best option for personal use & for your next project.</p>
+
+                            <div class="card-price">
+                                <span class="price">£29</span>
+                                <span class="term">/month</span>
+                            </div>
+
+                            <ul role="list">
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Individual configuration</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>No setup, or hidden fees</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Team size: <span class="font-semibold color-black">1 developer</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Premium support: <span class="font-semibold color-black">6
+                                            months</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Free updates: <span class="font-semibold color-black">6 months</span></span>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="btn btn-primary full-width">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card text-center">
+                            <h3>Company</h3>
+                            <p class="mb-sm">Relevant for multiple users, extended & premium support.</p>
+
+                            <div class="card-price">
+                                <span class="price">£99</span>
+                                <span class="term">/month</span>
+                            </div>
+
+                            <ul role="list">
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Individual configuration</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>No setup, or hidden fees</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Team size: <span class="font-semibold color-black">10 developer</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Premium support: <span class="font-semibold color-black">24
+                                            months</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Free updates: <span class="font-semibold color-black">24 months</span></span>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="btn btn-primary full-width">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card text-center">
+                            <h3>Enterprise</h3>
+                            <p class="mb-sm">Best for large scale uses and extended redistribution rights.</p>
+
+                            <div class="card-price">
+                                <span class="price">£299</span>
+                                <span class="term">/month</span>
+                            </div>
+
+                            <ul role="list">
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Individual configuration</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>No setup, or hidden fees</span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Team size: <span class="font-semibold color-black">100+
+                                            developers</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Premium support: <span class="font-semibold color-black">36
+                                            months</span></span>
+                                </li>
+                                <li>
+
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Free updates: <span class="font-semibold color-black">36 months</span></span>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="btn btn-primary full-width color-black">Get Started</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2>Подать заявку на участие</h2>
+
+                        <p>Успей подать свою статью и принять участие в YCAMD 2024.</p>
+
+                        <a href="#" class="btn btn-primary">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- <h3>Company</h3>
+
+                    <ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Brand Center</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="col-sm-3">
+                    <!-- <h3>Help Center</h3>
+
+                    <ul>
+                        <li>
+                            <a href="#">Discord Server</a>
+                        </li>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="col-sm-3">
+                    <!-- <h3>Legal</h3>
+
+                    <ul>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms</a>
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="col-sm-3">
+
+                    <!-- <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" class="logo"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.3 27.2">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #fff;
+                                }
+
+                                .cls-2 {
+                                    fill: none;
+                                    stroke: #fa496e;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 7px;
+                                }
+
+                                .cls-3 {
+                                    isolation: isolate;
+                                }
+                            </style>
+                        </defs>
+                        <circle class="cls-2" cx="13.6" cy="13.6" r="10.1" />
+                        <g class="cls-3">
+                            <path class="cls-1"
+                                d="M38.2,6.4h5.4c.4,0,.7,0,1,.1,1.1,.1,1.9,.6,2.4,1.3,.6,.7,.8,1.7,.8,2.8,0,.9-.2,1.7-.6,2.3s-.9,1.2-1.6,1.5l2.4,4.9h-2.5l-2.2-4.5h-3.1v4.5h-2.2V6.4h.2Zm5.2,6.4c.3,0,.6,0,.8-.1,.5-.1,.9-.4,1.1-.8,.2-.4,.3-.8,.3-1.3s-.1-.9-.3-1.3c-.2-.4-.6-.7-1.1-.8-.2-.1-.5-.1-.8-.1h-3.1v4.4s3.1,0,3.1,0Z" />
+                        </g>
+                        <g class="cls-3">
+                            <path class="cls-1"
+                                d="M51.5,19c-.8-.4-1.3-1-1.8-1.8-.4-.8-.6-1.6-.6-2.6s.2-2,.6-2.8c.4-.8,1-1.4,1.7-1.8,.8-.4,1.6-.6,2.6-.6,.9,0,1.7,.2,2.4,.6,.7,.4,1.2,1,1.6,1.8,.4,.8,.5,1.7,.5,2.7v.6h-7c.1,.8,.3,1.4,.8,1.8,.4,.4,1,.6,1.7,.6,.5,0,1-.1,1.4-.4,.4-.2,.7-.6,.9-1l2.1,.6c-.2,.6-.6,1.1-1,1.5s-.9,.7-1.5,1c-.6,.2-1.2,.3-1.8,.3-1,.1-1.8-.1-2.6-.5Zm4.8-5.5c-.1-.8-.3-1.3-.7-1.7s-.9-.5-1.6-.5c-1.4,0-2.3,.7-2.5,2.2h4.8Z" />
+                            <path class="cls-1"
+                                d="M71.3,11.9c-.3-.4-.8-.6-1.3-.6-.3,0-.7,.1-.9,.2s-.5,.4-.7,.7-.2,.7-.2,1.1v6h-2.2v-5.9c0-.7-.2-1.2-.5-1.6-.3-.4-.8-.6-1.3-.6-.4,0-.7,.1-1,.3s-.5,.4-.6,.7-.2,.7-.2,1.1v6h-2.2V9.6h1.8v1.1c.3-.4,.7-.7,1.2-1,.5-.2,1-.3,1.6-.3,.7,0,1.2,.1,1.7,.4,.5,.3,.9,.7,1.1,1.1,.3-.5,.7-.9,1.2-1.1,.5-.3,1.1-.4,1.7-.4,.7,0,1.3,.1,1.8,.4s.9,.7,1.1,1.2c.3,.5,.4,1.1,.4,1.8v6.5h-2.2v-5.9c.2-.6,0-1.1-.3-1.5Z" />
+                            <path class="cls-1"
+                                d="M77.8,19c-.8-.4-1.3-1-1.8-1.8-.4-.8-.6-1.6-.6-2.6s.2-2,.6-2.8,1-1.4,1.7-1.8c.7-.4,1.6-.6,2.5-.6s1.7,.2,2.4,.6c.7,.4,1.2,1,1.6,1.8s.5,1.7,.5,2.7v.6h-7c.1,.8,.3,1.4,.8,1.8s1,.6,1.7,.6c.5,0,1-.1,1.4-.4,.4-.2,.7-.6,.9-1l2.1,.6c-.2,.6-.6,1.1-1,1.5s-.9,.7-1.5,1c-.5,.3-1.1,.4-1.7,.4-1,0-1.8-.2-2.6-.6Zm4.8-5.5c-.1-.8-.3-1.3-.7-1.7-.4-.4-.9-.5-1.6-.5-1.4,0-2.3,.7-2.5,2.2h4.8Z" />
+                            <path class="cls-1"
+                                d="M88.2,19c-.7-.4-1.2-1.1-1.6-1.8-.4-.8-.5-1.7-.5-2.6,0-1,.2-1.9,.6-2.6,.4-.8,.9-1.4,1.6-1.8,.7-.4,1.5-.7,2.4-.7s1.7,.2,2.4,.7v-3.8h2.2v13h-1.9v-.8c-.7,.7-1.7,1-2.8,1-.9,0-1.7-.2-2.4-.6Zm.5-2.9c.2,.5,.5,.9,.8,1.1,.4,.3,.8,.4,1.4,.4,.8,0,1.4-.3,1.8-.9s.6-1.3,.6-2.3-.2-1.8-.6-2.3c-.4-.6-1-.9-1.8-.9-.6,0-1,.1-1.4,.4-.4,.3-.7,.7-.9,1.1-.2,.5-.3,1-.3,1.6,.1,.8,.2,1.4,.4,1.8Z" />
+                            <path class="cls-1" d="M100.5,19.3l-4-9.7h2.3l2.7,7,2.6-7h2.2l-5.4,14h-2l1.6-4.3Z" />
+                        </g>
+                    </svg> -->
+
+                    YCAMD2024
+                    <ul class="social">
+                        <li>
+                            <a href="https://t.me/youthscience">
+                                <i class="w-5 h-5 fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.sgu.ru/conference/ycamd-2024">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:#">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p>Cайт разработан: <a href="https://mlabs.space/"
+                            style="color: white; text-decoration: none;">mlabs.space</a></p>
+
+                    <p><small>© YCAMD 2024™</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- partial -->
+    <script src="./script.js"></script>
+    <script src="./countdown.js"></script>
+
+</body>
+
+</html>
