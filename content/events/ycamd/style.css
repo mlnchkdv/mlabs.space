@@ -459,7 +459,7 @@ header #navbar .logo {
 
 #cta {
     background: #f9fafb;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 #waves {
@@ -676,13 +676,23 @@ footer .logo {
     width: 100%
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .particles {
         display: none;
     }
 }
 
-@media(min-width: 768px) {
+/* @media (min-device-width: 376px) and (max-device-width: 668px) { */
+@media (max-device-width: 668px) {
+    /* .container {
+        font-size: 3em;
+    } */
+    .particles {
+        display: none;
+    }
+}
+
+@media(min-width: 778px) {
     .container {
         max-width: 750px
     }
