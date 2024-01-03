@@ -1684,6 +1684,10 @@ footer .logo {
     text-align: center
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .text-left {
     text-align: left
 }

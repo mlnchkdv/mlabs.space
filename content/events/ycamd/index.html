@@ -111,16 +111,19 @@
 
         @media screen and (max-device-width: 376px) {
             #hero {
-                padding: 20px; /* Уменьшение отступов */
-                height: 100vh; /* Растягиваем на всю высоту вьюпорта */
-                font-size: 2rem; /* Увеличиваем размер шрифта */
+                padding: 20px;
+                /* Уменьшение отступов */
+                height: 100vh;
+                /* Растягиваем на всю высоту вьюпорта */
+                font-size: 2rem;
+                /* Увеличиваем размер шрифта */
             }
 
             #navbar {
                 padding-top: 0rem;
             }
 
-            #hero .container { 
+            #hero .container {
                 margin-top: 3.5rem;
             }
 
@@ -184,6 +187,18 @@
                 font-size: 2rem;
                 margin: 15px 0;
             }
+
+            main h2 {
+                font-size: 3rem;
+            }
+
+            main p {
+                font-size: 1.7rem;
+            }
+
+            .a-btn {
+                font-size: 1.5rem !important;
+            }
         }
     </style>
 </head>
@@ -199,15 +214,15 @@
                     YCAMD2024
                     <input type="checkbox" id="burger-toggle" class="burger-checkbox">
                     <label for="burger-toggle" class="burger-icon">☰</label>
-                        <nav class="burger-menu">
-                            <ul>
-                                <li class="active"><a href="#">Главная</a></li>
-                                <li><a href="#trusted">Партнеры</a></li>
-                                <li><a href="#intro">О нас</a></li>
-                                <li><a href="#pricing">Комитет</a></li>
-                                <li><a href="#cta">Контакты</a></li>
-                            </ul>
-                        </nav>
+                    <nav class="burger-menu">
+                        <ul>
+                            <li class="active"><a href="#">Главная</a></li>
+                            <li><a href="#trusted">Партнеры</a></li>
+                            <li><a href="#intro">О нас</a></li>
+                            <li><a href="#pricing">Комитет</a></li>
+                            <li><a href="#cta">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -302,7 +317,8 @@
         <!-- Trusted -->
         <section id="trusted">
             <div class="container">
-                <div class="row d-flex items-center justify-center"> <!-- d-flex -->
+                <div class="row d-flex items-center justify-center">
+                    <!-- d-flex -->
                     <div class="col-md-2 col-sm-2">
                         <a href="https://designcenter.me/">
                             <img src="./img/dc_claster_logo.svg" alt="">
@@ -378,7 +394,7 @@
         <section id="intro">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12 col-md-6">
                         <p class="kicker">Как присоединиться?</p>
                         <h2>Стань участником нашей конференции.</h2>
 
@@ -421,7 +437,7 @@
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <!-- <img src="https://assets.codepen.io/772926/section-img-01.png" class="img-right" alt=""> -->
 
 
@@ -435,13 +451,13 @@
                 <div class="row">
 
 
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <!-- <img src="https://assets.codepen.io/772926/section-img-02.png" class="img-left" alt=""> -->
 
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-12 col-md-6">
                         <p class="kicker">Fully Intergrated</p>
                         <h2>Work with tools you <br>already use.</h2>
 
@@ -460,11 +476,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <p class="kicker">Кто в комитете?</p>
+                        <p class="kicker">Кто организатор?</p>
                         <h2>Состав программного и организационного комитета</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <!-- <p class="text-justify">Состав программного и организационного комитета включает в себя лучших сотрудников
+                            университета. Эти профессионалы не только отличаются высоким уровнем экспертизы в области
+                            машинного обучения и анализа данных, но и являются академическим ядром организации.
+                            Благодаря их знаниям и опыту, комитет обеспечивает эффективную организацию и качественную
+                            программу конференции.</p> -->
                     </div>
                 </div>
 
@@ -779,7 +798,7 @@
                     <div class="col-sm-12 text-center">
                         <h2>Подать заявку на участие</h2>
 
-                        <p>Успей подать свою статью и принять участие в YCAMD 2024.</p>
+                        <p>Успей подать свою статью и принять участие в YCAMD2024.</p>
 
                         <a href="#" class="btn btn-primary">Регистрация</a>
                     </div>
