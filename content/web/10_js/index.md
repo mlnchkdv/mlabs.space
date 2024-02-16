@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: Введение в JavaScript
-description: Цифровой дизайн в проектировании информационных ресурсов
+description: Введение в JavaScript, структура кода, переменные, типы данных.
 author: MLabs
 authorLink: null
 date: 2024-02-01T14:48:57.920Z
