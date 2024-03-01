@@ -18,6 +18,8 @@ draft: false
 
 # <div style="text-align: center;">Анализ интернет-данных</div>
 
+[Google Trends](https://trends.google.ru/trends/)
+
 {{< admonition info "Задание 1:" false >}}
 
 ### Анализ Трендов Потребительского Спроса с Использованием Интернет-Данных
@@ -50,6 +52,8 @@ draft: false
 
 {{< /admonition >}}
 
+[Rosstat](https://showdata.gks.ru/finder/)
+
 {{< admonition info "Задание 2:" >}}
 
 ### Анализ и интерпретация данных от [Федеральной службы государственной статистики России](https://rosstat.gov.ru/statistic) для решения экономических задач
@@ -57,11 +61,11 @@ draft: false
 **Цели задания:**
 
 1. Развитие навыков аналитической работы с данными.
-2. Знакомство с платформой [rosstat.gov.ru](https://rosstat.gov.ru/statistic), загрузка и экономическая интерпретация данных.
+2. Знакомство с платформой [rosstat.gov.ru](https://rosstat.gov.ru/statistic) и [showdata.gks.ru](https://showdata.gks.ru/finder/), загрузка и экономическая интерпретация данных.
 
 **Задачи**:
 
-- Посетите официальный сайт Федеральной службы государственной статистики России (Rosstat) по адресу [https://rosstat.gov.ru/statistic](https://rosstat.gov.ru/statistic).
+- Посетите официальный сайт Федеральной службы государственной статистики России (Rosstat) по адресу [https://rosstat.gov.ru/statistic](https://rosstat.gov.ru/statistic) и официальный инструмент называемый – Витрина данный по адресу https://showdata.gks.ru/finder/.
 
 - Выберите один из разделов на сайте, например посвященный демографической статистике, внешняя торговля, муниципальная статистика, рынок труда и т.д.
 
@@ -141,5 +145,11 @@ draft: false
 - Точность и актуальность собранных данных.
 - Глубина и логичность аналитического разбора данных.
 - Качество и ясность презентации результатов анализа.
+
+{{< /admonition >}}
+
+[GDELT](../gdelt)
+
+{{< admonition info "Задание 3:" false >}}
 
 {{< /admonition >}}
