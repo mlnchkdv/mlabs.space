@@ -90,9 +90,9 @@ https://api.gdeltproject.org/api/v2/summary/summary?d=iatv&t=summary&k=%28ukrain
 
 #### Режим запросов
 
-- **Поисковой запрос** (*Search term*) – используются слова и фразы на Анлийском языке, даже в случае поиска контента не связанного с английским языком, будет автоматически переведен с английского на исходные языки (*source languages*). Фразы следует заключать в "двойные кавычки". Spaces outside quotes are interpreted as AND. Boolean is supported, so you can search for  <a href="https://gdelt.github.io/#api=geo&query=(missile OR nuclear)&geolocationcc=KN&geomode=PointData&geotimespan=7d">(x OR y)</a> or <a href="https://gdelt.github.io/#api=doc&query="World Cup" -football&sourcelang=eng&contentmode=ArtList&maxrecords=75&timespan=1m">x - y (NOT y)</a>. There are also two powerful special search functions that can help to find the right content:
-    - **near:** articles that feature two words within *n* words of each other - e.g. **near5:"climate emergency"** <a href="https://gdelt.github.io/#api=doc&query=near5:"climate emergency"&timelinemode=TimelineVol&timelinesmooth=0&timespan=1w">(example)</a>
-    - **repeat:** articles that feature a word a minimum of *n* times (max 5) - e.g. **repeat3:"climate"** <a href="https://gdelt.github.io/#api=doc&query=repeat3:"climate"&contentmode=ArtList&maxrecords=75&timespan=1w">(example)</a>
+- **Поисковой запрос** (*Search term*) – используются слова и фразы на Анлийском языке, даже в случае поиска контента не связанного с английским языком, будет автоматически переведен с английского на исходные языки (*source languages*). Фразы следует заключать в "двойные кавычки". Spaces outside quotes are interpreted as AND. Boolean is supported, so you can search for  <a href="https://gdelt.github.io/#api=geo&query=(missile OR nuclear)&geolocationcc=KN&geomode=PointData&geotimespan=7d">(x OR y)</a> or <a href="https://gdelt.github.io/#api=doc&query=%22World%20Cup%22%20-football&sourcelang=eng&contentmode=ArtList&maxrecords=75&timespan=1m%22%3Ex%20-%20y%20(NOT%20y)">(x NOT y)</a>. There are also two powerful special search functions that can help to find the right content:
+    - **near:** articles that feature two words within *n* words of each other - e.g. **near5:"climate emergency"**: https://gdelt.github.io/#api=doc&query=near5:%22climate%20emergency%22&timelinemode=TimelineVol&timespan=1w
+    - **repeat:** articles that feature a word a minimum of *n* times (max 5) - e.g. **repeat3:"climate"**: https://gdelt.github.io/#api=doc&query=repeat3:%22climate%22&contentmode=ArtList&maxrecords=75&timespan=1w
 - **Image tags** - images within content are processed using deep learning algorithms to identify features and text they contain. Search for available tags in the dialogue box <a href="https://gdelt.github.io/#api=doc&query=&imagetag=military vehicle,tank,self propelled artillery&sourcecountry=UP&contentmode=ImageCollageInfo&maxrecords=75&timespan=1w">(example)</a>
 - **Themes** - content is interpreted and linked to 'themes' reflecting its subject matter, which you can search by. Themes are based on GDELT's [Global Knowledge Graph](https://blog.gdeltproject.org/gdelt-global-knowledge-graph/) (GKG).
 - **Source countries** - countries of content origin. Choose up to ~7 - current implementation interprets these as (tag1 OR tag2)
@@ -199,22 +199,40 @@ timeline
 ## References
 
 [1] [gdeltproject.org](https://www.gdeltproject.org/) – сайт проекта.
+
 [2] [blog.gdeltproject.org](https://blog.gdeltproject.org/) – блог проекта. 
+
 [3] [analysis.gdeltproject.org](https://analysis.gdeltproject.org/) – набор инструментов и сервисов   для визуализации, исследования и экспорта данных из базы данных GDELT.
+
 [4] [gdelt.github.io](https://gdelt.github.io/) – упрощенный web-интерфейс GDELT api.
+
 [5] [api.gdeltproject.org/api/v2/summary](https://api.gdeltproject.org/api/v2/summary/summary?d=iatv) – web-интерфейс GDELT Summary. 
+
 [6] [blog.gdeltproject.org/web-ngrams-3-0-tutorials-roundup](https://blog.gdeltproject.org/web-ngrams-3-0-tutorials-roundup/) – серия учебных пособий, демонстрирующих, возможности GDELT Web News NGrams 3.0. 
+
 [7] [blog.gdeltproject.org/gdelt-doc-2-0-api-debuts](https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/) – документация GDELT Doc.
+
 [8] [blog.gdeltproject.org/gdelt-geo-2-0-api-debuts](https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/) – документация GDELT Geo.
+
 [9] [blog.gdeltproject.org/gdelt-2-0-television-api-debuts](https://blog.gdeltproject.org/gdelt-2-0-television-api-debuts/) – документация GDELT TV.
+
 [10] [archive.org/details/tv](https://archive.org/details/tv) – архив телевизионных новостей. 
+
 [11] [blog.gdeltproject.org/announcing-the-gdelt-context-2-0-api](https://blog.gdeltproject.org/announcing-the-gdelt-context-2-0-api/) – API Context c поддержкой до 72 часов скользящего окна.
+
 [12] [github.com/alex9smith/gdelt-doc-api](https://github.com/alex9smith/gdelt-doc-api) – Python клиент для доступа к данным GDELT Doc.
+
 [[13](https://cyberleninka.ru/article/n/analiz-bolshih-obemov-dannyh-vozmozhnosti-gdelt-project-pri-ispolzovanii-yazyka-programmirovaniya-python-opyt-gumanitariya)] *Ярцева Н. В. –  Анализ больших объемов данных: возможности GDELT project при использовании языка программирования Python. Опыт гуманитария, решившего постичь Big Data // Мониторинг. 2021. №1.*
+
 [14] [habr.com/ru/post/224647](https://habr.com/ru/post/224647/) – одно из первых упоминаний о GDELT в российском сегменте (30 мая 2014).
+
 [[15](https://swan-swan.ru/articles/nauka/banki-informacii-i-bazy-otkrytyh-dannyh-opyt-gdelt/)] Перевод оригинальной статьи [Forbs](https://www.forbes.com/sites/kalevleetaru/2018/11/24/seeing-the-world-through-the-eyes-of-others-mass-machine-translation/?sh=4b33cb542c8a) о возможностях GDELT после большого обновления (24 ноября 2018).
+
 [16] [github.com/jdrumgoole/gdelttools](https://github.com/jdrumgoole/gdelttools) –  инструмент для загрузки данных из GDELT в MongoDB, доступен под [Python](https://pypi.org/project/gdelttools/0.5a17/).
+
 [17] [github.com/abresler/gdeltr2](https://github.com/abresler/gdeltr2) – клиент для доступа к базам GDELT на языке R.
+
+
 
 <script>   
     document.querySelectorAll("img").forEach((item, index, arr) => {
