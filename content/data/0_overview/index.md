@@ -311,9 +311,113 @@ draft: false
 
 ## VK
 
-{{< admonition tip "Дополнительный материал" false >}}
+{{< admonition tip "Генерация токена доступа для VK" false >}}
 
+Для генерация `access token` необходимо перейти на сайт https://vkhost.github.io/ нажать на `Настройки »`, далее выбрать пункты `Стена` и `Доступ в любое время`, после чего нажать на кнопку `Получть`:
 
+![](./img/vkhost_github_io.png " ")
+
+На следующем шаге появляется запрос на разрешение к доступу к вашему аккаунту, которое следует подтвердить нажав на кнопку `Разрешить`:
+
+![](./img/vk_access.png " ")
+
+![](./img/vk_oauth.png " ")
+
+Далее появится окно с уникальным URL-ом, который необходимо сохранить в отдельное место. Примерный вид такого URL адреса: https://oauth.vk.com/blank.html#access_token=vk1.a.xISBqUFd_SDo-DwPkrvBrfU03mkeHrZxo1t-7F7MmOdfVpXcdegTq7ZvOHjY4qDaWqlnUqaFrhgeFWB7m5Rp8O7QBjiDB0fMZHGwksR2ePLlCCPdyBquYbGj7WA07pEL7-f0E60gYneg-ANWq0pCPF4QOOM9n6f7oADZWgo6sJKPj-L_nIvDaWMubuF2zLqJEdkEGA&expires_in=86400&user_id=888827370
+
+Как вы видите URL состоит из нескольких частей разделенные знаком `&`:
+
+- `access_token=`
+- `expires_in=`
+- `user_id=`
+
+Нам для дальнейшей работы необходим только длинный ключ который находится между `access_token=` и `&expires_in=`, в нашем примере это: vk1.a.xISBqUF…LqJEdkEGA. Скопируйте и вставьте в код ниже, в переменную `access_token = "your_token"`.
+
+{{< /admonition >}}
+
+{{< admonition tip "Програмная реализация" false >}}
+
+Прежде чем запускать код ниже, не забудьте скопировать и заменить в переменной `access_token = "your_token"` на ваш токен.
+
+```python
+import requests
+import json
+import pandas as pd
+import datetime
+import time
+from tqdm import tqdm
+
+def get_unixtime_from_datetime(date_time):
+    return str(time.mktime(date_time.timetuple()))
+
+def get_vk_newsfeed(query, start_time, end_time):
+    df = pd.DataFrame()
+
+    access_token = "your_token"
+    q = query
+    count = "200"
+
+    start_time = datetime.datetime.strptime(start_time, "%Y-%m-%d").date()
+    end_time = datetime.datetime.strptime(end_time, "%Y-%m-%d").date()
+
+    delta = datetime.timedelta(days=30)
+    start_delta_time = start_time
+    end_delta_time = start_time + delta
+
+    n_days = int((end_time - start_time).days)
+    pbar = tqdm(desc="Progress", total=n_days, leave=False)
+
+    while end_delta_time <= end_time:
+        url = str(
+            "https://api.vk.com/method/newsfeed.search?q="
+            + q
+            + "&count="
+            + count
+            + "&access_token="
+            + access_token
+            + "&start_time="
+            + get_unixtime_from_datetime(start_delta_time)
+            + "&end_time="
+            + get_unixtime_from_datetime(end_delta_time)
+            + "&v=5.131"
+        )
+
+        res = requests.get(url)
+        text = res.text
+        json_text = json.loads(text)
+
+        df = pd.concat([df, pd.json_normalize(json_text['response'], record_path =['items'])])
+
+        start_delta_time += delta
+        end_delta_time += delta
+
+        time.sleep(3)
+        pbar.update(30)
+
+    return df
+
+vk_df = get_vk_newsfeed(query = "%23советскийкосмос", start_time = "2022-01-01", end_time = "2023-12-31")
+vk_df = vk_df[['id', 'date', 'owner_id', 'short_text_rate', 'text', 'comments.count', 'likes.count', 'reposts.count', 'views.count', 'attachments']]
+vk_df['date'] = pd.to_datetime(vk_df['date'], unit='s')
+vk_df.to_csv("vk_data.csv")
+```
+
+В примере выше загружаются и сохраняются в файл `vk_data.csv` содержимое всех постов и информации о них за период c `2022-01-01` по `2023-12-31` содержащих ключевое слово `#советскийкосмос`, символ `#` в запросе заменяется [кодом ACSII](https://wm-school.ru/html/html_url_acsii.html) `%23`.
+
+Вы можете менять период и ключевые слова на своё усмотрение, в том числе загружать данные нетолько по хэштегам (как в примере выше), но и просто по ключевому слову или словам (в таком случае достаточно использовать код пробела `%20`, тогда запрос будте выглядеть следующим образом: `ЕГЭ%20Математика%20график%20функции`).
+
+Таким образом вы получите таблицу содержащую следующую информацию:
+
+- `id` – уникальный порядковый номер поста в рамках стены или сообщества источника;
+- `date` – дата публикации поста;
+- `owner_id` – уникальный идентификатор автора поста, причем если число начинается со знака минус `-`, это означает что источником служит сообщество, в противном случае источник это стена пользрвателя;
+- `short_text_rate` – коэффициент длины поста;
+- `text` – текст поста;
+- `comments.count` – количество комментариев;
+- `likes.count` – количесвто лайков;
+- `reposts.count` – количество репостов;
+- `views.count` – количесвто просмотров;
+- `attachments` – прикрепленные файлы к посту (фото, видео и т.д).
 
 {{< /admonition >}}
 
@@ -405,3 +509,4 @@ draft: false
   - Изучение активности и предпочтений потребителей в социальных сетях.
 
 {{< /admonition >}}
+
