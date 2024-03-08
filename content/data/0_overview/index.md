@@ -309,7 +309,7 @@ draft: false
 
 ## VK
 
-{{< admonition tip "Генерация токена доступа для VK" false >}}
+{{< admonition warning "Генерация токена доступа для VK" false >}}
 
 Для генерация `access token` необходимо перейти на сайт https://vkhost.github.io/ нажать на `Настройки »`, далее выбрать пункты `Стена` и `Доступ в любое время`, после чего нажать на кнопку `Получть`:
 
@@ -333,7 +333,7 @@ draft: false
 
 {{< /admonition >}}
 
-{{< admonition tip "Програмная реализация" false >}}
+{{< admonition success "Програмная реализация" false >}}
 
 Прежде чем запускать код ниже, не забудьте скопировать и заменить в переменной `access_token = "your_token"` на ваш токен.
 
@@ -483,7 +483,7 @@ vk_df.to_csv("vk_data.csv")
 
 {{< /admonition >}}
 
-{{< admonition tip "Методики" false >}}
+{{< admonition note "Методики" false >}}
 
 Методики и источники данных:
 
@@ -535,7 +535,7 @@ vk_df.to_csv("vk_data.csv")
 
 {{< /admonition >}}
 
-{{< admonition success "План исследования" false >}}
+{{< admonition abstract "План исследования" false >}}
 
 Предлагаемый план исследования рынка обоев, красок, ковров и услуг дизайнеров и мастеров в России:
 
