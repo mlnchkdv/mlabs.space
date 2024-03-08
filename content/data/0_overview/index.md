@@ -331,7 +331,7 @@ draft: false
 - `expires_in=`
 - `user_id=`
 
-Нам для дальнейшей работы необходим только длинный ключ который находится между `access_token=` и `&expires_in=`, в нашем примере это: vk1.a.xISBqUF…LqJEdkEGA. Скопируйте и вставьте в код ниже, в переменную `access_token = "your_token"`.
+Нам для дальнейшей работы необходим только длинный ключ который находится между `access_token=` и `&expires_in=`, в нашем примере это: `vk1.a.xISBqUF…LqJEdkEGA`. Скопируйте и вставьте в код ниже, в переменную `access_token = "your_token"`.
 
 {{< /admonition >}}
 
@@ -360,6 +360,7 @@ def get_vk_newsfeed(query, start_time, end_time):
     start_time = datetime.datetime.strptime(start_time, "%Y-%m-%d").date()
     end_time = datetime.datetime.strptime(end_time, "%Y-%m-%d").date()
 
+    # шаг дельта равен 30 дням, если у вас очень популярный запрс (превышающий 200 постов в месяц), то уменьшите до 1 дня
     delta = datetime.timedelta(days=30)
     start_delta_time = start_time
     end_delta_time = start_time + delta
@@ -390,8 +391,10 @@ def get_vk_newsfeed(query, start_time, end_time):
 
         start_delta_time += delta
         end_delta_time += delta
-
+		
+        # ожидание 3 секунды между запросами
         time.sleep(3)
+        # если вы смените шаг на 1 день, то заменить значение ниже также на 1
         pbar.update(30)
 
     return df
