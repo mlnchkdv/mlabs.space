@@ -36,9 +36,9 @@ draft: false
 
 - [:(fa-brands fa-codepen): Page with static banner](https://codepen.io/mlnchkdv/pen/PogZMZa)
 
-    <iframe height="450" style="width: 100%;" scrolling="no" title="Page with flex  content" src="https://codepen.io/mlnchkdv/embed/qBwbeRr?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-      See the Pen <a href="https://codepen.io/mlnchkdv/pen/qBwbeRr">
-      Page with flex  content</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Page with static banner" src="https://codepen.io/mlnchkdv/embed/PogZMZa?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/PogZMZa">
+      Page with static banner</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
       on <a href="https://codepen.io">CodePen</a>.
     </iframe>
 
