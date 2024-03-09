@@ -106,3 +106,13 @@ draft: false
       on <a href="https://codepen.io">CodePen</a>.
     </iframe>
 
+## Примеры динамичных элементов
+
+- [:(fa-brands fa-codepen): Page with light/dark mode and animated circles in the background](https://codepen.io/mlnchkdv/pen/vYMGEmd)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="html page with light/dark mode, animated circles in the background" src="https://codepen.io/mlnchkdv/embed/vYMGEmd?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/vYMGEmd">
+      html page with light/dark mode, animated circles in the background</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
