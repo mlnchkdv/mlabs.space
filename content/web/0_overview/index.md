@@ -16,7 +16,7 @@ toc:
 draft: false
 ---
 
-# <div style="text-align: center;">Современной Web-дизайн в профессиональной деятельности</div>
+# <div style="text-align: center;">Современный Web-дизайн в профессиональной деятельности</div>
 
 <!--
 {{< admonition info "Достижения 311:" false >}}
