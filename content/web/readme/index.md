@@ -20,9 +20,9 @@ draft: false
 
 2. Если вашей командой было выбрано создание лэндинга для одного из приложений:
 
-    <img src="../files/ИИС_защиты_images_Page1.jpg" alt="1 Блок проектов" style="zoom:50%;" />
+    <img src="../files/ИИС_защиты_images_Page1.jpg" alt="1 Блок проектов" style="zoom:35%;" />
 
-    <img src="../files/ИИС_защиты_images_Page2.jpg" alt="2 Блок проектов" style="zoom:50%;" />
+    <img src="../files/ИИС_защиты_images_Page2.jpg" alt="2 Блок проектов" style="zoom:35%;" />
 
     То ознакомьтесь с презентацией проекта [часть 1](https://cloud.mail.ru/public/LKfg/U38MgwQ8G) и [часть 2](https://cloud.mail.ru/public/v8Kf/o8pqZe6ra).
 
