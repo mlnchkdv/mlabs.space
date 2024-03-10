@@ -116,3 +116,27 @@ draft: false
       on <a href="https://codepen.io">CodePen</a>.
     </iframe>
 
+- [:(fa-brands fa-codepen): Simple dark mode](https://codepen.io/mlnchkdv/pen/BaEKyYM)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Simple Dark Mode" src="https://codepen.io/mlnchkdv/embed/BaEKyYM?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/BaEKyYM">
+      Simple Dark Mode</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
+- [:(fa-brands fa-codepen): Portfolio page](https://codepen.io/mlnchkdv/pen/wvZGByO)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Portfolio page" src="https://codepen.io/mlnchkdv/embed/wvZGByO?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/wvZGByO">
+      Portfolio page</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
+- [:(fa-brands fa-codepen): Simple tab menu](https://codepen.io/mlnchkdv/pen/BaEKyrM)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="JavaScript - Tab Menu" src="https://codepen.io/mlnchkdv/embed/BaEKyrM?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/BaEKyrM">
+      JavaScript - Tab Menu</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
