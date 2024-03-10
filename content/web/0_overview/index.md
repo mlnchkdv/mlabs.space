@@ -18,6 +18,7 @@ draft: false
 
 # <div style="text-align: center;">Современной Web-дизайн в профессиональной деятельности</div>
 
+<!--
 {{< admonition info "Достижения 311:" false >}}
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=1746296934&amp;range=B1:M30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
@@ -53,8 +54,13 @@ draft: false
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=1852629622&amp;range=B1:M30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
 
 {{< /admonition >}}
+-->
 
+{{< admonition info "Список команд и проектов" false >}}
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsl8LdmmLkenLGnmBlbU9fEJZrBnvWMvzNXE2da45Bx02sz5SAn63A9BCvlGdkGT9zBhFE4fZlT2_j/pubhtml?gid=0&amp;range=A1:F121&single=true&widget=false&chrome=false&headers=false" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+
+{{< /admonition >}}
 
 ## Семестр 1 (HTML&CSS)
 
