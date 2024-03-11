@@ -78,7 +78,7 @@ draft: false
 **Цели задания:**
 
 1. Развитие навыков аналитической работы с данными.
-2. Знакомство с платформой [rosstat.gov.ru](https://rosstat.gov.ru/statistic) и [showdata.gks.ru](https://showdata.gks.ru/finder/), загрузка и экономическая интерпретация данных.
+2. Знакомство с платформой [rosstat.gov.ru](https://rosstat.gov.ru/statistic), [showdata.gks.ru](https://showdata.gks.ru/finder/) и [customs.gov.ru/statistic](https://customs.gov.ru/statistic), загрузка и экономическая интерпретация данных.
 
 **Задачи**:
 
