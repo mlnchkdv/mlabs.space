@@ -140,3 +140,26 @@ draft: false
       on <a href="https://codepen.io">CodePen</a>.
     </iframe>
 
+- [:(fa-brands fa-codepen): Background video with text overlay](https://codepen.io/mlnchkdv/pen/gOyrjar)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Background Video with Text Overlay" src="https://codepen.io/mlnchkdv/embed/gOyrjar?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/gOyrjar">
+      Background Video with Text Overlay</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
+- [:(fa-brands fa-codepen): Gradients - html, css, animation](https://codepen.io/mlnchkdv/pen/dyLMjXb)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Gradients - html, css, animation" src="https://codepen.io/mlnchkdv/embed/dyLMjXb?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/dyLMjXb">
+      Gradients - html, css, animation</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>
+
+- [:(fa-brands fa-codepen): Slides](https://codepen.io/mlnchkdv/pen/zYXqLKM)
+
+    <iframe height="450" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/mlnchkdv/embed/zYXqLKM?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href="https://codepen.io/mlnchkdv/pen/zYXqLKM">
+      Untitled</a> by mlnchkdv (<a href="https://codepen.io/mlnchkdv">@mlnchkdv</a>)
+      on <a href="https://codepen.io">CodePen</a>.
+    </iframe>

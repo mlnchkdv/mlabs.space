@@ -88,6 +88,7 @@ draft: false
 - [:(fa-solid fa-circle-exclamation): Инструкция по выполнению ВКР](../readme)
 - [:(fa-solid fa-file-word): Шаблон выпускной работы](../files/Шаблон-ИФиЖ.docx) и [:(fa-solid fa-quote-left): пример ВКР](../files/Пример_ВКР_(ycadm.ru).docx)
 - [:(fa-brands fa-codepen): Примеры лэндингов](../examples)
+<!-- - [:(fa-brands fa-readme): Глоссарий](../glossary) -->
 
 ## Источники
 
