@@ -68,7 +68,7 @@ draft: false
 - [:(fa-solid fa-ellipsis): Глобальные атрибуты HTML](../attributes/)
 - [:(fa-solid fa-palette): Основы CSS](../css/)
 - [:(fa-solid fa-border-top-left): Отображения элементов, Единицы измерения, Работа с цветом](../units/)
-- [:(fa-solid fa-text-height): Оформление текста](../text_style)
+- [:(fa-solid fa-text-height): Оформление текста](../text_style), [:(fa-brands fa-codepen): Базовые CSS-свойства для фона](https://codepen.io/mlnchkdv/full/eYovPyo)
 - [:(fa-solid fa-table-columns): Позиционирование](../position)
 - [:(fa-solid fa-display): Адаптивность](../adaptive)
 - [:(fa-solid fa-clapperboard): Анимации](../animation)
