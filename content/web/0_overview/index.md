@@ -71,7 +71,7 @@ draft: false
 - [:(fa-solid fa-text-height): Оформление текста](../text_style), [:(fa-brands fa-codepen): Базовые CSS-свойства для фона](https://codepen.io/mlnchkdv/full/eYovPyo)
 - [:(fa-solid fa-table-columns): Позиционирование](../position)
 - [:(fa-solid fa-display): Адаптивность](../adaptive)
-- [:(fa-solid fa-clapperboard): Анимации](../animation)
+- [:(fa-solid fa-clapperboard): Анимации](../animation), [:(fa-brands fa-codepen): CSS-свойства Transform](https://codepen.io/mlnchkdv/full/XWQMxVL)
 - [:(fa-solid fa-images): Форматы изображений](../image_formats)
 
 ## Семестр 2 (Цифровой дизайн)
