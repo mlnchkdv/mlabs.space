@@ -14,8 +14,6 @@ toc:
 draft: false
 ---
 
-:(fa-solid fa-phone): *Phone*:  +7-927-1453-41-8
-
 :(fab fa-telegram): *Tg*: [@dm_ml](https://t.me/dm_ml)
 
 :(fas fa-globe): *Web*: [mlabs.space](https://mlabs.space/), [sgu.ru](https://www.sgu.ru/person/melnichuk-dmitriy-vadimovich)
@@ -35,7 +33,7 @@ draft: false
 </div>
 Computer science and engineering
 
-[Dissertation](https://www.sstu.ru/aspirantu/dissertation/melnichuk-dmitriy-vadimovich.html): “*Analysis and synthesis of controlled hybrid dynamic systems on parallel computing architectures*”
+[Dissertation](https://www.sstu.ru/aspirantu/dissertation/melnichuk-dmitriy-vadimovich.html): “*Analysis and synthesis of controlled hybrid dynamic systems on parallel computing architectures*”.
 
 <br/>
 
@@ -46,7 +44,7 @@ Computer science and engineering
 </div>
 Applied mathematics and informatics
 
-Thesis: “*Modeling and parallel algorithms for analysis and synthesis of controlled hybrid dynamic systems*”
+Thesis: “*Modeling and parallel algorithms for analysis and synthesis of controlled hybrid dynamic systems*”.
 
 Advisor: Prof. Andreichenko D.K.
 
@@ -161,25 +159,19 @@ Advisor: Prof. Andreiychenko D.K.
 
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Russian Foundation for Basic Research (RFBR)</b></span>     <span style="text-align: center;">2022 - 2024</span> </div>
 
-**22-18-00153**
-
-The Image of the USSR in Historical Memory: A Study of Media Strategies for Reproducing Representations of the Past in Russia and Foreign Countries
+**22-18-00153**: “*The Image of the USSR in Historical Memory: A Study of Media Strategies for Reproducing Representations of the Past in Russia and Foreign Countries*”.
 
 <br/>
 
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Russian Foundation for Basic Research (RFBR)</b></span>     <span style="text-align: center;">2019 - 2021</span> </div>
 
-**19-37-90017**
-
-Mathematical models and parallel algorithms for computer simulation of hybrid dynamic systems
+**19-37-90017**: “*Mathematical models and parallel algorithms for computer simulation of hybrid dynamic systems*”.
 
 <br/>
 
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Tempus-GreenCo</b></span>     <span style="text-align: center;">2014 - 2016</span> </div>
 
-**GREENCO-530270-Tempus-1-2012-1- UK-Tempus-JPCR**
-
-Optimization of parallel algorithms for high-performance computing cluster systems
+**GREENCO-530270-Tempus-1-2012-1-UK-Tempus-JPCR**: “*Optimization of parallel algorithms for high-performance computing cluster systems*”.
 
 <br/>
 
@@ -281,41 +273,3 @@ Links:
 ·    [researchgate.net](https://www.researchgate.net/profile/Dmitriy_Melnichuk)
 
  <br/>
-
-## References
-
-
-
-<br/>
-
-**Prof. Dmitry K. Andreichenko**, Head of department 
-
-Department of Mathematical Support of Computer and Information Systems
-
-Saratov State University, 83 Astrakhanskaya Street, Saratov, 410012, Russia
-
-Phone: +7 (8452) 21 - 36 - 30
-
-Email: [andreichenkodk@gmail.com](mailto:andreichenkodk@gmail.com)
-
-<br/>
-
-**Prof. Sergei P. Sidorov**, Director
-
-Risks institute
-
-Phone: +7 (8452) 21 - 06 - 84
-
-Email: [SidorovSP@info.sgu.ru](mailto:SidorovSP@info.sgu.ru)
-
-<br/>
-
-**Sergei V. Mironov**, Dean
-
-Faculty of Computer Science and Information Technologies
-
-Saratov State University, 83 Astrakhanskaya Street, Saratov, 410012, Russia
-
-Phone: +7 (8452) 21 - 36 - 16
-
-Email: [MironovSV@info.sgu.ru](mailto:MironovSV@info.sgu.ru)
