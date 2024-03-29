@@ -31,9 +31,12 @@ draft: false
     <span style="text-align: center;"><i class="fa-solid fa-building-columns"></i> Saratov State University</span>
     <span style="text-align: right;">2017 - 2022</span>
 </div>
-Computer science and engineering
 
-[Dissertation](https://www.sstu.ru/aspirantu/dissertation/melnichuk-dmitriy-vadimovich.html): “*Analysis and synthesis of controlled hybrid dynamic systems on parallel computing architectures*”.
+PhD in Physics and Mathematics. Postgraduate studies in Computer Science and Engineering.
+
+[Dissertation](https://www.sstu.ru/aspirantu/dissertation/melnichuk-dmitriy-vadimovich.html): “*Mathematical modeling on parallel computing architectures of the dynamics of elements of devices stabilizing the starting trajectory of reactively propelled objects*”.
+
+Advisor: Prof. Andreichenko D.K.
 
 <br/>
 
@@ -42,6 +45,7 @@ Computer science and engineering
     <span style="text-align: center;"><i class="fa-solid fa-building-columns"></i> Saratov State University</span>
     <span style="text-align: right;">2015 - 2017</span>
 </div>
+
 Applied mathematics and informatics
 
 Thesis: “*Modeling and parallel algorithms for analysis and synthesis of controlled hybrid dynamic systems*”.
@@ -55,6 +59,7 @@ Advisor: Prof. Andreichenko D.K.
     <span style="text-align: center;"><i class="fa-solid fa-building-columns"></i> Saratov State University</span>
     <span style="text-align: right;">2011 - 2015</span>
 </div>
+
 Mathematical support and administration of information systems
 
 <br/>
@@ -107,34 +112,13 @@ Mathematical support and administration of information systems
 
 <br/>
 
-## Research Experience
+## Teaching Experience
 
-<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Dissertation</b>, Saratov State University, Saratov, Russia</span>     <span style="text-align: center;">2021</span> </div>
+---
 
-Advisor: Prof. Andreiychenko D.K.
 
- <br/>
-
-<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Risks Institute</b>, Saratov, Russia</span>     <span style="text-align: center;">2019</span> </div>
-
-**Engineer**, Educational and scientific laboratory of statistical analysis and modeling
-
-- Analysis of Financial Network Topological
-- Data Mining
-- Network Science
-
- <br/>
-
-<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Smart Data Lab</b>, Saratov, Russia</span>     <span style="text-align: center;">2019</span> </div>
-
-**Assistant**
-
-- Participation in the creation of the course
-- Development of BI system for the warehouse
 
 <br/>
-
-## Teaching Experience
 
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Feb 2019 - Jun 2019</span> </div>
 
@@ -145,11 +129,19 @@ Advisor: Prof. Andreiychenko D.K.
 
 <br/>
 
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>University of Hradec Králové</b>, Hradec Králové, Czech Republic</span>     <span style="text-align: center;">Nov 2018</span> </div>
+
+**Workshop**, Department of Mathematics
+
+- “C*ontrolled hybrid dynamic systems on parallel computing architectures*”
+
+<br/>
+
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Mar 2016</span> </div>
 
-**Masters Students Advised**
+**Masters Students Advised**, Department of Mathematic Cybernetics and Computer Sciences
 
-​      Course “Parallel and distributed programming”
+- Course “Parallel and distributed programming”
 
 <br/>
 
@@ -200,12 +192,6 @@ Author of more than 30 articles and publications:
 
 <br/>
 
-## Presentations and Invited Lectures
-
-:(fa-solid fa-id-card-clip): **Workshop**, “C*ontrolled hybrid dynamic systems on parallel computing architectures*”, University of Hradec Králové, Czech Republic, 2018.
-
-<br/>
-
 ## Public Activities
 
 ---
@@ -214,7 +200,13 @@ Author of more than 30 articles and publications:
 
 <br/>
 
-:(fa-solid fa-bullhorn): Creator and writing posts in telegram channel: [@yourai](https://t.me/yourai)
+
+
+:(fa-solid fa-id-card-clip): Organizer of many international conferences ([CMDM](https://risk2023.sgu.ru/), [Saratov Winter School](https://school-22.sgu.ru/)) on mathematics and applied machine learning.
+
+<br/>
+
+:(fa-solid fa-bullhorn): Creator and writing posts in telegram channel [@yourai](https://t.me/yourai)
 
 <br/>
 
