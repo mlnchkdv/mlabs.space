@@ -58,7 +58,7 @@ draft: false
 
 {{< admonition info "Список команд и проектов" false >}}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsl8LdmmLkenLGnmBlbU9fEJZrBnvWMvzNXE2da45Bx02sz5SAn63A9BCvlGdkGT9zBhFE4fZlT2_j/pubhtml?gid=0&amp;range=A1:F121&single=true&widget=false&chrome=false&headers=false" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsl8LdmmLkenLGnmBlbU9fEJZrBnvWMvzNXE2da45Bx02sz5SAn63A9BCvlGdkGT9zBhFE4fZlT2_j/pubhtml?gid=0&amp;range=A1:I121&single=true&widget=false&chrome=false&headers=false" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
 
 {{< /admonition >}}
 
