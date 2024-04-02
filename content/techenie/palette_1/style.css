@@ -1,0 +1,172 @@
+body {
+  background: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.imagePalette {
+  position: relative;
+  margin: 4em 0;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.imagePalette__container {
+  padding: 0 1.6rem;
+}
+
+.image__main {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image__main.isLoading:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px 15px 5px;
+  border-radius: 0 0 0 4px;
+  z-index: 10;
+}
+.links svg {
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+}
+.links svg:hover {
+  opacity: 1;
+}
+
+.image__new {
+  padding: 0;
+  margin-left: 7px;
+}
+.image__new[disabled] svg, .image__new[disabled]:hover svg {
+  opacity: 0.2;
+}
+
+.image__upload {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+}
+
+h1 {
+  margin: 1.4em 0;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #333;
+}
+
+.swatch__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.swatch {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  transition: background 0.3s ease;
+}
+
+.swatch__wrapper {
+  display: inline-block;
+  width: 30%;
+  list-style: none;
+  margin-bottom: 1.4em;
+}
+
+.swatch__hex {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 0.3em 0 0.2em 0.3em;
+}
+
+.swatch__name {
+  font-size: 11px;
+  color: #aaa;
+  padding-left: 0.5em;
+}
+
+.swatch__type {
+  font-size: 13px;
+  color: #aaa;
+  padding: 1em 0 0.5em 0.5em;
+}
+
+.loading {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.loading.active {
+  display: block;
+}
+.loading svg {
+  position: absolute;
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

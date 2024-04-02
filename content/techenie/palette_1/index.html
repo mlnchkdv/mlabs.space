@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Extract prominent colors from an image</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="app-wrapper">
+  <template>
+    <div class="imagePalette">
+      <div class="links">
+        <label class="image__upload--label" for="upload" title="Upload an image">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 3v2h-4v-2h4zm3 6l-2.519 4-2.481-1.96-4 5.96h14l-5-8zm-7.5 1c.828 0 1.5-.671 1.5-1.5 0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5c0 .829.672 1.5 1.5 1.5zm10.5 9h-4v2h4v-2zm-6 2v-2h-4v2h4zm2-18v2h4v-2h-4zm6 0v2h3v3h2v-5h-5zm-17 2h3v-2h-5v5h2v-3zm20 14h-3v2h5v-5h-2v3zm0-5h2v-4h-2v4zm-20-4h-2v4h2v-4zm3 9h-3v-3h-2v5h5v-2z"/></svg>
+          <input id="upload" class="image__upload" type="file" name="img" @change="uploadFile" />
+        </label>
+        <!-- <button @click="randomImage" class="image__new" title="Generate a new image" :disabled="isLoading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 12c0-.552.448-1 1.001-1s.999.448.999 1-.446 1-.999 1-1.001-.448-1.001-1zm6.2 0l-1.7 2.6-1.3-1.6-3.2 4h10l-3.8-5zm8.8-5v14h-20v-3h-4v-15h21v4h3zm-20 9v-9h15v-2h-17v11h2zm18-7h-16v10h16v-10z"/></svg>
+        </button> -->
+      </div>
+      <div class="image__main" :style="{ backgroundImage: 'url(' + imageSrc + ')' }" :class="{isLoading: isLoading}">
+        <span :class="{active: isLoading}" class="loading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 22c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm-2-22c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 10c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm-22 2c0 1.105.896 2 2 2s2-.895 2-2c0-1.104-.896-2-2-2s-2 .896-2 2zm19-9c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm0 14c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm-14-14c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm0 14c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2z"/></svg>
+        </span>
+      </div>
+      <div class="imagePalette__container">
+        <h1>COLORS</h1>
+        <ul class="swatch__container">
+          <li v-for="color in palette" class="swatch__wrapper">
+            <div :style="{ backgroundColor: color.hex }" class="swatch">
+              <div :style="{ color: color.typeTextColor }" class="swatch__type">№ {{ color.number }}. {{ color.type }}</div>
+              <div :style="{ color: color.hexTextColor }" class="swatch__hex">{{ color.hex }}</div>
+              <div :style="{ color: color.nameTextColor }" class="swatch__name">{{ color.name }}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </template>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/node-vibrant@3.1.5/dist/vibrant.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://unpkg.com/color-name-list@4.7.1/dist/colornames.umd.js'></script>
+<script src='https://unpkg.com/nearest-color@0.4.4/nearestColor.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
