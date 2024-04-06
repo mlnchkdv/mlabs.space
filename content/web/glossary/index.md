@@ -11,7 +11,7 @@ categories:
 math: true
 lightgallery: true
 toc:
-    auto: false
+  auto: false
 draft: false
 
 ## Блок менеджмента и маркетинга
