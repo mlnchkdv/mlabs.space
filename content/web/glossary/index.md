@@ -1,3 +1,4 @@
+---
 weight: 1
 title: Глоссарий курса
 description: Глоссарий и вопросы для курса
@@ -13,6 +14,7 @@ lightgallery: true
 toc:
   auto: false
 draft: false
+---
 
 ## Блок менеджмента и маркетинга
 
