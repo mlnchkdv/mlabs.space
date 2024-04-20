@@ -20,11 +20,21 @@ draft: false
 
 :(far fa-envelope): *Email*: mlnchkdv@gmail.com
 
+<!-- :(fa-solid fa-download): [CV in PDF format]() -->
+
 <br/>
 
 ## Education
 
 ---
+
+<!-- <div style="display: flex; justify-content: space-between;">
+    <span style="text-align: left;"><b>Member</b></span>
+    <span style="text-align: center;"><i class="fa-solid fa-building-columns"></i> Association of Russian Art Historians</span>
+    <span style="text-align: right;">2025</span>
+</div>
+
+<br/> -->
 
 <div style="display: flex; justify-content: space-between;">
     <span style="text-align: left;"><b>PhD</b></span>
@@ -70,6 +80,33 @@ Mathematical support and administration of information systems
 
 ---
 
+<!-- <div style="display: flex; justify-content: space-between;">
+    <span style="text-align: left;"><b>IDCV.me</b>, Moscow, Russia</span>
+    <span style="text-align: center;">Sep 2025 - present</span>
+</div>
+
+:(fa-regular fa-address-card): **Founder and CEO** of a creating Intelligent Digital CV building service.
+
+<br/>
+
+<div style="display: flex; justify-content: space-between;">
+    <span style="text-align: left;"><b>SPLAV</b>, Moscow, Russia</span>
+    <span style="text-align: center;">Sep 2024 - present</span>
+</div>
+
+:(fa-solid fa-user-tie): **Co-Founder and CEO** of Autonomous non-profit organization and «Skolkovo» resident
+
+<br/>
+
+<div style="display: flex; justify-content: space-between;">
+    <span style="text-align: left;"><b>Radishchev Art Museum</b>, Saratov, Russia</span>
+    <span style="text-align: center;">2024 - 2025</span>
+</div>
+
+:(fa-solid fa-object-group): **Curator of the Exhibition** «TECHENIE»
+
+<br/>
+
 <div style="display: flex; justify-content: space-between;">
     <span style="text-align: left;"><b>Creative Cluster «Design Center»</b>, Saratov, Russia</span>
     <span style="text-align: center;">Oct 2023 - present</span>
@@ -77,7 +114,7 @@ Mathematical support and administration of information systems
 
 :(fa-solid fa-handshake-angle): **Innovation Advisor**
 
-<br/>
+<br/> -->
 
 <div style="display: flex; justify-content: space-between;">
     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>
@@ -116,7 +153,7 @@ Mathematical support and administration of information systems
 
 ---
 
-
+...
 
 <br/>
 
@@ -198,9 +235,11 @@ Author of more than 30 articles and publications:
 
 :(fa-solid fa-square-root-variable): Maintaining math olympiads among schoolchildren in the city of Saratov.
 
+<!-- <br/>
+
+:(fa-solid fa-photo-film): Producer and Assistant Director of documentary about the Saratov School of Painting. -->
+
 <br/>
-
-
 
 :(fa-solid fa-id-card-clip): Organizer of many international conferences ([CMDM](https://risk2023.sgu.ru/), [Saratov Winter School](https://school-22.sgu.ru/)) on mathematics and applied machine learning.
 
