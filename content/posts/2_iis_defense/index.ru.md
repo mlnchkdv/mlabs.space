@@ -65,7 +65,7 @@ draft: false
 Итоговый сборник проектов станет важным ресурсом, способствующим карьере студентов и выпускников. Проекты показывают интеграцию технологий, дизайна и бизнеса, открывая новые пути сотрудничества.
 
 <div style="text-align: center;">
-	<video width="640" height="480" controls loop>
+	<video style="max-width: 100%; height: auto;" controls loop>
         <source src="https://mlabs.space/blog/iis_defense/video/video_2024-05-30_17-24-33.mp4" type="video/mp4">
     </video>
 </div>
