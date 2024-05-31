@@ -73,6 +73,9 @@ draft: false
     <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
       <img src="./img/DSC_5295.jpg" alt="Slide 2" style="width: 100%; height: auto;">
     </div>
+    <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
+      <img src="./img/DSC_5901.jpg" alt="Slide 1" style="width: 100%; height: auto;">
+    </div>
   </div>
   <button class="prev" onclick="plusSlides(this.parentElement, -1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; background-color: rgba(0,0,0,0.5); left: 0;">&#10094;</button>
   <button class="next" onclick="plusSlides(this.parentElement, 1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 3px 0 0 3px; user-select: none; background-color: rgba(0,0,0,0.5); right: 0;">&#10095;</button>
@@ -81,26 +84,15 @@ draft: false
 
 Присутствие докторов наук и профессоров смежных специальностей повысило академическую значимость защиты, обеспечив студентам ценную обратную связь от экспертов, а место проведения, [Дизайн Центр](https://designcenter.me/), идеально подходило для обмена идеями и взаимодействия участников.
 
-<div id="slider4" class="slider" style="position: relative; max-width: 85%; margin: auto;">
-  <div class="slides" style="display: flex; overflow: hidden; width: 100%;">
-    <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-      <img src="./img/DSC_5901.jpg" alt="Slide 1" style="width: 100%; height: auto;">
-    </div>
-    <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
-      <img src="./img/DSC_5866.jpg" alt="Slide 1" style="width: 100%; height: auto;">
-    </div>
-  </div>
-  <button class="prev" onclick="plusSlides(this.parentElement, -1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; background-color: rgba(0,0,0,0.5); left: 0;">&#10094;</button>
-  <button class="next" onclick="plusSlides(this.parentElement, 1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 3px 0 0 3px; user-select: none; background-color: rgba(0,0,0,0.5); right: 0;">&#10095;</button>
-  <div class="dots" style="text-align: center; position: absolute; bottom: 15px; width: 100%;"></div>
-</div>
-
 Также на мероприятии была анонсирована конференции [YCAMD2024](https://t.me/youthscience), которая будет направлена на развитие научных исследований и партнерских отношений. 
 
 Мы гордимся достижениями студентов и благодарим всех участников. YCAMD станет ключевым событием для специалистов в области машинного обучения и анализа данных, демонстрируя достижения и открывая новые горизонты для инноваций. Конференция способствует формированию междисциплинарных связей между студентами, наукой и бизнесом.
 
-<div id="slider5" class="slider" style="position: relative; max-width: 85%; margin: auto;">
+<div id="slider4" class="slider" style="position: relative; max-width: 85%; margin: auto;">
   <div class="slides" style="display: flex; overflow: hidden; width: 100%;">
+    <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
+      <img src="./img/DSC_5866.jpg" alt="Slide 1" style="width: 100%; height: auto;">
+    </div>
     <div class="slide" style="min-width: 100%; transition: transform 0.5s ease;">
       <img src="./img/DSC_5912.jpg" alt="Slide 1" style="width: 100%; height: auto;">
     </div>
@@ -133,9 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideIndex = 0;
     initDots(slider);
     showSlides(slider, slideIndex);
-    setInterval(() => { plusSlides(slider, 1); }, 5000);
+    setInterval(() => { plusSlides(slider, 1); }, 7000);
   });
-
   function initDots(slider) {
     const slides = slider.getElementsByClassName('slide');
     const dotsContainer = slider.querySelector('.dots');
@@ -159,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
       dotsContainer.appendChild(dot);
     }
   }
-
   function plusSlides(slider, n) {
     let slides = slider.getElementsByClassName('slide');
     let slideIndex = parseInt(slider.getAttribute('data-slide-index') || 0) + n;
@@ -168,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.setAttribute('data-slide-index', slideIndex);
     showSlides(slider, slideIndex);
   }
-
   function showSlides(slider, n) {
     let slides = slider.getElementsByClassName('slide');
     let dots = slider.getElementsByClassName('dot');
@@ -182,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dots[n].style.backgroundColor = '#717171';
     dots[n].style.border = '1px solid #717171';
   }
-
   window.plusSlides = plusSlides;
 });
 </script>
