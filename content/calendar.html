@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar with Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header .back-button {
+            font-size: 1.5em;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calendar-container, .events-container {
+            padding: 20px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .calendar div {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .calendar div:hover {
+            background: #f1f1f1;
+            transform: scale(1.05);
+        }
+
+        .calendar .today {
+            background-color: #ffeb3b;
+            animation: pulse 1s infinite;
+        }
+
+        .calendar .event-day {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 235, 59, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 235, 59, 0);
+            }
+        }
+
+        @keyframes highlight {
+            0% {
+                background-color: #ffeb3b;
+            }
+            100% {
+                background-color: #fff;
+            }
+        }
+
+        .events-container {
+            border-top: 1px solid #ddd;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+			width: 100%;
+        }
+
+        .events-container h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #events-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #events-list li {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        #events-list li:hover {
+            background: #f1f1f1;
+        }
+
+        #events-list li.pulse {
+            animation: highlight 1s infinite alternate;
+        }
+
+        #events-list li span {
+            display: block;
+        }
+
+        #events-list li .event-title {
+            font-weight: bold;
+        }
+
+        #events-list li .event-date {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            color: #ccc;
+        }
+
+        @media (min-width: 601px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .events-container {
+                border-left: 1px solid #ddd;
+                border-top: none;
+                max-height: none;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">←</div>
+        <h1>MLabs Events</h1>
+    </div>
+    <div class="container">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">&lt;</button>
+                <h2 id="month-year"></h2>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div class="calendar" id="calendar"></div>
+        </div>
+        <div class="events-container">
+            <h3>📅 Upcoming Events</h3>
+            <ul id="events-list"></ul>
+        </div>
+    </div>
+    <script>
+        const events = [
+            { date: '2024-06-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details' },
+            { date: '2024-06-15', title: 'Project deadline', time: '23:59', description: 'Submit the final project' },
+            { date: '2024-07-04', title: 'Independence Day', time: 'All day', description: 'National holiday' },
+            { date: '2024-07-20', title: 'Conference', time: '09:00', description: 'Annual tech conference' },
+        ];
+
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCalendar(currentMonth, currentYear);
+            renderEventsList(events);
+
+            document.getElementById('prev-month').addEventListener('click', () => changeMonth(-1));
+            document.getElementById('next-month').addEventListener('click', () => changeMonth(1));
+        });
+
+        function changeMonth(change) {
+            currentMonth += change;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        }
+
+        function renderCalendar(month, year) {
+            const calendar = document.getElementById('calendar');
+            calendar.innerHTML = '';
+
+            const monthYear = document.getElementById('month-year');
+            monthYear.textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            for (let i = 0; i < firstDay; i++) {
+                calendar.appendChild(document.createElement('div'));
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+
+                const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                if (isToday(fullDate)) {
+                    dayElement.classList.add('today');
+                }
+
+                const event = getEvent(fullDate);
+                if (event) {
+                    dayElement.classList.add('event-day');
+                    dayElement.addEventListener('click', () => {
+                        highlightEvent(fullDate);
+                        highlightDate(fullDate);
+                    });
+                }
+
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        function isToday(date) {
+            const today = new Date();
+            return date === `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        }
+
+        function getEvent(date) {
+            return events.find(event => event.date === date);
+        }
+
+        function renderEventsList(events) {
+            const eventsList = document.getElementById('events-list');
+            eventsList.innerHTML = '';
+
+            const today = new Date().toISOString().split('T')[0];
+            const futureEvents = events.filter(event => event.date >= today);
+
+            futureEvents.forEach(event => {
+                const eventItem = document.createElement('li');
+                const eventDate = new Date(event.date);
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                eventItem.innerHTML = `
+                    <span class="event-date">${eventDate.toLocaleDateString('en-US', options)} ⌚ ${event.time}</span>
+                    <span class="event-title">${event.title}</span>
+                    <span class="event-description">${event.description}</span>
+                `;
+                eventItem.addEventListener('click', () => {
+                    highlightDate(event.date);
+                    const eventMonth = new Date(event.date).getMonth();
+                    const eventYear = new Date(event.date).getFullYear();
+                    changeMonth(eventMonth - currentMonth);
+                    renderCalendar(eventMonth, eventYear);
+                });
+                eventsList.appendChild(eventItem);
+            });
+        }
+
+        function highlightEvent(date) {
+            const eventItems = document.querySelectorAll('#events-list li');
+            eventItems.forEach(item => {
+                const itemDateText = item.querySelector('.event-date').textContent.split(' ').slice(0, 3).join(' ');
+                const itemDate = new Date(itemDateText);
+                const formattedDate = `${itemDate.getFullYear()}-${String(itemDate.getMonth() + 1).padStart(2, '0')}-${String(itemDate.getDate()).padStart(2, '0')}`;
+                if (formattedDate === date) {
+                    item.classList.add('pulse');
+                    setTimeout(() => {
+                        item.classList.remove('pulse');
+                    }, 2000);
+                } else {
+                    item.classList.remove('pulse');
+                }
+            });
+        }
+
+        function highlightDate(date) {
+            const [year, month, day] = date.split('-');
+            const dayElements = document.querySelectorAll('.calendar div');
+            dayElements.forEach(dayElement => {
+                if (dayElement.textContent === String(parseInt(day))) {
+                    dayElement.classList.add('today');
+                    setTimeout(() => {
+                        dayElement.classList.remove('today');
+                    }, 2000);
+                } else {
+                    dayElement.classList.remove('today');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
