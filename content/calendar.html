@@ -14,7 +14,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
-            padding: 10px;
+            padding: 0 10px;
         }
 
         .header {
@@ -26,15 +26,10 @@
             box-sizing: border-box;
         }
 
-        .header .back-button {
-            font-size: 1.5em;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
         .header h1 {
             font-size: 1.5em;
             margin: 0;
+			cursor: pointer;
         }
 
         .container {
@@ -46,6 +41,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+			max-height: 550px;
         }
 
         .calendar-container, .events-container {
@@ -116,7 +112,7 @@
 
         .events-container {
             border-top: 1px solid #ddd;
-            max-height: calc(100vh - 40px);
+            max-height: calc(100vh - 260px);
             overflow-y: auto;
 			width: 100%;
         }
@@ -183,14 +179,32 @@
                 border-left: 1px solid #ddd;
                 border-top: none;
                 max-height: none;
-                overflow: hidden;
+                overflow: auto;
             }
+			
+			.events-container::-webkit-scrollbar {
+				width: 6px;
+			}
+
+			.events-container::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 10px; 
+				margin: 4px 2px;
+			}
+
+			.events-container::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 10px;
+			}
+
+			.events-container::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="back-button">←</div>
         <h1>MLabs Events</h1>
     </div>
     <div class="container">
@@ -209,10 +223,12 @@
     </div>
     <script>
         const events = [
-            { date: '2024-06-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details' },
-            { date: '2024-06-15', title: 'Project deadline', time: '23:59', description: 'Submit the final project' },
-            { date: '2024-07-04', title: 'Independence Day', time: 'All day', description: 'National holiday' },
-            { date: '2024-07-20', title: 'Conference', time: '09:00', description: 'Annual tech conference' },
+            { date: '2024-06-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details', location: 'Conference Room A' },
+            { date: '2024-06-15', title: 'Project deadline', time: '23:59', description: 'Submit the final project', location: 'Online' },
+            { date: '2024-07-04', title: 'Independence Day', time: 'All day', description: 'National holiday', location: 'Nationwide' },
+            { date: '2024-07-20', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			{ date: '2024-07-21', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			{ date: '2024-07-22', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
         ];
 
         let currentMonth = new Date().getMonth();
@@ -290,14 +306,17 @@
             const today = new Date().toISOString().split('T')[0];
             const futureEvents = events.filter(event => event.date >= today);
 
+            futureEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
             futureEvents.forEach(event => {
                 const eventItem = document.createElement('li');
                 const eventDate = new Date(event.date);
                 const options = { year: 'numeric', month: 'long', day: 'numeric' };
                 eventItem.innerHTML = `
-                    <span class="event-date">${eventDate.toLocaleDateString('en-US', options)} ⌚ ${event.time}</span>
+                    <span class="event-date">${eventDate.toLocaleDateString('en-US', options)} ${event.time}</span>
                     <span class="event-title">${event.title}</span>
                     <span class="event-description">${event.description}</span>
+                    <span class="event-location">📍 ${event.location}</span>
                 `;
                 eventItem.addEventListener('click', () => {
                     highlightDate(event.date);
@@ -324,6 +343,7 @@
                     setTimeout(() => {
                         item.classList.remove('pulse');
                     }, 2000);
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
                     item.classList.remove('pulse');
                 }
