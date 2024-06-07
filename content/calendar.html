@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar with Events</title>
+    <title>MLabs Calendar with Events</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -202,10 +202,11 @@
 			}
         }
     </style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div class="header">
-        <h1>MLabs Events</h1>
+        <h1><a href="https://mlabs.space/" style="text-decoration: none;"><i class="fa-solid fa-graduation-cap"></i> MLabs</a> Events</h1>
     </div>
     <div class="container">
         <div class="calendar-container">
@@ -223,12 +224,14 @@
     </div>
     <script>
         const events = [
-            { date: '2024-06-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details', location: 'Conference Room A' },
-            { date: '2024-06-15', title: 'Project deadline', time: '23:59', description: 'Submit the final project', location: 'Online' },
-            { date: '2024-07-04', title: 'Independence Day', time: 'All day', description: 'National holiday', location: 'Nationwide' },
-            { date: '2024-07-20', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
-			{ date: '2024-07-21', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
-			{ date: '2024-07-22', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			// { date: '2024-07-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details', location: 'Conference Room A' },
+            // { date: '2024-06-10', title: 'Meeting with John', time: '10:00', description: 'Discuss project details', location: 'Conference Room A' },
+            // { date: '2024-06-15', title: 'Project deadline', time: '23:59', description: 'Submit the final project', location: 'Online' },
+            // { date: '2024-07-04', title: 'Independence Day', time: 'All day', description: 'National holiday', location: 'Nationwide' },
+            // { date: '2024-07-20', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			// { date: '2024-07-21', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			// { date: '2024-07-22', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
+			// { date: '2024-05-22', title: 'Conference', time: '09:00', description: 'Annual tech conference', location: 'Main Hall' },
         ];
 
         let currentMonth = new Date().getMonth();
@@ -315,8 +318,8 @@
                 eventItem.innerHTML = `
                     <span class="event-date">${eventDate.toLocaleDateString('en-US', options)} ${event.time}</span>
                     <span class="event-title">${event.title}</span>
+					<span class="event-location">📍 ${event.location}</span>
                     <span class="event-description">${event.description}</span>
-                    <span class="event-location">📍 ${event.location}</span>
                 `;
                 eventItem.addEventListener('click', () => {
                     highlightDate(event.date);
