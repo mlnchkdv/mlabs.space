@@ -39,14 +39,14 @@ defaultContentLanguage = "ru"
     #   name = "Researches"
     #   url = "/researches/"
     #   title = ""
-    # [[languages.en.menu.main]]
-    #   weight = 3
-    #   identifier = "events"
-    #   pre = ""
-    #   post = ""
-    #   name = "Events"
-    #   url = "/events/"
-    #   title = ""
+    [[languages.en.menu.main]]
+      weight = 3
+      identifier = "events"
+      pre = " "
+      post = ""
+      name = "Events"
+      url = "/calendar.html/"
+      title = ""
     [[languages.en.menu.main]]
       weight = 4
       identifier = "tags"
@@ -85,14 +85,14 @@ defaultContentLanguage = "ru"
     #   post = ""
     #   url = "/researches/"
     #   title = ""
-    # [[languages.ru.menu.main]]
-    #   weight = 3
-    #   identifier = "events"
-    #   name = "Мероприятия"
-    #   pre = ""
-    #   post = ""
-    #   url = "/events/"
-    #   title = ""
+    [[languages.ru.menu.main]]
+      weight = 3
+      identifier = "events"
+      name = "Мероприятия"
+      pre = ""
+      post = ""
+      url = "/calendar.html/"
+      title = ""
     [[languages.ru.menu.main]]
       weight = 4
       identifier = "tags"
@@ -130,14 +130,14 @@ defaultContentLanguage = "ru"
   #   name = "Researches"
   #   url = "/researches/"
   #   title = ""
-  # [[menu.main]]
-  #   weight = 3
-  #   identifier = "events"
-  #   pre = ""
-  #   post = ""
-  #   name = "Events"
-  #   url = "/events/"
-  #   title = ""
+  [[menu.main]]
+    weight = 3
+    identifier = "events"
+    pre = ""
+    post = ""
+    name = "Events"
+    url = "/calendar.html/"
+    title = ""
   [[menu.main]]
     weight = 4
     identifier = "tags"
