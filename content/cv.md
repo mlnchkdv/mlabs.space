@@ -210,10 +210,11 @@ Mathematical support and administration of information systems
 
 Author of more than 30 articles and publications:
 
-- [:(fa-solid fa-e): elibrary.ru]()
+- [:(fa-solid fa-e): elibrary.ru](https://www.elibrary.ru/author_profile.asp?authorid=1021510)
 - [:(fab fa-orcid): orcid.org](https://orcid.org/0000-0002-6689-8904)
 - [:(fab fa-researchgate): researchgate.net](https://www.researchgate.net/profile/Dmitriy_Melnichuk)
 - [:(fa-brands fa-google): scholar.google.com](https://scholar.google.com/citations?user=XcYTbJsAAAAJ&hl=en)
+- [:(fa-solid fa-r): researcherid.com](https://www.webofscience.com/wos/author/record/KQV-4784-2024)
 
  <br/>
 
