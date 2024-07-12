@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <style>
+        svg {
+            border: 1px solid black;
+            display: block;
+            margin: auto;
+            width: 100%;
+            min-height: 87vh;
+            height: 97vh;
+        }
+
+        .link-pulse {
+            animation: pulse 0.3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                stroke-width: 2;
+            }
+
+            to {
+                stroke-width: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <svg id="graph"></svg> -->
+
+    <script>
+        // Подготовка данных для вершин и связей
+        const nodes = [{
+                id: "node1",
+                imageUrl: "https://rusmuseumvrm.ru/reference/classifier/author/bogolyubov_aleksey_petrovich/8156_mainfoto_02.jpg",
+                name: "Узел 1",
+                description: "Описание узла 1",
+                diameter: 50
+            },
+            {
+                id: "node2",
+                imageUrl: "https://rusmuseumvrm.ru/reference/classifier/author/petrov_vodkin_kuzma_sergeevich/2099_mainfoto_02.jpg",
+                name: "Узел 2",
+                description: "Описание узла 2",
+                diameter: 40
+            },
+            {
+                id: "node3",
+                imageUrl: "https://artchive.ru/res/media/img/ox800/work/e64/460726.jpg",
+                name: "Узел 3",
+                description: "Описание узла 3",
+                diameter: 60
+            },
+            {
+                id: "node4",
+                imageUrl: "https://artchive.ru/res/media/img/ox800/work/e64/460726.jpg",
+                name: "Узел 4",
+                description: "Описание узла 4",
+                diameter: 55
+            }
+        ];
+
+        const links = [{
+                source: "node1",
+                target: "node2",
+                length: 300
+            },
+            {
+                source: "node2",
+                target: "node3",
+                length: 200
+            },
+            {
+                source: "node1",
+                target: "node3",
+                length: 400
+            },
+            {
+                source: "node1",
+                target: "node4",
+                length: 400
+            }
+        ];
+
+        // Получение размеров окна браузера
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // Создание SVG элемента
+        const svg = d3.select("body").append("svg")
+            // .attr("width", 500)
+            // .attr("height", 500);
+            .attr("width", width)
+            .attr("height", height);
+
+        // Обработчики событий перетаскивания
+        function dragstarted(d) {
+            if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(d) {
+            d.fx = d3.event.x;
+            d.fy = d3.event.y;
+        }
+
+        function dragended(d) {
+            if (!d3.event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        // Обработчик клика на вершину
+        function clickNode(d) {
+            // Плавное увеличение диаметра вершины
+            d3.select(this).select("circle")
+                .transition()
+                .duration(500)
+                .attr("r", 80); // Увеличение до указанного диаметра
+        }
+
+        // Создание симуляции сил для вершин и связей
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(link => link.length))
+            .force("charge", d3.forceManyBody().strength(-200))
+            // .force("center", d3.forceCenter(500 / 2, 500 / 2));
+            .force("center", d3.forceCenter(width / 2, height / 2)); // Центрирование графа
+
+        // Отрисовка связей (рёбер)
+        const link = svg.append("g")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(links)
+            .enter().append("line")
+            .attr("stroke-width", 2)
+            .attr("stroke", "#999");
+
+        // Определение шаблонов для картинок вершин
+        const defs = svg.append("defs").selectAll("pattern")
+            .data(nodes)
+            .enter().append("pattern")
+            .attr("id", d => `image-${d.id}`)
+            .attr("width", 1)
+            .attr("height", 1)
+            .attr("patternContentUnits", "objectBoundingBox");
+
+        defs.append("image")
+            .attr("xlink:href", d => d.imageUrl)
+            .attr("width", 1)
+            .attr("height", 1)
+            .attr("preserveAspectRatio", "xMidYMid slice");
+
+        // Функция для отображения всплывающего окна
+        function showTooltip(d) {
+            // Создаем элемент для всплывающего окна, если он еще не создан
+            let tooltip = d3.select("#tooltip");
+            if (tooltip.empty()) {
+                tooltip = d3.select("body").append("div")
+                    .attr("id", "tooltip")
+                    .style("position", "absolute")
+                    .style("padding", "10px")
+                    .style("background", "white")
+                    .style("border", "1px solid black")
+                    .style("border-radius", "5px")
+                    .style("pointer-events", "none")
+                    .style("opacity", 0);
+            }
+
+            // Задаем содержимое и позицию всплывающего окна
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(`<strong>${d.name}</strong><br/>${d.description}`)
+                .style("left", (d3.event.pageX + 45) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        }
+
+        // Отображение связей и рамок
+        function showLinks(d) {
+            // Подсветка рёбер и рамок вершин
+            link.style('stroke', link_d => link_d.source === d || link_d.target === d ? 'red' : '#999')
+                .style('stroke-opacity', link_d => link_d.source === d || link_d.target === d ? 1 : 0.6)
+                // .style('stroke-width', link_d => link_d.source === d || link_d.target === d ? 3 : 2);
+                .classed('link-pulse', link_d => link_d.source === d || link_d.target === d); // Добавление анимации
+
+
+            node.selectAll('circle')
+                .style('stroke', node_d => node_d === d || links.some(link => (link.source === d && link.target ===
+                    node_d) || (link.target === d && link.source === node_d)) ? 'red' : 'black')
+                .style('stroke-width', node_d => node_d === d || links.some(link => (link.source === d && link
+                    .target === node_d) || (link.target === d && link.source === node_d)) ? 3 : 1);
+        }
+
+        function hideLinks() {
+            // Возврат к исходному стилю рёбер
+            link.style('stroke', '#999')
+                .style('stroke-opacity', 0.6)
+                // .style('stroke-width', 2)
+                // .style('stroke-dasharray', 'none');
+                .classed('link-pulse', false); // Удаление анимации
+
+            node.selectAll('circle')
+                .style('stroke', 'black')
+                .style('stroke-width', 1);
+        }
+
+        // Функция для скрытия всплывающего окна
+        function hideTooltip() {
+            let tooltip = d3.select("#tooltip");
+            if (!tooltip.empty()) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            }
+        }
+
+        // Функция для возвращения вершины к первоначальному состоянию
+        function resetNode(d, nodeElement) {
+            d3.select(nodeElement).select("circle")
+                .transition()
+                .duration(500) // Плавное возвращение за 500 мс
+                .attr("r", d.diameter / 2); // Исходный размер
+        }
+
+
+        // Функция для обработки клика на вершину
+        function handleNodeClick(d) {
+            const isEnlarged = d3.select(this).select("circle").attr("r") > d.diameter / 2;
+            if (isEnlarged) {
+                resetNode(d, this);
+            } else {
+                showTooltip(d);
+                clickNode.call(this, d);
+            }
+        }
+
+        // Обработчик убирания курсора с вершины
+        function handleNodeMouseOut(d) {
+            hideLinks();
+            hideTooltip();
+            resetNode(d, this); // Передаем текущий элемент в функцию resetNode
+        }
+
+        // Отрисовка вершин
+        const node = svg.append("g")
+            .attr("class", "nodes")
+            .selectAll("g")
+            .data(nodes)
+            .enter().append("g")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended))
+            .on("click", handleNodeClick);
+
+        // Добавление текста (подписей) к вершинам перед кругами
+        node.append("text")
+            .attr("dy", ".35em")
+            .text(d => d.title) // Использование свойства title для текста
+            .style("text-anchor", "middle")
+            .style("font-size", "12px")
+            .style("fill", "black");
+
+        node.append("circle")
+            .attr("r", d => d.diameter / 2)
+            .attr("fill", d => `url(#image-${d.id})`)
+            .on("mouseover", showLinks)
+            .on("mouseout", handleNodeMouseOut);
+
+        // Добавление текста (подписей) к вершинам
+        // node.append("text")
+        //     .attr("dx", 12)
+        //     .attr("dy", ".35em")
+        //     .text(d => d.title) // Использование атрибута title из данных
+        //     .style("font-size", "18px")
+        //     .style("text-anchor", "start");
+        // node.append("text")
+        //     .attr("x", 0)
+        //     .attr("y", d => -d.diameter / 2 - 5) // Смещение текста выше вершины
+        //     .text(d => d.title) // Добавление текста из свойства title
+        //     .style("font-size", "24px")
+        //     .style("text-anchor", "middle")
+        //     .style("fill", "black"); // Чёрный цвет текста
+
+        // Обновление положения вершин и связей при симуляции
+        simulation.on("tick", () => {
+            link.attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+            node.attr("transform", d => `translate(${d.x}, ${d.y})`);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datastorytelling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #scroll {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow-y: scroll;
+            padding: 50px;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+
+        .step {
+            margin: 0 auto;
+            padding: 50px 0;
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        #graphic {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            background: #f9f9f9;
+        }
+
+        @media (max-width: 768px) {
+            #graphic {
+                position: static;
+                width: 100%;
+                height: 400px;
+            }
+            .step {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll">
+        <div class="step" data-step="1">
+            <p>Welcome to this datastory. Scroll down to see how the data changes dynamically.</p>
+        </div>
+        <div class="step" data-step="2">
+            <p>Here we see the data shifting in the first chart.</p>
+        </div>
+        <div class="step" data-step="3">
+            <p>As we continue, the data evolves to show new insights.</p>
+        </div>
+        <div class="step" data-step="4">
+            <p>Finally, we conclude our story with the last transformation.</p>
+        </div>
+    </div>
+    <div id="graphic">
+        <svg width="100%" height="100%"></svg>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+        const svg = d3.select("svg");
+        const width = parseInt(svg.style("width"));
+        const height = parseInt(svg.style("height"));
+
+        const margin = { top: 20, right: 30, bottom: 40, left: 40 };
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+
+        const x = d3.scaleLinear()
+            .domain([0, 10])
+            .range([0, innerWidth]);
+
+        const y = d3.scaleLinear()
+            .domain([0, 200])
+            .range([innerHeight, 0]);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        g.append("g")
+            .call(d3.axisLeft(y));
+
+        g.append("g")
+            .attr("transform", `translate(0,${innerHeight})`)
+            .call(d3.axisBottom(x));
+
+        const updateChart = (data) => {
+            const circles = g.selectAll("circle").data(data);
+
+            circles.exit().remove();
+
+            circles.enter().append("circle")
+                .attr("cx", d => x(d.x))
+                .attr("cy", d => y(d.y))
+                .attr("r", 5)
+                .merge(circles)
+                .transition().duration(500)
+                .attr("cx", d => x(d.x))
+                .attr("cy", d => y(d.y));
+        };
+
+        const data1 = Array.from({ length: 10 }, (_, i) => ({ x: i, y: Math.random() * 100 }));
+        const data2 = Array.from({ length: 10 }, (_, i) => ({ x: i, y: Math.random() * 50 }));
+        const data3 = Array.from({ length: 10 }, (_, i) => ({ x: i, y: Math.random() * 150 }));
+        const data4 = Array.from({ length: 10 }, (_, i) => ({ x: i, y: Math.random() * 200 }));
+
+        const steps = [
+            { data: data1, text: "Welcome to this datastory. Scroll down to see how the data changes dynamically." },
+            { data: data2, text: "Here we see the data shifting in the first chart." },
+            { data: data3, text: "As we continue, the data evolves to show new insights." },
+            { data: data4, text: "Finally, we conclude our story with the last transformation." }
+        ];
+
+        const scroller = scrollama();
+
+        scroller.setup({
+            step: ".step",
+            offset: 0.5,
+            debug: false
+        })
+            .onStepEnter(response => {
+                const { data } = steps[response.index];
+                updateChart(data);
+            });
+
+        window.addEventListener("resize", scroller.resize);
+    </script>
+</body>
+</html>
