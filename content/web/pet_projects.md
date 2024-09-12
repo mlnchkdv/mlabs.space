@@ -1263,18 +1263,512 @@ JavaScript отвечает за логику проверки данных, о�
 
 {{< /admonition >}}
 
-<!--
-
 ### Random User
 
 [![Random User](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjlfog2j2okpgtx01eyso.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjlfog2j2okpgtx01eyso.png)  
-**Description**: This project utilizes an API to generate random user information. It fetches data like name, email, avatar, and more, and displays it on the web page, simulating a random user profile.
+**Описание**: Этот проект использует API для генерации случайной информации о пользователе. Он получает такие данные, как имя, электронная почта, аватар и другие, и отображает их на веб-странице, имитируя профиль случайного пользователя.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Asynchronous programming: Similar to project 2 (DadJokes), this project reinforces asynchronous operations in JavaScript.
--   Fetch API: Continues practicing using tools for making HTTP requests to APIs and retrieving data.
--   Working with APIs: Further explores interacting with external APIs to access specific functionalities or data.
+- Асинхронное программирование: Подобно проекту DadJokes, этот проект укрепляет асинхронные операции в JavaScript.
+- Fetch API: Продолжаем практиковаться в использовании инструментов для выполнения HTTP-запросов к API и получения данных.
+- Работа с API: Продолжает изучать взаимодействие с внешними API для получения доступа к определенным функциям или данным.
+
+
+
+{{< admonition info "Пример реализации" false >}}
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <!-- Иконка с подписью -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 30px; height: 30px;"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+        <span>email.svg</span>
+    </div>
+    <!-- Иконка с подписью -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marked-alt" class="svg-inline--fa fa-map-marked-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 30px; height: 30px;"><path fill="currentColor" d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"></path></svg>
+        <span>map.svg</span>
+    </div>
+    <!-- Иконка с подписью -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 30px; height: 30px;"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+        <span>phone.svg</span>
+    </div>
+    <!-- Иконка с подписью -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 30px; height: 30px;"><path fill="currentColor" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path></svg>
+        <span>user.svg</span>
+    </div>
+</div>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random User | DOM Projects</title>
+  </head>
+  <body>
+    <main class="main-section">
+      <!-- watermark -->
+      <p id="watermark" class="watermark">RANDOM USER GENERATOR</p>
+      <section class="section-1"></section>
+      <section class="section-2"></section>
+
+      <!-- Random user card -->
+      <div class="card">
+        <!-- card top-section -->
+        <div class="top-section">
+          <div id="user-image" class="img-circle-box">
+            <!-- <img src="images/jisan.jpg" alt="" /> -->
+          </div>
+          <p onclick="genrateNewUser()" class="new">Generate New user</p>
+        </div>
+        <!-- card bottom-section -->
+
+        <div class="bottom-section">
+          <div class="user-info">
+            <div id="user-name-div" class="user-info-inner user-name">
+              <h5>Hi, my name is</h5>
+              <h3 id="user-name"></h3>
+            </div>
+
+            <div id="user-email-div" class="user-info-inner user-email">
+              <h5>My Email address is</h5>
+              <h3 id="user-email"></h3>
+            </div>
+
+            <div id="user-phone-div" class="user-info-inner user-phone">
+              <h5>My phone number is</h5>
+              <h3 id="user-phone"></h3>
+            </div>
+
+            <div id="user-address-div" class="user-info-inner user-address">
+              <h5>My address is</h5>
+              <h3 id="user-address"></h3>
+            </div>
+          </div>
+
+          <div class="icon-area">
+            <div class="icon-inner">
+              <img onclick="showUserName()" src="./img/user.svg" alt="" />
+            </div>
+
+            <div class="icon-inner">
+              <img onclick="showUserEmail()" src="./img/email.svg" alt="" />
+            </div>
+
+            <div class="icon-inner">
+              <img onclick="showUserPhone()" src="./img/phone.svg" alt="" />
+            </div>
+
+            <div class="icon-inner">
+              <img onclick="showUserLocation()" src="./img/map.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', Fallback, sans-serif;
+  font-size: 16px;
+}
+
+.section-1 {
+  width: 100%;
+  background-color: #2c2e31;
+  height: 270px;
+}
+
+.section-2 {
+  width: 100%;
+  height: 393px;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.main-section {
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  top: 12%;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 675px;
+  height: 396px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.card .top-section {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.card .img-circle-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.card .img-circle-box img {
+  width: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.card .new {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  color: white;
+  background-color: #686a6df1;
+  padding-top: 5px;
+}
+
+.user-info {
+  font-family: "Raleway", sans-serif;
+}
+
+.user-info .user-info-inner {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.user-info .user-info-inner h5 {
+  font-size: 16px;
+  color: gray;
+  font-weight: 500;
+}
+
+.user-info .user-info-inner h3 {
+  font-size: 2.4em;
+  font-weight: 600;
+}
+
+.icon-area {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.icon-area .icon-inner {
+  width: 25px;
+}
+
+.icon-area .icon-inner img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.watermark {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 255, 0, 0.658);
+  color: white;
+  padding: 5px 0;
+}
+
+.user-email,
+.user-phone,
+.user-address {
+  display: none;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 83%;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+}
+
+footer .copywriteName {
+  color: orange;
+  cursor: pointer;
+}
+
+@media (max-width: 644px) {
+  .card {
+    width: 500px;
+  }
+
+  .user-info .user-info-inner h3 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    width: 390px;
+  }
+
+  .user-info .user-info-inner h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 360px;
+  }
+
+  .user-info .user-info-inner h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: 290px;
+  }
+
+  .user-info .user-info-inner h5 {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .user-info .user-info-inner h3 {
+    font-size: 1.2em;
+  }
+
+  .user-info .user-info-inner {
+    margin-top: 80px;
+  }
+
+  .section-1 {
+    height: 230px;
+  }
+}
+```
+
+```js
+const url = "https://randomuser.me/api/";
+function apiFetch() {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      showDataOnUi(data);
+    });
+}
+
+function showDataOnUi(data) {
+  const userName = `${
+    data.results[0].name.first + " " + data.results[0].name.last
+  }`;
+
+  const userEmail = `${data.results[0].email}`;
+
+  const userPhone = `${data.results[0].phone}`;
+
+  const location = `${
+    data.results[0].location.city + ", " + data.results[0].location.country
+  }`;
+
+  const image = `<img src="${data.results[0].picture.large}" alt=""/>`;
+
+  document.getElementById("user-name").innerText = userName;
+  document.getElementById("user-email").innerText = userEmail;
+  document.getElementById("user-phone").innerText = userPhone;
+  document.getElementById("user-address").innerText = location;
+  document.getElementById("user-image").innerHTML = image;
+
+  document.getElementById("");
+}
+
+function displayCurrentInfo(id1, id2, id3, id4) {
+  document.getElementById(id1).style.display = "block";
+  document.getElementById(id2).style.display = "none";
+  document.getElementById(id3).style.display = "none";
+  document.getElementById(id4).style.display = "none";
+  document.getElementById(id4).style.display = "none";
+}
+
+function showUserName() {
+  displayCurrentInfo(
+    "user-name-div",
+    "user-email-div",
+    "user-phone-div",
+    "user-address-div"
+  );
+}
+function showUserEmail() {
+  displayCurrentInfo(
+    "user-email-div",
+    "user-phone-div",
+    "user-address-div",
+    "user-name-div"
+  );
+}
+function showUserPhone() {
+  displayCurrentInfo(
+    "user-phone-div",
+    "user-email-div",
+    "user-address-div",
+    "user-name-div"
+  );
+}
+function showUserLocation() {
+  displayCurrentInfo(
+    "user-address-div",
+    "user-phone-div",
+    "user-email-div",
+    "user-name-div"
+  );
+}
+
+setTimeout(() => {
+  document.getElementById("watermark").style.display = "none";
+}, 2500);
+
+apiFetch();
+
+function genrateNewUser() {
+  apiFetch();
+}
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+#### HTML
+
+HTML-код создает основную структуру страницы:
+
+1. **Основные элементы:**
+   - `main` с классом `main-section` — основной контейнер для элементов.
+   - `div` с классом `card` — карточка для отображения данных о случайном пользователе.
+   - Внутри карточки находятся:
+     - `div` с `id="user-image"` — контейнер для изображения пользователя.
+     - Несколько `div` с классом `user-info-inner` и соответствующими `id` (например, `user-name-div`, `user-email-div`), которые содержат информацию о пользователе (имя, email, телефон и адрес).
+     - `div` с классом `icon-area` — блок с иконками, которые при клике отображают определенную информацию о пользователе (имя, email, телефон, адрес).
+
+2. **Подключение JavaScript:**
+   - `<script src="script.js"></script>` подключает файл JavaScript, который отвечает за получение и отображение данных о пользователе.
+
+#### CSS
+
+CSS стилизует элементы страницы, делая интерфейс привлекательным и удобным для пользователя:
+
+1. **Основные стили:**
+   - Основные стили для страницы (`body`), включая шрифт, фон и размещение контейнера по центру.
+   - Стили для карточки (`.card`), которая содержит данные о пользователе. Карточка имеет закругленные углы, тени и делится на верхнюю (`top-section`) и нижнюю (`bottom-section`) части.
+   - Стили для иконок (`.icon-area`), которые позволяют пользователю выбирать, какую информацию отображать на карточке.
+
+2. **Респонсивность:**
+   - Использование медиа-запросов для адаптации карточки под разные размеры экранов, обеспечивая корректное отображение на мобильных устройствах.
+
+#### JavaScript
+
+JavaScript отвечает за взаимодействие с API, обработку данных и отображение их на странице. Рассмотрим код подробнее:
+
+1. **Определение URL API и функция `apiFetch()`:**
+   - `const url = "https://randomuser.me/api/";` — URL для получения случайной информации о пользователе с помощью API.
+   - `function apiFetch()` — функция для выполнения запроса к API и получения данных о пользователе:
+     - Используется метод `fetch` для отправки запроса к API.
+     - Полученный ответ преобразуется в формат JSON, и данные передаются в функцию `showDataOnUi(data)` для отображения на странице.
+
+2. **Функция `showDataOnUi(data)`:**
+   - Получает данные о пользователе и отображает их на странице:
+   - Извлекает имя, email, телефон, местоположение и изображение пользователя из полученных данных:
+     ```js
+     const userName = `${data.results[0].name.first + " " + data.results[0].name.last}`;
+     const userEmail = `${data.results[0].email}`;
+     const userPhone = `${data.results[0].phone}`;
+     const location = `${data.results[0].location.city + ", " + data.results[0].location.country}`;
+     const image = `<img src="${data.results[0].picture.large}" alt=""/>`;
+     ```
+   - Устанавливает соответствующие значения в элементы DOM:
+     ```js
+     document.getElementById("user-name").innerText = userName;
+     document.getElementById("user-email").innerText = userEmail;
+     document.getElementById("user-phone").innerText = userPhone;
+     document.getElementById("user-address").innerText = location;
+     document.getElementById("user-image").innerHTML = image;
+     ```
+
+3. **Функции для отображения выбранной информации:**
+   - **Функция `displayCurrentInfo(id1, id2, id3, id4)`** — отображает выбранную информацию и скрывает остальные:
+     ```js
+     function displayCurrentInfo(id1, id2, id3, id4) {
+       document.getElementById(id1).style.display = "block";
+       document.getElementById(id2).style.display = "none";
+       document.getElementById(id3).style.display = "none";
+       document.getElementById(id4).style.display = "none";
+     }
+     ```
+   - **Функции `showUserName()`, `showUserEmail()`, `showUserPhone()`, `showUserLocation()`** — используют `displayCurrentInfo` для отображения конкретной информации (например, имени, email и т.д.) при клике на соответствующую иконку.
+
+4. **Инициализация и обновление данных:**
+   - `apiFetch()` — вызывается при загрузке страницы, чтобы сразу отобразить данные о случайном пользователе.
+   - `function genrateNewUser()` — вызывается при клике на кнопку "Generate New User" для получения новых данных о пользователе.
+
+5. **Дополнительные функции:**
+   - **Функция `setTimeout()`** используется для скрытия водяного знака через 2.5 секунды после загрузки страницы:
+     ```js
+     setTimeout(() => {
+       document.getElementById("watermark").style.display = "none";
+     }, 2500);
+     ```
+
+{{< /admonition >}}
+
+<!--
 
 ### Morse Code Translator
 
@@ -1286,18 +1780,25 @@ JavaScript отвечает за логику проверки данных, о�
 -   String manipulation: Understand how to work with strings in JavaScript, including functions for splitting, joining, and character manipulation, which are crucial for Morse code translation.
 -   Conditional statements: Learn how to use conditional statements (if/else) in JavaScript to implement the translation logic based on user input (text or Morse code).
 
-### Basic Calculator
+{{< admonition info "Пример реализации" false >}}
 
-[![Basic Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Friz357iso4aux1an08sx.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Friz357iso4aux1an08sx.png)  
-**Description**: This project uses JavaScript to build a bare minimum basic calculator application. It allows users to perform fundamental arithmetic operations like addition, subtraction, multiplication, and division. Users can enter numbers and choose the desired operation using buttons on the screen. The calculator displays the calculated result.
+```html
+```
 
-**Learning Concepts**:
+```css
+```
 
--   Event handling: Similar to previous projects, this project practices capturing user clicks on calculator buttons and triggering actions (updating the calculation and result).
--   DOM manipulation: Demonstrates how to update the displayed numbers and result within the calculator interface using JavaScript.
--   Basic math operations in JavaScript: Explores using JavaScript's built-in math operators and functions for performing calculations like addition, subtraction, multiplication, and division.
+```js
 
-### Normal Calculator
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
+### Calculator
 
 [![Normal Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png)  
 **Description**: This project builds upon the basic calculator by offering a more comprehensive user experience for standard mathematical calculations. It caters to users familiar with basic calculator functionalities.
@@ -1306,6 +1807,24 @@ JavaScript отвечает за логику проверки данных, о�
 
 -   Building upon existing projects: Demonstrates expanding on the basic calculator concept to create a more user-friendly and feature-rich calculator.
 -   Enhanced user interaction: Introduces techniques for improving user interaction with the calculator, such as handling decimal inputs or incorporating memory functions.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Scientific Calculator
 
@@ -1316,6 +1835,24 @@ JavaScript отвечает за логику проверки данных, о�
 
 -   Building complex applications: Demonstrates creating a more intricate application with advanced scientific functionalities.
 -   Mathematical functions in JavaScript: Introduces using JavaScript's built-in math functions for advanced calculations
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Simple Todo App
 
@@ -1328,6 +1865,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   Arrays: It demonstrates storing and managing task data using arrays in JavaScript.
 -   User interface updates: Explores how to update the visual representation of the to-do list (adding, completing, deleting tasks) based on user interactions.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Profile Form & Card
 
 [![Profile Form & Card](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png)  
@@ -1338,6 +1893,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   Form handling: This project builds upon concepts from form validation (project 3) by focusing on capturing form data and utilizing it for further actions.
 -   DOM creation and manipulation: It goes beyond basic DOM manipulation by dynamically creating new HTML elements (profile cards) based on user input.
 -   Event handling: Continues practicing capturing user interactions with the form and delete buttons and triggering appropriate actions.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### PC Component Filtering
 
@@ -1350,6 +1923,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   Arrays and data filtering: Explores using arrays to store computer part data and implements filtering logic in JavaScript to match user selections.
 -   User interface updates: Focuses on updating the visual representation of the component list based on the applied filters.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Weather App
 
 [![Weather App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png)  
@@ -1357,9 +1948,17 @@ JavaScript отвечает за логику проверки данных, о�
 
 **Learning Concepts:**
 
--   Asynchronous programming: Similar to projects like DadJokes (project 2), this project reinforces concepts of handling asynchronous operations for fetching weather data.
+-   Asynchronous programming: Similar to projects like DadJokes, this project reinforces concepts of handling asynchronous operations for fetching weather data.
 -   Fetch API: Continues practicing using tools for making HTTP requests to APIs and retrieving weather data.
 -   Working with APIs: Further explores interacting with external APIs to access weather information.
+
+{{< admonition info "Пример реализации" false >}}
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Testimonial Slider
 
@@ -1371,6 +1970,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   DOM manipulation: Demonstrates manipulating the visibility of testimonial elements based on the slider position.
 -   Event handling: Captures user interactions with the slider control and triggers the sliding animation.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Animation on Scroll
 
 [![Animation on Scroll](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png)  
@@ -1380,6 +1997,24 @@ JavaScript отвечает за логику проверки данных, о�
 
 -   CSS animations: Explores using CSS animations to create visual effects that activate based on scroll position.
 -   JavaScript for scroll events: Introduces using JavaScript to detect scroll events and trigger animations accordingly.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Search Field Reveal
 
@@ -1391,6 +2026,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   CSS animations: Introduces using CSS animations to create dynamic visual effects for the search field reveal.
 -   Event handling: Covers capturing user interactions (eg. button clicks) and using JavaScript to trigger the animations.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Question List & Progress
 
 [![Question List & Progress](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png)  
@@ -1400,6 +2053,24 @@ JavaScript отвечает за логику проверки данных, о�
 
 -   DOM manipulation: This project emphasizes manipulating elements like the progress indicator based on user interaction with the questions.
 -   Event handling: Captures user interactions with the question elements and triggers actions like updating the progress indicator.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Modal
 
@@ -1411,6 +2082,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   DOM manipulation: Focuses on showing and hiding the modal window element based on user interaction.
 -   Event handling: Captures clicks on the trigger element and the modal's close button to control its visibility.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Advanced Todo
 
 [![Advanced Todo](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png)  
@@ -1420,6 +2109,24 @@ JavaScript отвечает за логику проверки данных, о�
 
 -   Building upon existing projects: Similar to the scientific calculator (project 7), this project demonstrates expanding on a basic concept (to-do list) to create a more advanced application.
 -   User interface updates: Extends the concept of updating the to-do list to include functionalities like filtering, editing task content, and removing tasks.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Retro Calculator
 
@@ -1432,6 +2139,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   DOM manipulation: Updates the calculator display based on user input and calculation results.
 -   Object-oriented programming: This project introduces concepts of object-oriented programming (OOP) in JavaScript for creating a more modular and reusable calculator functionality.
 
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
+
 ### Simple Quiz App
 
 [![Simple Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png)  
@@ -1440,6 +2165,24 @@ JavaScript отвечает за логику проверки данных, о�
 **Learning Concepts:**
 
 -   DOM manipulation: Updates the quiz interface to display questions, handle answer selections, and show the final
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Advanced Quiz App
 
@@ -1451,6 +2194,24 @@ JavaScript отвечает за логику проверки данных, о�
 -   Building upon existing projects: Similar to other projects (scientific calculator, advanced to-do list), this project demonstrates extending a basic concept with additional features.
 -   User input validation: It introduces concepts of validating user input for the customization options (e.g., ensuring a valid number of questions is chosen).
 -   Conditional statements: Plays a more prominent role in this project as JavaScript logic needs to adapt the quiz based on user-defined parameters.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+```
+
+```css
+```
+
+```js
+
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+{{< /admonition >}}
 
 ### Take the Next Step:
 
