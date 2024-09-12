@@ -460,18 +460,586 @@ JavaScript отвечает за взаимодействие с API и обра
 
 {{< /admonition >}}
 
-<!--
-
 ### Form Validation
 
 [![Form Validation](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)  
-**Description**: This project demonstrates client-side form validation using JavaScript. It validates user input in a form before submitting it. Additionally, upon successful validation, it displays a success message and allows users to preview the submitted data in a read-only format.
+**Описание**: Этот проект демонстрирует проверку формы на стороне клиента с помощью JavaScript. Он проверяет вводимые пользователем данные в форме перед отправкой. Кроме того, при успешной проверке выводится сообщение об успехе, а пользователи могут просматривать введенные данные в формате, доступном только для чтения.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Form validation: Understand how to use JavaScript to validate user input in forms before submission. This helps ensure data integrity and prevents invalid data from being processed.
--   DOM manipulation: Learn how to access and modify form elements (like displaying error messages or disabling input fields) based on validation results.
--   Event handling: Capture the form submission event and trigger validation logic using JavaScript.
+- Валидация формы: Поймите, как использовать JavaScript для проверки вводимых пользователем данных в формах перед отправкой. Это помогает обеспечить целостность данных и предотвратить обработку недействительных данных.
+- Манипулирование DOM: Узнайте, как получать доступ к элементам формы и изменять их (например, выводить сообщения об ошибках или отключать поля ввода) на основе результатов проверки.
+- Обработка событий: Перехватывайте событие отправки формы и запускайте логику проверки с помощью JavaScript.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation | DOM Projects</title>
+  </head>
+  <body>
+    <div class="container" id="main-page">
+      <div class="header">
+        <h2>REGISTRATION FORM</h2>
+      </div>
+
+      <form class="form" id="form">
+        <div class="form-group">
+          <label for="">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your name"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <!-- <div class="form-group">
+				<label for="">Phone Number</label>
+				<input type="number" id="phone" placeholder="Enter phone number">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error Msg</small>
+			</div> -->
+
+        <div class="form-group">
+          <label for="">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <div class="form-group">
+          <label for="">Retype Password</label>
+          <input
+            type="password"
+            id="retypepass"
+            placeholder="Enter password again"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <input id="submit-btn" type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+
+    <!-- message after submitted -->
+    <div class="container" id="submitted-msg">
+      <div class="submit-msg-inner">
+        <h1>Thanks <span id="msg-name"></span> for Your Registration.</h1>
+        <button onclick="previewForm()" class="preview-btn">
+          Preview Form
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', Fallback, sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --lg-lightcolor: linear-gradient(to left,
+      rgba(116, 235, 0.6),
+      rgba(159, 172, 23, 0));
+}
+
+body {
+  background-color: #f8f9fc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 8px rgba(0, 0, 0, 0.091);
+  overflow: hidden;
+  width: 500px;
+  max-width: 100%;
+}
+
+#main-page {
+  display: block;
+}
+
+.header {
+  background-image: linear-gradient(62deg, #4e54c8 0%, #8f94fb 100%);
+  padding: 25px 0;
+}
+
+.header h2 {
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.form-group input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-group.success input {
+  border-color: #2ecc71;
+}
+
+.form-group.error input {
+  border-color: #e74c3c;
+}
+
+.form-group i {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  visibility: hidden;
+}
+
+.form-group.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-group.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-group small {
+  color: #e74c3c;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  visibility: hidden;
+}
+
+.form-group.error small {
+  visibility: visible;
+}
+
+.form .btn {
+  /*background-color: #8EC5FC;*/
+  background-image: linear-gradient(62deg, #4e54c8 0%, #8f94fb 100%);
+
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 11px 0;
+  margin-top: 30px;
+  width: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.form .btn:hover {
+  background-image: linear-gradient(62deg, #8f94fb 0%, #4e54c8 100%);
+}
+
+#submitted-msg {
+  display: none;
+  background-color: aliceblue;
+}
+
+.submit-msg-inner {
+  text-align: center;
+  padding: 65px;
+}
+
+#msg-name {
+  color: green;
+}
+
+.preview-btn {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.disabled-btn {
+  background: #8f94fb;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 11px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+  #main-page {
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 525px) {
+  #main-page {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    width: 400px;
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 19px;
+  }
+
+  .form-group {
+    margin-bottom: 19px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 7px;
+  }
+
+  .form-group i {
+    right: 10px;
+    top: 33px;
+  }
+}
+
+@media (max-width: 375px) {
+  #main-page {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 330px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 17px;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group input {
+    padding: 5px;
+  }
+
+  .form-group i {
+    right: 10px;
+    top: 32px;
+  }
+}
+
+@media (max-width: 325px) {
+  .container {
+    width: 300px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group input {
+    padding: 5px;
+  }
+
+  .form-group i {
+    right: 10px;
+    top: 32px;
+  }
+}
+```
+
+```js
+const form = document.getElementById("form");
+const userName = document.getElementById("username");
+const email = document.getElementById("email");
+// const phone = document.getElementById('phone');
+const password = document.getElementById("password");
+const cpassword = document.getElementById("retypepass");
+
+//add event
+form.addEventListener("submit", (event) => {
+  console.log("form submit");
+  event.preventDefault();
+
+  validate();
+});
+
+//is email(check the email)
+const isEmail = (emailVal) => {
+  let atSymbol = emailVal.indexOf("@");
+  if (atSymbol < 1) return false;
+
+  let dot = emailVal.lastIndexOf(".");
+  if (dot <= atSymbol + 3) return false;
+
+  if (dot === emailVal.length - 1) return false;
+
+  return true;
+};
+
+const validate = () => {
+  const userNameVal = username.value.trim();
+  const emailVal = email.value.trim();
+  // const phoneVal = phone.value.trim();
+  const passwordVal = password.value.trim();
+  const cpasswordVal = cpassword.value.trim();
+
+  // validate userName
+  if (userNameVal === "") {
+    setErrorMsg(username, "Username cannot be blank");
+  } else if (userNameVal.length <= 2) {
+    setErrorMsg(username, "Enter min 3 char");
+  } else {
+    setSuccessmsg(username);
+  }
+
+  // validate email
+  if (emailVal === "") {
+    setErrorMsg(email, "Email cannot be blank");
+  } else if (!isEmail(emailVal)) {
+    setErrorMsg(email, "Not valid email");
+  } else {
+    setSuccessmsg(email);
+  }
+
+  //validate phone
+  /*if(phoneVal === ""){
+		setErrorMsg(phone, 'phone num cannot be blank');
+	} else if (phoneVal.length != 11 ) {
+		setErrorMsg(phone, 'not valid phone num');
+	} else{
+		setSuccessmsg(phone);
+	}*/
+
+  //validate password
+  if (passwordVal === "") {
+    setErrorMsg(password, "Password cannot be blank");
+  } else if (passwordVal.length < 8) {
+    setErrorMsg(password, "Enter min 8 char");
+  } else {
+    setSuccessmsg(password);
+  }
+
+  //validate confirm password
+  if (cpasswordVal === "") {
+    setErrorMsg(cpassword, "Field cannot be blank");
+  } else if (cpasswordVal.length < 8) {
+    setErrorMsg(cpassword, "Enter min 8 char");
+  } else if (cpasswordVal != passwordVal) {
+    setErrorMsg(cpassword, "Password didn't matched ");
+  } else {
+    setSuccessmsg(cpassword);
+  }
+
+  setTimeout(() => {
+    let successCls = document.querySelectorAll(".success");
+    if (successCls.length == 4) {
+      showSubmittedMsg();
+    }
+  }, 1000);
+};
+
+function showSubmittedMsg() {
+  let mainPage = document.getElementById("main-page");
+  mainPage.style.display = "none";
+  let successMsgPage = document.getElementById("submitted-msg");
+  successMsgPage.style.display = "block";
+
+  document.getElementById("msg-name").innerText = userName.value;
+}
+
+function setErrorMsg(input, errormsg) {
+  const formGroup = input.parentNode;
+  const small = formGroup.querySelector("small");
+  formGroup.className = "form-group error";
+  small.innerText = errormsg;
+}
+
+function setSuccessmsg(input) {
+  const fromGroup = input.parentNode;
+  fromGroup.className = "form-group success";
+}
+
+function previewForm() {
+  document.getElementById("main-page").style.display = "block";
+  document.getElementById("submitted-msg").style.display = "none";
+
+  let submitBtn = document.getElementById("submit-btn");
+  submitBtn.classList.remove("btn");
+  submitBtn.classList.add("disabled-btn");
+  submitBtn.disabled = true;
+}
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+#### HTML
+
+HTML-код создает структуру страницы и форму для ввода данных:
+
+1. **Основные элементы:**
+   - `div` с классом `container` и `id="main-page"` содержит форму регистрации.
+   - `form` с классом `form` и `id="form"` — сама форма с несколькими полями ввода: "Имя пользователя", "Email", "Пароль", "Повторите пароль".
+   - В каждом `div` с классом `form-group` содержатся элементы ввода (`input`), иконки для индикации статуса (успех или ошибка), и `small` для отображения сообщений об ошибках.
+
+2. **Сообщение об успехе:**
+   - `div` с `id="submitted-msg"` содержит сообщение об успешной регистрации и кнопку для предварительного просмотра введенных данных.
+
+3. **Подключение JavaScript:**
+   - `<script src="script.js"></script>` подключает файл JavaScript для обработки проверки формы и отображения сообщений.
+
+#### CSS
+
+CSS стилизует элементы страницы, обеспечивая удобство использования и привлекательный внешний вид:
+
+1. **Основные стили:**
+   - Основные стили для страницы, включая фон, шрифт и размещение контейнера формы по центру.
+   - Стили для контейнера `.container`, формы, заголовков, иконок и сообщений об ошибках.
+   - Стили для кнопок с различными эффектами при наведении курсора и нажатии.
+
+2. **Респонсивность:**
+   - Использование медиа-запросов для адаптации формы под разные размеры экранов.
+
+#### JavaScript
+
+JavaScript отвечает за логику проверки данных, обработку событий и отображение сообщений. Рассмотрим код подробнее:
+
+1. **Получение элементов формы:**
+   - `const form = document.getElementById("form");` — получает форму по `id`.
+   - `const userName`, `email`, `password`, `cpassword` — получают поля ввода формы по `id`.
+
+2. **Обработка события отправки формы:**
+   - `form.addEventListener("submit", (event) => { ... });` — добавляет обработчик события `submit` для формы. При попытке отправки формы выполняется логика проверки:
+     - `event.preventDefault();` предотвращает стандартное поведение отправки формы.
+     - Вызывается функция `validate()` для проверки введенных данных.
+
+3. **Проверка правильности данных:**
+   - **Функция `isEmail(emailVal)`** — проверяет, является ли введенное значение корректным email-адресом.
+   - **Функция `validate()`** — выполняет проверку данных для каждого поля формы:
+     - Проверяет, не пустое ли поле, соответствует ли длина минимальным требованиям, и совпадают ли пароли.
+     - В случае ошибки вызывает `setErrorMsg(input, message)`, чтобы указать на ошибку.
+     - В случае успеха вызывает `setSuccessmsg(input)` для отображения статуса "успех".
+
+4. **Отображение сообщений:**
+   - **Функция `setErrorMsg(input, errormsg)`** — добавляет класс `error` к `form-group` и выводит сообщение об ошибке.
+   - **Функция `setSuccessmsg(input)`** — добавляет класс `success` к `form-group`, чтобы показать успешное прохождение проверки.
+   - **Функция `showSubmittedMsg()`** — скрывает форму и отображает сообщение об успешной регистрации.
+
+5. **Предпросмотр данных:**
+   - **Функция `previewForm()`** — отображает введенные данные в форме в режиме только для чтения. Кнопка "Отправить" блокируется и стилизуется как неактивная.
+
+{{< /admonition >}}
+
+<!--
 
 ### Random User
 
