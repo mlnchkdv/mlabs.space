@@ -1300,6 +1300,7 @@ JavaScript отвечает за логику проверки данных, о�
         <span>user.svg</span>
     </div>
 </div>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
