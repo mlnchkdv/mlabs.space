@@ -460,6 +460,230 @@ JavaScript отвечает за взаимодействие с API и обра
 
 {{< /admonition >}}
 
+### Random Dog
+
+**Описание:** Этот проект получает случайные изображения собак из внешнего API, используя асинхронные методы на JavaScript. После получения изображения оно отображается на веб-странице для вашего развлечения.
+
+**Концепции обучения:**
+
+- Асинхронное программирование: Поймите, как обрабатывать операции, требующие времени для завершения (например, получение данных из API), не блокируя основной поток выполнения в JavaScript.
+- Fetch API: Узнайте, как использовать встроенные функции браузера для выполнения HTTP-запросов к API и получения данных.
+- Работа с API: Изучите, как взаимодействовать с внешними API для получения доступа к данным или функциональным возможностям, предоставляемым этими сервисами.
+
+{{< admonition info "Пример реализации" false >}}
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Dog Image | DOM Projects</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Random Dog Image Generator</h3>
+      <div class="imageDiv"><img id="dogImage" src="" alt="Random Dog" /></div>
+      <button class="imageGeneratorBtn">Get Another Image</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+```
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', Fallback, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f8f9fc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  border: 1px solid lightgray;
+}
+
+.container h3 {
+  font-weight: 400;
+  font-size: 22px;
+  color: rgb(136, 136, 138);
+  margin-bottom: 35px;
+}
+
+.imageDiv {
+  margin: 50px auto;
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.imageDiv img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imageGeneratorBtn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 13px 45px;
+  color: #f8f8f8f6;
+  background-color: rgb(95, 95, 255);
+
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.imageGeneratorBtn:active {
+  transform: scale(0.98);
+}
+
+.imageGeneratorBtn:focus {
+  outline: 0;
+}
+
+.imageGeneratorBtn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+```
+
+```js
+const imageDiv = document.querySelector(".imageDiv");
+const generatorBtn = document.querySelector(".imageGeneratorBtn");
+const dogImage = document.getElementById("dogImage");
+
+const url = "https://dog.ceo/api/breeds/image/random";
+let timer_on = 10000;
+let interval;
+
+function startInterval() {
+  interval = setInterval(generateImage, timer_on);
+}
+
+async function generateImage() {
+  generatorBtn.setAttribute("disabled", "disabled");
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    dogImage.src = data.message; // Устанавливаем источник изображения на URL, полученный из API
+  } catch {
+    imageDiv.innerHTML = "Error getting image";
+  } finally {
+    generatorBtn.removeAttribute("disabled");
+  }
+}
+
+generateImage();
+startInterval();
+
+generatorBtn.addEventListener("click", function () {
+  generateImage();
+  clearInterval(interval);
+  startInterval();
+});
+```
+
+{{< /admonition >}}
+
+{{< admonition info "Пояснение к коду реализации" false >}}
+
+#### HTML
+
+1. **Основные элементы:**
+   - `h3` — заголовок "Random Dog Image Generator".
+   - `div` с классом `imageDiv` — элемент, содержащий изображение случайной собаки. Изначально в элементе `img` установлено пустое значение `src`.
+   - `button` с классом `imageGeneratorBtn` — кнопка для получения нового изображения.
+
+2. **Подключение JavaScript:**
+   - `<script src="./script.js"></script>` подключает файл JavaScript, который будет отвечать за получение и отображение изображения.
+
+#### CSS
+
+1. **Основные стили:**
+   - Стили для всего тела (`body`), чтобы разместить элементы по центру страницы и задать им фон.
+   - Оформление контейнера `.container`, где находятся заголовок, изображение и кнопка, с использованием тени, закругленных углов и внутреннего отступа.
+   - Стили для `.imageDiv` делают изображение адаптивным и ограничивают его размер.
+   - Кнопка `.imageGeneratorBtn` имеет стили для изменения цвета, формы и анимации при нажатии.
+
+#### JavaScript
+
+1. **Получение элементов DOM:**
+   
+   - `const imageDiv = document.querySelector(".imageDiv");` — получает контейнер для изображения.
+   - `const generatorBtn = document.querySelector(".imageGeneratorBtn");` — получает кнопку для генерации нового изображения.
+   - `const dogImage = document.getElementById("dogImage");` — получает элемент `img` для отображения изображения.
+   
+2. **Установка URL API и таймера:**
+   - `const url = "https://dog.ceo/api/breeds/image/random";` — URL API, который возвращает случайное изображение собаки.
+   - `let timer_on = 10000;` — интервал в миллисекундах (10 секунд), через который будет автоматически генерироваться новое изображение.
+   - `let interval;` — переменная для хранения интервала таймера.
+
+3. **Функция для запуска интервала:**
+   - `function startInterval() { interval = setInterval(generateImage, timer_on); }` — функция для запуска интервала, который вызывает `generateImage` каждые 10 секунд.
+
+4. **Асинхронная функция для получения изображения:**
+   - `async function generateImage()` — асинхронная функция для получения данных изображения из API.
+   - В начале функция отключает кнопку, чтобы предотвратить повторные нажатия во время выполнения запроса:
+     ```js
+     generatorBtn.setAttribute("disabled", "disabled");
+     ```
+   - Функция выполняет HTTP-запрос с использованием `fetch` и получает данные в формате JSON:
+     ```js
+     const response = await fetch(url);
+     const data = await response.json();
+     ```
+   - Если запрос проходит успешно, URL изображения устанавливается в качестве значения `src` для элемента `img`. Если произошла ошибка, выводится сообщение об ошибке:
+     ```js
+     dogImage.src = data.message;
+     // или, в случае ошибки:
+     imageDiv.innerHTML = "Error getting image";
+     ```
+   - В блоке `finally` кнопка снова активируется для пользователя:
+     ```js
+     generatorBtn.removeAttribute("disabled");
+     ```
+
+5. **Запуск первого изображения и интервала:**
+   - `generateImage();` — вызывается для получения первого изображения при загрузке страницы.
+   - `startInterval();` — запускает интервал, чтобы автоматически получать новые изображения каждые 10 секунд.
+
+6. **Обработчик события для кнопки:**
+   - `generatorBtn.addEventListener("click", function () { ... });` — добавляет обработчик события для кнопки. При нажатии на кнопку:
+     - Снова вызывается функция `generateImage()`.
+     - Сбрасывается текущий интервал таймера и запускается новый, чтобы отсчет начинался заново после каждого нажатия.
+
+{{< /admonition >}}
+
 ### Form Validation
 
 [![Form Validation](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)  
