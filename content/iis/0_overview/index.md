@@ -55,7 +55,7 @@ draft: false
         text-align: center;
     }
     #countdown {
-        font-size: 1.8em;
+        font-size: 1.6em;
         color: #444;
         margin-bottom: 30px;
     }
@@ -89,7 +89,7 @@ draft: false
     .milestone {
         position: absolute;
         top: 50px;
-        font-size: 0.9em;
+        font-size: 0.7em;
         color: #555;
         text-align: center;
         width: 100px;
@@ -104,9 +104,9 @@ draft: false
         <div class="tick" style="left: 50%;"></div>
         <div class="tick" style="left: 70%;"></div>
         <div class="tick" style="left: 90%;"></div>
-        <div class="milestone" style="left: 50%;">Submission<br>проектов и команд</div>
-        <div class="milestone" style="left: 70%;">Питчинг 1<br>23.11.24</div>
-        <div class="milestone" style="left: 90%;">Питчинг 2<br>14.12.24</div>
+        <div class="milestone" style="left: 50%;">Submission</div>
+        <div class="milestone" style="left: 70%;">Pitching 1<br>23.11.24</div>
+        <div class="milestone" style="left: 90%;">Pitching 2<br>14.12.24</div>
     </div>
 </div>
 <script>
