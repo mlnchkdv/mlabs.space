@@ -45,10 +45,11 @@ draft: false
         margin: 0;
         background-color: #e8f4f8;
         box-sizing: border-box;
-        min-height: 55vh;
+        min-height: 60vh;
     }
     .title {
         font-size: 2.1em;
+        padding: 5px 0;
         font-weight: bold;
         color: #333;
         margin-bottom: 20px;
@@ -60,13 +61,18 @@ draft: false
         margin-bottom: 30px;
     }
     #progress-bar-container {
-        width: 80%;
+        width: 85%;
         background-color: #ddd;
         border-radius: 8px;
         margin-top: 20px;
         position: relative;
         height: 40px;
         overflow: visible;
+    }
+    @media (max-width: 600px) {
+        #progress-bar-container {
+            width: 100%;
+        }
     }
     #progress-bar {
         width: 0;
@@ -94,6 +100,9 @@ draft: false
         text-align: center;
         width: 100px;
         transform: translateX(-50%);
+    }
+    .milestone br {
+        margin: 7px;
     }
 </style>
 <div class="counter">
