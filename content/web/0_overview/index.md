@@ -54,13 +54,14 @@ draft: false
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSg9l6StvWEoEvnau9VjoMp2dlqn8PPyhJxHwLXZxQR-SXixlbW_BmPIE1XjM8GxrO0YtriqOlaZ39X/pubhtml?gid=1852629622&amp;range=B1:M30&single=true&widget=false&chrome=false&headers=false" width="100%" height="514px" frameborder="0" scrolling="no"></iframe>
 
 {{< /admonition >}}
--->
 
-{{< admonition info "Список команд и проектов" false >}}
+{{< admonition info "Список команд и проектов 2023-2024" false >}}
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsl8LdmmLkenLGnmBlbU9fEJZrBnvWMvzNXE2da45Bx02sz5SAn63A9BCvlGdkGT9zBhFE4fZlT2_j/pubhtml?gid=0&amp;range=A1:L121&single=true&widget=false&chrome=false&headers=false" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
 
 {{< /admonition >}}
+
+-->
 
 ## Семестр 1 (HTML&CSS)
 
@@ -89,6 +90,7 @@ draft: false
 - [:(fa-solid fa-file-word): Шаблон выпускной работы](../files/Шаблон-ИФиЖ.docx) и [:(fa-solid fa-quote-left): пример ВКР](../files/Пример_ВКР_(ycadm.ru).docx)
 - [:(fa-brands fa-codepen): Примеры лэндингов](../examples)
 <!-- - [:(fa-brands fa-readme): Глоссарий](../glossary) -->
+- [:(fa-solid fa-list-check): Проекты для портфолио](../projects)
 
 ## Источники
 
