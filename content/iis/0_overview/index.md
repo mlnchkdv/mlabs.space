@@ -34,6 +34,82 @@ draft: false
 
 {{< /admonition >}}
 
+<style>
+.counter {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+#countdown {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+#progress-bar-container {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+</style>
+<div class="counter">
+    <div id="countdown">Загрузка...</div>
+    <div id="progress-bar-container">
+        <div id="progress-bar">0%</div>
+    </div>
+<script>
+    // Функция для обновления обратного отсчета
+    function updateCountdown() {
+        const endDate = new Date("2024-12-23T00:00:00");
+        const now = new Date();
+        const timeDifference = endDate - now;
+        if (timeDifference <= 0) {
+            document.getElementById("countdown").innerHTML = "Срок достигнут!";
+            return;
+        }
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = 
+            days + "д " + hours + "ч " + minutes + "м " + seconds + "с ";
+    }
+    // Функция для обновления полосы загрузки
+    function updateProgressBar() {
+        const startDate = new Date("2024-09-01T00:00:00");
+        const endDate = new Date("2024-12-23T00:00:00");
+        const now = new Date();
+        if (now < startDate) {
+            document.getElementById("progress-bar").style.width = "0%";
+            document.getElementById("progress-bar").innerHTML = "0%";
+            return;
+        }
+        const totalDuration = endDate - startDate;
+        const elapsed = now - startDate;
+        const progressPercentage = Math.min((elapsed / totalDuration) * 100, 100);
+        document.getElementById("progress-bar").style.width = progressPercentage + "%";
+        document.getElementById("progress-bar").innerHTML = Math.floor(progressPercentage) + "%";
+    }
+    // Обновляем счетчик и полосу загрузки каждую секунду
+    setInterval(function() {
+        updateCountdown();
+        updateProgressBar();
+    }, 1000);
+</script>
+</div>
 **Целью курса** является изучение базовых парадигм разработки интеллектуальных информационных систем (ИИС), т.е. систем обладающих способностью собирать, обрабатывать и анализировать большое количество данных, на основе которых она может автоматически принимать решения и выполнять задачи. Такие системы могут быть использованы для широкого круга задач в различных отраслях, включая финансы, здравоохранение, транспорт, производство и множество других областей.
 
 Интеллектуальные системы могут автоматизировать процессы и улучшать качество принимаемых решений. Они могут анализировать данные и выдавать рекомендации или предсказания, учитывая сложные факторы и зависимости, вычисляемые на основе статистических данных.
