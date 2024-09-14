@@ -20,7 +20,7 @@ draft: false
 
 ### Counter
 
-![Counter](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fegsodt4dyfekiwp8ln4q.png) "Counter"]
+![Counter](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fegsodt4dyfekiwp8ln4q.png "Counter")
 
 **Описание:** Этот проект представляет собой простой счетчик, который позволяет пользователям увеличивать и уменьшать числовое значение, отображаемое на экране. Кроме того, проект включает кнопку для сброса счетчика на ноль.
 
@@ -237,14 +237,15 @@ JavaScript отвечает за обработку событий и измен
 
 ### DadJokes
 
-[![DadJokes](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz09wwb70arrb5ccjhl87.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz09wwb70arrb5ccjhl87.png)  
-**Описание:** Этот проект получает случайные шутки про отца из внешнего API, используя асинхронные методы на JavaScript. После получения анекдот отображается на веб-странице для вашего развлечения.
+![DadJokes](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz09wwb70arrb5ccjhl87.png "DadJokes")
+
+**Описание:** Проект использует внешний API для получения случайных шуток про отца с использованием асинхронных методов на JavaScript. После получения данные отображаются на веб-странице в виде шутки для развлечения пользователей.
 
 **Концепции обучения:**
 
-- Асинхронное программирование: Поймите, как обрабатывать операции, требующие времени для завершения (например, получение данных из API), не блокируя основной поток выполнения в JavaScript.
-- Fetch API: Узнайте, как использовать встроенные функции браузера для выполнения HTTP-запросов к API и получения данных.
-- Работа с API: Изучите, как взаимодействовать с внешними API для получения доступа к данным или функциональным возможностям, предоставляемым этими сервисами.
+- Асинхронное программирование: Работа с операциями, требующими времени для завершения (например, получение данных из API), без блокировки основного потока выполнения в JavaScript.
+- Fetch API: Использование встроенных функций браузера для выполнения HTTP-запросов к API и получения данных.
+- Работа с API: Взаимодействие с внешними API для доступа к данным или функциональным возможностям, предоставляемым этими сервисами.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -471,13 +472,13 @@ JavaScript отвечает за взаимодействие с API и обра
 
 ### Random Dog
 
-**Описание:** Этот проект получает случайные изображения собак из внешнего API, используя асинхронные методы на JavaScript. После получения изображения оно отображается на веб-странице для вашего развлечения.
+**Описание:** Проект предназначен для получения случайных изображений собак из внешнего API с использованием асинхронных методов на JavaScript. Полученные изображения отображаются на веб-странице в качестве развлечения для пользователей.
 
 **Концепции обучения:**
 
-- Асинхронное программирование: Поймите, как обрабатывать операции, требующие времени для завершения (например, получение данных из API), не блокируя основной поток выполнения в JavaScript.
-- Fetch API: Узнайте, как использовать встроенные функции браузера для выполнения HTTP-запросов к API и получения данных.
-- Работа с API: Изучите, как взаимодействовать с внешними API для получения доступа к данным или функциональным возможностям, предоставляемым этими сервисами.
+- Асинхронное программирование: Обработка операций, требующих времени для завершения (например, получение данных из API), без блокировки основного потока выполнения в JavaScript.
+- Fetch API: Использование встроенных функций браузера для выполнения HTTP-запросов к API и получения данных.
+- Работа с API: Взаимодействие с внешними API для доступа к данным или функциональным возможностям, предоставляемым этими сервисами.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -695,14 +696,15 @@ generatorBtn.addEventListener("click", function () {
 
 ### Form Validation
 
-[![Form Validation](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png)  
-**Описание**: Этот проект демонстрирует проверку формы на стороне клиента с помощью JavaScript. Он проверяет вводимые пользователем данные в форме перед отправкой. Кроме того, при успешной проверке выводится сообщение об успехе, а пользователи могут просматривать введенные данные в формате, доступном только для чтения.
+![Form Validation](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7b7mbyvuwxdwkzv2eidr.png "Form Validation")
+
+**Описание:** Проект демонстрирует проверку формы на стороне клиента с использованием JavaScript. В процессе выполнения проверяются данные, введенные пользователем в форму, перед отправкой. При успешной проверке отображается сообщение об успехе, а введенные данные становятся доступными для просмотра в режиме только для чтения.
 
 **Концепции обучения:**
 
-- Валидация формы: Поймите, как использовать JavaScript для проверки вводимых пользователем данных в формах перед отправкой. Это помогает обеспечить целостность данных и предотвратить обработку недействительных данных.
-- Манипулирование DOM: Узнайте, как получать доступ к элементам формы и изменять их (например, выводить сообщения об ошибках или отключать поля ввода) на основе результатов проверки.
-- Обработка событий: Перехватывайте событие отправки формы и запускайте логику проверки с помощью JavaScript.
+- Валидация формы: Использование JavaScript для проверки данных, вводимых пользователем в форму, перед их отправкой. Это позволяет обеспечить целостность данных и предотвратить обработку недействительных значений.
+- Манипулирование DOM: Получение доступа к элементам формы и их изменение (например, вывод сообщений об ошибках или отключение полей ввода) на основе результатов проверки.
+- Обработка событий: Перехват события отправки формы и выполнение логики проверки с помощью JavaScript.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -1274,16 +1276,15 @@ JavaScript отвечает за логику проверки данных, о�
 
 ### Random User
 
-[![Random User](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjlfog2j2okpgtx01eyso.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjlfog2j2okpgtx01eyso.png)  
-**Описание**: Этот проект использует API для генерации случайной информации о пользователе. Он получает такие данные, как имя, электронная почта, аватар и другие, и отображает их на веб-странице, имитируя профиль случайного пользователя.
+![Random User](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjlfog2j2okpgtx01eyso.png "Random User")
+
+**Описание:** Проект использует API для генерации случайной информации о пользователе. В процессе работы с API получаются данные, такие как имя, электронная почта, аватар и другие, которые отображаются на веб-странице в виде профиля случайного пользователя.
 
 **Концепции обучения:**
 
-- Асинхронное программирование: Подобно проекту DadJokes, этот проект укрепляет асинхронные операции в JavaScript.
-- Fetch API: Продолжаем практиковаться в использовании инструментов для выполнения HTTP-запросов к API и получения данных.
-- Работа с API: Продолжает изучать взаимодействие с внешними API для получения доступа к определенным функциям или данным.
-
-
+- Асинхронное программирование: Закрепление навыков выполнения асинхронных операций в JavaScript.
+- Fetch API: Практика использования встроенных функций для выполнения HTTP-запросов к API и получения данных.
+- Работа с API: Изучение взаимодействия с внешними API для доступа к различным функциям или данным.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -1782,35 +1783,919 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Morse Code Translator
 
-[![Morse Code Translator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fil6si3v62r76udcis9lq.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fil6si3v62r76udcis9lq.png)  
-**Description**: This project allows users to translate between Morse code and text. Users can either type text and see the corresponding Morse code or enter Morse code and view the translated text.
+![Morse Code Translator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fil6si3v62r76udcis9lq.png "Morse Code Translator")
 
-**Learning Concepts**:
+**Описание:** Проект позволяет пользователям переводить текст в азбуку Морзе и обратно. Пользователь может ввести текст и получить соответствующий перевод в азбуку Морзе или ввести код Морзе и получить его перевод в текст.
 
--   String manipulation: Understand how to work with strings in JavaScript, including functions for splitting, joining, and character manipulation, which are crucial for Morse code translation.
--   Conditional statements: Learn how to use conditional statements (if/else) in JavaScript to implement the translation logic based on user input (text or Morse code).
+**Концепции обучения:**
+
+- Манипулирование строками: Работа с строками в JavaScript, включая функции для разбиения, объединения и обработки символов, которые необходимы для перевода азбуки Морзе.
+- Условные операторы: Использование условных операторов (if/else) в JavaScript для реализации логики перевода в зависимости от пользовательского ввода (текста или кода Морзе).
 
 {{< admonition info "Пример реализации" false >}}
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Morse Code Translator | DOM Projects</title>
+  </head>
+  <body>
+    <!-- navigation section -->
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="#" class="brand">
+          <img src="./img/logo.png" alt="logo" />
+          <span>Morse Decoder</span>
+        </a>
+
+        <a
+          target="_blank"
+          href="https://github.com/Jisan-mia/dom-projects/tree/main/projects/5-morse-translator"
+          class="brand"
+        >
+          <img src="./img/github_PNG58.png" alt="github-logo" />
+          <span>Github</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- header section -->
+    <section class="header">
+      <header class="container">
+        <h2>Morse Code Translator</h2>
+        <p>
+          It's easy to use Morse Code Translator, translate Morse code to text
+          and text to Morse code.
+        </p>
+      </header>
+    </section>
+
+    <!-- both input area  -->
+    <section class="main container">
+      <div class="text-area">
+        <div class="top">
+          <i id="textClipboard" class="far fa-clipboard"></i>
+          <strong>Text</strong>
+        </div>
+        <textarea
+          oninput="onTextInput(this)"
+          name="text"
+          id="textAreaInput"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="morse-area">
+        <div class="top">
+          <i id="morseClipboard" class="far fa-clipboard"></i>
+          <strong>Morse Code</strong>
+        </div>
+        <textarea
+          oninput="onMorseInput(this)"
+          name="morse"
+          id="morseAreaInput"
+          rows="5"
+        ></textarea>
+      </div>
+    </section>
+
+    <!-- morse faq accordion -->
+    <section class="container morse-accordion">
+      <h1 style="text-align: center; margin: 20px 0 40px 0" class="faq-heading">
+        Morse Code Related FAQ
+      </h1>
+      <article class="contentBox">
+        <h3 class="accordion-label">What is Morse Code?</h3>
+        <p class="accordion-content">
+          Morse Code is a character encoding scheme that allows operators to
+          send messages using a series of electrical pulses represented as short
+          or long pulses, dots, and dashes in other words.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">Who Invented Morse Code and When?</h3>
+        <p class="accordion-content">
+          Samuel F. B. Morse and his assistant Alfred Vail are known as the
+          inventors of the Morse code. And Morse code developed in the 1830s
+          then advanced in the 1840s.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What is Morse Code Used For?</h3>
+        <p class="accordion-content">
+          In the past, Morse code had extensive usage, especially in the
+          military. Although Morse code has a limited usage area today, it is
+          still being used in aviation, amateur radio activities, and assistive
+          technology (AT).
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">Who Invented Morse Code and When?</h3>
+        <p class="accordion-content">
+          Samuel F. B. Morse and his assistant Alfred Vail are known as the
+          inventors of the Morse code. And Morse code developed in the 1830s
+          then advanced in the 1840s.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Use Morse Code?</h3>
+        <p class="accordion-content">
+          Morse code can be used in various ways, such as with pen and paper or
+          with the aid of light and sound. Even, it can be used with the parts
+          of the body like eyes or fingers.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">When Was Morse Code Patented?</h3>
+        <p class="accordion-content">
+          Samuel Morse received a U.S. patent, US1647A, for dot-dash telegraphy
+          signals on June 20, 1840. On the other hand, some sources claim that
+          Samuel Morse received a patent issued by an Ottoman Sultan, Abdulmejid
+          I, for Morse Code. However, according to Cyrus Hamlin’s memoirs and
+          The New York Times obituary published on April 3, 1872, Samuel Morse
+          received not a patent, but an order of the Ottoman Empire, Order of
+          Glory, instead.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">
+          What Was the First Message Sent by Morse Code?
+        </h3>
+        <p class="accordion-content">
+          “What hath God wrought” is the first official message sent by Samuel
+          F.B. Morse on May 24, 1844, to open the Baltimore - Washington
+          telegraph line.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What is Morse Code Used For?</h3>
+        <p class="accordion-content">
+          In the past, Morse code had extensive usage, especially in the
+          military. Although Morse code has a limited usage area today, it is
+          still being used in aviation, amateur radio activities, and assistive
+          technology (AT).
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Use Morse Code?</h3>
+        <p class="accordion-content">
+          “What hath God wrought” is the first official message sent by Samuel
+          F.B. Morse on May 24, 1844, to open the Baltimore - Washington
+          telegraph line.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Read Morse Code?</h3>
+        <p class="accordion-content">
+          If you are not proficient enough in reading Morse code, you can look
+          up for the corresponding Morse representation of each character from
+          the Morse alphabet table, or you can use Morse code translator.
+        </p>
+      </article>
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Translate Morse Code?</h3>
+        <p class="accordion-content">
+          If you’d like to translate or decipher Morse code and if you do not
+          know how to read Morse code, you can use Morse Code Translator online.
+          With the Morse Decoder, you can decode Morse code and read English
+          text easily. Therefore, you can and end your search for the question
+          of how do you translate Morse code.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What is Morse Code Translator?</h3>
+        <p class="accordion-content">
+          Morse Code Translator is a translator that lets anyone translate text
+          to Morse code and decode Morse code to text easily. With the online
+          Morse code translator, anyone can convert any plain text in English or
+          whatever language to Morse code and vice versa.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Use Morse Code Translator?</h3>
+        <p class="accordion-content">
+          Just type in the Morse code or text to the corresponding input fields
+          to use the Morse code converter. For instance, do you remember the
+          Nokia SMS Tone? Try decoding “... -- ...” then playing the audio of
+          it. How about decoding a secret message in Morse or the easter egg you
+          found in a game you played? Well, Morse Code Translator can help you
+          as long as you have an internet connection and the ambition to learn
+          Morse code.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What Does SOS Mean?</h3>
+        <p class="accordion-content">
+          SOS is a distress signal in Morse code, which is internationally
+          recognized worldwide for obtaining help. It was first adopted by the
+          German government in 1905. Although some people think that SOS stands
+          for “Save Our Souls” or “Save Our Ship”, its letters do not stand for
+          anything.
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What is SOS in Morse Code?</h3>
+        <p class="accordion-content">SOS in Morse code is “... --- ...”</p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">How to Say Hello in Morse Code?</h3>
+        <p class="accordion-content">
+          “Hello” in Morse code is “.... . .-.. .-.. ---”
+        </p>
+      </article>
+
+      <article class="contentBox">
+        <h3 class="accordion-label">What Does 3 Dots Mean in Morse Code?</h3>
+        <p class="accordion-content">
+          Letter S is three dots in Morse code: “...”
+        </p>
+      </article>
+      <article class="contentBox">
+        <h3 class="accordion-label">International Morse Code Rule</h3>
+
+        <ol class="accordion-content" style="padding-left: 25px">
+          <li>The length of a .(dot) is one unit.</li>
+          <li>A -(dash) is three unit.</li>
+          <li>The space between parts of the same letter is one unit.</li>
+          <li>The space beteween letters is three unit.</li>
+          <li>The space between words is seven unit.</li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- morse code chart -->
+    <section class="morse-chart container">
+      <h1>Morse Code Chart</h1>
+      <div id="morseMainChart"></div>
+    </section>
+
+    <footer class="container">
+      <p>
+        &copy; Created by
+        <a target="_blank" href="https://www.linkedin.com/in/jisan-mia/"
+          >Jisan Mia</a
+        >
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
 ```
 
 ```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', Fallback, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* nav */
+nav {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.nav-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand img {
+  width: 30px;
+  margin-right: 8px;
+}
+
+.git-link {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #48487b;
+  padding: 15px 8px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  background-color: #e8e8e8;
+}
+
+/* header */
+.header {
+  background-image: linear-gradient(90deg, #27276b, #534c98, #27276b);
+  color: #fff;
+  line-height: 1.5;
+}
+
+.header h2 {
+  font-size: 2rem;
+}
+
+.header .container {
+  padding: 20px 0;
+}
+
+/* main */
+
+.main {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.main textarea {
+  min-width: 100%;
+  resize: vertical;
+  max-width: 100%;
+  border: 0.6px solid lightgray;
+  border-radius: 2px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: rgb(58, 55, 55);
+  min-height: 160px;
+}
+
+.main textarea:focus {
+  outline: none !important;
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125rem rgb(50 115 220 / 25%);
+}
+
+.main .top i {
+  font-size: 1.5rem;
+  color: rgb(75, 75, 75);
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.main .top {
+  display: flex;
+  align-items: center;
+}
+
+/* morsecode chart img */
+.morse-chart {
+  margin: 60px auto;
+  border: 0.5px solid #e0e0e0;
+  text-align: center;
+}
+
+.morse-chart h1 {
+  padding: 12px;
+  font-size: 2rem;
+}
+
+#morseMainChart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /* grid-row-gap: 20px; */
+}
+
+.chart-item {
+  border-top: 0.1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.chart-item strong {
+  /* display: block; */
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.chart-item .symbol {
+  font-weight: 400;
+  font-size: 1.4;
+  color: #3d3d3d;
+  letter-spacing: 5px;
+}
+
+/* accordion design */
+/* morse-accordion
+contentBox
+accordion-label
+accordion-content */
+
+.morse-accordion {
+  margin: 80px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.morse-accordion .contentBox {
+  margin: 18px auto;
+}
+
+.accordion-label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  background: #eff3f0;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  margin-bottom: 10px;
+}
+
+.accordion-label::after {
+  content: "+";
+  float: right;
+  font-size: 1.2rem;
+}
+
+.accordion-label.is-open::after {
+  content: "-";
+}
+
+.accordion-label:hover,
+.accordion-label.is-open {
+  background: #dbdbdbd0;
+}
+
+.accordion-content {
+  line-height: 2;
+  letter-spacing: 0.9px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555454;
+  padding: 0px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+/* footer design */
+footer {
+  text-align: center;
+  margin: 40px auto !important;
+}
+
+footer p {
+  font-family: "Roboto", sans-serif;
+  color: #5a5858da;
+}
+
+footer a {
+  text-decoration: none;
+  color: #4714fff5;
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.2rem;
+  }
+
+  .header p {
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    padding: 15px 0;
+  }
+
+  .main textarea {
+    min-height: 120px;
+  }
+
+  .main .top i {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+
+  nav a {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+
+  .brand img {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .accordion-content {
+    line-height: 1.3;
+    letter-spacing: 0.8px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0px 12px;
+  }
+
+  .morse-accordion .contentBox {
+    margin: 10px auto;
+  }
+
+  .accordion-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    margin-bottom: 7px;
+  }
+
+  .morse-chart h1 {
+    padding: 12px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .main {
+    margin-top: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+  }
+}
 ```
 
 ```js
+const textAreaInput = document.querySelector("#textAreaInput");
+const morseAreaInput = document.querySelector("#morseAreaInput");
+const textClipboard = document.querySelector("#textClipboard");
+const morseClipboard = document.querySelector("#morseClipboard");
+const morseMainChart = document.getElementById("morseMainChart");
+const accordions = document.querySelectorAll(".accordion-label");
+// morse code key vales
+const MORSE_CODE = {
+  ".-": "A",
+  "-...": "B",
+  "-.-.": "C",
+  "-..": "D",
+  ".": "E",
+  "..-.": "F",
+  "--.": "G",
+  "....": "H",
+  "..": "I",
+  ".---": "J",
+  "-.-": "K",
+  ".-..": "L",
+  "--": "M",
+  "-.": "N",
+  "---": "O",
+  ".--.": "P",
+  "--.-": "Q",
+  ".-.": "R",
+  "...": "S",
+  "-": "T",
+  "..-": "U",
+  "...-": "V",
+  ".--": "W",
+  "-..-": "X",
+  "-.--": "Y",
+  "--..": "Z",
+  "-----": "0",
+  ".----": "1",
+  "..---": "2",
+  "...--": "3",
+  "....-": "4",
+  ".....": "5",
+  "-....": "6",
+  "--...": "7",
+  "---..": "8",
+  "----.": "9",
+};
 
+// MORSE_CODE obj keys to values and values to keys odolbodl
+const odolBodolFunc = (keys, values) => {
+  let obj = {};
+  for (let i = 0; i < keys.length; i++) {
+    obj[values[i]] = keys[i];
+  }
+  return obj;
+};
+const morseKeys = Object.keys(MORSE_CODE);
+const morseValues = Object.values(MORSE_CODE);
+const odolBodolMorse = odolBodolFunc(morseKeys, morseValues);
+
+//individual validations
+/*
+//text input validate
+const checkTextInputValidation = (input) => {
+	textAreaInput.value = textAreaInput.value.replace(input, "");
+	textAreaInput.style.borderColor = "red";
+	setTimeout(() => {
+		textAreaInput.style.borderColor = "#3273dc";
+	}, 400);
+};
+//morse code validate
+const checkMorseValidation = (input) => {
+	morseAreaInput.value = morseAreaInput.value.replace(input, "");
+	morseAreaInput.style.borderColor = "red";
+	setTimeout(() => {
+		morseAreaInput.style.borderColor = "#3273dc";
+	}, 400);
+};
+*/
+
+//check validation for both textInputArea and MorseInputArea
+const checkInputValidation = (input, inputArea) => {
+  inputArea.value = inputArea.value.replace(input, "");
+
+  if (inputArea.value == morseAreaInput.value) {
+    if (input === "") {
+      // console.log("it's space");
+    } else {
+      inputArea.style.borderColor = "red";
+      setTimeout(() => {
+        inputArea.style.borderColor = "#3273dc";
+      }, 400);
+    }
+  } else {
+    inputArea.style.borderColor = "red";
+    setTimeout(() => {
+      inputArea.style.borderColor = "#3273dc";
+    }, 400);
+  }
+};
+
+//show output on screen function
+const showOutput = (input, areaInput, tTMMTT) => {
+  if (input) {
+    areaInput.value = tTMMTT;
+  } else {
+    areaInput.value = "";
+  }
+};
+
+// translator for both textToMorse and MorseToText
+// tTMMTT = textToMorseOrMorseToText
+const textToMorseOrMorseToText = (letters, morseCode, inputArea) => {
+  let tTMMTT = [];
+
+  for (let x = 0; x < letters.length; x++) {
+    tTMMTT[x] = [];
+    for (let y = 0; y < letters[x].length; y++) {
+      if (morseCode[letters[x][y]]) {
+        tTMMTT[x].push(morseCode[letters[x][y]]);
+      } else {
+        checkInputValidation(letters[x][y], inputArea);
+      }
+    }
+  }
+  return tTMMTT;
+};
+
+// text to morse code
+const onTextInput = (e) => {
+  // JISAN MIA
+  const textInput = e.value.toUpperCase();
+  const word = textInput.split(" ");
+  const letters = word.map((char) => char.split(""));
+
+  /*
+	let morse = [];
+	for (let x = 0; x < letters.length; x++) {
+		morse[x] = [];
+		for (let y = 0; y < letters[x].length; y++) {
+			if (odolBodolMorse[letters[x][y]]) {
+				morse[x].push(odolBodolMorse[letters[x][y]]);
+			} else {
+				checkInputValidation(letters[x][y], textAreaInput);
+			}
+		}
+	}
+*/
+  const textToMorse = textToMorseOrMorseToText(
+    letters,
+    odolBodolMorse,
+    textAreaInput
+  );
+  const textToMorseMain = textToMorse.map((word) => word.join(" ")).join("   ");
+  showOutput(textInput, morseAreaInput, textToMorseMain);
+};
+
+// morse code to text
+const onMorseInput = (e) => {
+  // .--- .. ... .- -.   -- .. .-
+  /*
+	# Another solution
+	const morseToTextV2 = morseInput
+		.split("   ")
+		.map((word) =>
+			word
+				.split(" ")
+				.map((char) => MORSE_CODE[char])
+				.join("")
+		)
+		.join(" ")
+		.trim();
+*/
+
+  const morseInput = e.value;
+  const word = morseInput.split("   ");
+  const letters = word.map((char) => char.split(" "));
+
+  /*
+	let morseToText2 = [];
+	for (let x = 0; x < letters.length; x++) {
+		morseToText[x] = [];
+		for (let y = 0; y < letters[x].length; y++) {
+			if (MORSE_CODE[letters[x][y]]) {
+				morseToText[x].push(MORSE_CODE[letters[x][y]]);
+			} else {
+				checkInputValidation(letters[x][y], morseAreaInput);
+			}
+		}
+	}
+	*/
+
+  const morseToText = textToMorseOrMorseToText(
+    letters,
+    MORSE_CODE,
+    morseAreaInput
+  );
+
+  const morseToTextMain = morseToText.map((word) => word.join("")).join(" ");
+
+  showOutput(morseInput, textAreaInput, morseToTextMain);
+};
+
+// copy clipboard
+textClipboard.addEventListener("click", function () {
+  copyClipboard(textAreaInput);
+});
+morseClipboard.addEventListener("click", function () {
+  copyClipboard(morseAreaInput);
+});
+
+//function for copying clipboard for both morseinput and textinput
+function copyClipboard(areaInput) {
+  if (textAreaInput.value || morseAreaInput.value) {
+    areaInput.select();
+    areaInput.setSelectionRange(0, 99999);
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + areaInput.value);
+  } else {
+    alert("Type something to copy");
+  }
+}
+
+// show morse code of English alphabet and numbers in the ui
+Object.entries(MORSE_CODE).forEach(([key, value]) => {
+  const colros = [
+    "#FAFAFA",
+    "#fcfcfc",
+    "#f7f5f6",
+    "#e3e4e5",
+    "#d9dfe0",
+    "#fdfff5",
+    "#e5e9e1",
+    "#dde4e3",
+    "#d2d2df", //8
+    "#d6d7d2",
+    "#dee1e9",
+    "#dcdcdc",
+    "#fafafa", //12
+    "#dae4ee",
+    "#e5edf1",
+    "#e2e3eb", //15
+    "#f7f7f7",
+    "#f4f5f0",
+    "#eff3f0",
+    "#f8f8ff",
+  ];
+
+  const randomInd = Math.floor(Math.random() * colros.length + 1);
+  const randomCol = colros[randomInd];
+
+  morseMainChart.innerHTML += `<div style="background-color: ${randomCol}" class="chart-item">
+							 		<strong> ${value}</strong> 
+									<strong class="symbol"> ${key} </strong> 	
+								<div>`;
+});
+
+// accordion
+Array.from(accordions).forEach((accordion) => {
+  accordion.addEventListener("click", function () {
+    // toggle accordions + and -
+    this.classList.toggle("is-open");
+    const content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      //content is open, need to close
+      content.style.maxHeight = null;
+    } else {
+      // content is close, need to open
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
 ```
 
 {{< /admonition >}}
 
 {{< admonition info "Пояснение к коду реализации" false >}}
 
+#### HTML
+
+HTML-код создает структуру страницы с элементами управления и информационными разделами:
+
+1. **Навигация:**
+   - `<nav>` содержит ссылки на главную страницу и репозиторий проекта на GitHub.
+
+2. **Основные элементы:**
+   - Раздел с заголовком и описанием переводчика азбуки Морзе.
+   - Два текстовых поля для ввода текста и кода Морзе. При вводе текста или кода срабатывают функции `onTextInput(this)` и `onMorseInput(this)` соответственно.
+   - Секция с часто задаваемыми вопросами (FAQ) об азбуке Морзе, представленная в виде аккордеона.
+   - Таблица с кодами Морзе для различных символов (букв и цифр).
+   - Подвал страницы с указанием автора проекта.
+
+#### CSS
+
+CSS стилизует элементы страницы, улучшая их внешний вид и делая интерфейс удобным для пользователя:
+
+1. **Основные стили:**
+   - Установка шрифта, базовых отступов и размера текста.
+   - Стилизация навигации, заголовка и текстовых полей.
+   - Стилизация аккордеона для секции FAQ, таблицы кодов Морзе и других элементов.
+   
+2. **Медиа-запросы:**
+   - Используются для обеспечения адаптивного дизайна на различных устройствах, таких как мобильные телефоны и планшеты.
+
+#### JavaScript
+
+JavaScript реализует логику перевода текста в азбуку Морзе и наоборот, а также добавляет дополнительные функции для взаимодействия пользователя с приложением. Рассмотрим основные части кода:
+
+1. **Определение элементов DOM:**
+   - `const textAreaInput` и `const morseAreaInput` — получают доступ к полям ввода текста и кода Морзе.
+   - `const MORSE_CODE` — объект, содержащий соответствие между символами и их представлением в азбуке Морзе.
+
+2. **Функции перевода:**
+   - **`textToMorseOrMorseToText`** — универсальная функция, которая обрабатывает перевод текста в код Морзе и обратно, используя соответствия символов и кода Морзе из объекта `MORSE_CODE`.
+   - **`onTextInput`** — функция, которая вызывается при вводе текста. Преобразует введенный текст в код Морзе и отображает результат.
+   - **`onMorseInput`** — функция, вызываемая при вводе кода Морзе. Преобразует введенный код в текст и отображает результат.
+
+3. **Функции проверки ввода:**
+   - **`checkInputValidation`** — проверяет правильность ввода данных в текстовые поля и визуально выделяет ошибки красным цветом.
+   - **`showOutput`** — отображает результат перевода в соответствующем поле.
+
+4. **Копирование текста в буфер обмена:**
+   - **`copyClipboard`** — функция для копирования текста или кода Морзе в буфер обмена при нажатии на соответствующую кнопку.
+
+5. **Отображение таблицы с символами Морзе:**
+   - `Object.entries(MORSE_CODE).forEach()` — заполняет таблицу кодов Морзе в HTML, используя данные из объекта `MORSE_CODE`.
+
+6. **Реализация аккордеона:**
+   - Обработчики событий для каждого аккордеона (`accordion`) добавляют или убирают класс `is-open` и изменяют максимальную высоту контента для анимации раскрытия/скрытия FAQ.
+
 {{< /admonition >}}
 
 ### Calculator
 
-[![Normal Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png)  
+![Normal Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png "Calculator")
+
 **Description**: This project builds upon the basic calculator by offering a more comprehensive user experience for standard mathematical calculations. It caters to users familiar with basic calculator functionalities.
 
 **Learning Concepts:**
@@ -1838,7 +2723,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Scientific Calculator
 
-[![Scientific Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4taeew6vv1ublamhbyod.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4taeew6vv1ublamhbyod.png)  
+![Scientific Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4taeew6vv1ublamhbyod.png "Scientific Calculator")
+
 **Description**: This project takes calculator functionality to the next level by offering scientific functions like trigonometry (sine, cosine, tangent), logarithms, and exponents. It caters to users who require advanced mathematical calculations.
 
 **Learning Concepts:**
@@ -1866,7 +2752,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Simple Todo App
 
-[![Simple Todo App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F55d842o20i8j528q2maz.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F55d842o20i8j528q2maz.png)  
+![Simple Todo App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F55d842o20i8j528q2maz.png "Simple Todo App")
+
 **Description**: This project is a basic to-do list application. Users can add new tasks, mark them as completed, and delete them from the list. It demonstrates managing and keeping track of tasks.
 
 **Learning Concepts:**
@@ -1895,7 +2782,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Profile Form & Card
 
-[![Profile Form & Card](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png)  
+![Profile Form & Card](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png "Profile Form & Card")
+
 **Description**: This project allows users to create dynamic profile cards with a form. Users can enter their information, and upon submission, a new profile card is created and displayed on the page. It also includes functionality to delete existing profile cards.
 
 **Learning Concepts:**
@@ -1924,7 +2812,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### PC Component Filtering
 
-[![PC Component Filtering](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftxtgpqu4t0zbi2mcovbo.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftxtgpqu4t0zbi2mcovbo.png)  
+![PC Component Filtering](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftxtgpqu4t0zbi2mcovbo.png "PC Component Filtering")
+
 **Description**: This project allows users to filter computer parts based on their selections. Users can choose from various options like CPU brand, RAM size, graphics card type, etc., and the displayed list of components will update dynamically to reflect the chosen filters.
 
 **Learning Concepts:**
@@ -1953,7 +2842,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Weather App
 
-[![Weather App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png)  
+![Weather App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png "Weather App")
+
 **Description**: This project is a weather application that allows users to search for current weather information by city name. It utilizes an external weather API to fetch data and displays details like temperature, humidity, and weather conditions on the screen.
 
 **Learning Concepts:**
@@ -1972,7 +2862,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Testimonial Slider
 
-[![Testimonial Slider](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsroguxb8914j1dv65fpw.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsroguxb8914j1dv65fpw.png)  
+![Testimonial Slider](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsroguxb8914j1dv65fpw.png "Testimonial Slider")
+
 **Description**: This project creates a testimonial section with a slider functionality. It displays quotes or testimonials from users, and users can navigate through them using a slider control.
 
 **Learning Concepts:**
@@ -2000,7 +2891,7 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Animation on Scroll
 
-[![Animation on Scroll](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png)  
+![Animation on Scroll](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png "Animation on Scroll") 
 **Description**: This project incorporates animations that are triggered as you scroll down the page. As the user scrolls, different elements on the web page become animated, adding visual interest and interactivity.
 
 **Learning Concepts:**
@@ -2028,7 +2919,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Search Field Reveal
 
-[![Search Field Reveal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fawycht9282x9n35gyy5j.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fawycht9282x9n35gyy5j.png)  
+![Search Field Reveal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fawycht9282x9n35gyy5j.png "Search Field Reveal")
+
 **Description**: This project utilizes animations to enhance the user experience. It creates a search field that reveals itself with an animation upon user interaction (e.g., clicking a button).
 
 **Learning Concepts:**
@@ -2056,7 +2948,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Question List & Progress
 
-[![Question List & Progress](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png)  
+![Question List & Progress](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png "Question List & Progress")
+
 **Description**: This project demonstrates common DOM manipulation techniques in JavaScript. It features a list of questions and a progress indicator that updates as the user answers the questions.
 
 **Learning Concepts:**
@@ -2084,7 +2977,7 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Modal
 
-[![Modal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq0b06e0fi84z7wqsjev4.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq0b06e0fi84z7wqsjev4.png)  
+![Modal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq0b06e0fi84z7wqsjev4.png "Modal") 
 **Description**: This project creates a modal window, which is a popup element that overlays the main content of the page. It's commonly used for things like login forms, signup prompts, or alert messages.
 
 **Learning Concepts:**
@@ -2112,7 +3005,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Advanced Todo
 
-[![Advanced Todo](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png)  
+![Advanced Todo](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png "Advanced Todo")
+
 **Description**: This project builds upon the simple to-do app (project 8) by offering advanced functionalities like filtering, editing, and deleting tasks. Users can categorize tasks, edit existing ones, and delete unwanted tasks from the list.
 
 **Learning Concepts:**
@@ -2140,7 +3034,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Retro Calculator
 
-[![Retro Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthdpc8rzcppjfhlw8aru.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthdpc8rzcppjfhlw8aru.png)  
+![Retro Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthdpc8rzcppjfhlw8aru.png "Retro Calculator")
+
 **Description**: This project implements a classic calculator design with a physical keyboard support for input. It allows users to enter numbers and perform calculations using a layout resembling a traditional calculator.
 
 **Learning Concepts:**
@@ -2169,7 +3064,7 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Simple Quiz App
 
-[![Simple Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png)  
+![Simple Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png "Simple Quiz App")
 **Description**: This project creates a simple quiz application where users can answer questions and see their results. It includes a timer for each question to add a time pressure element.
 
 **Learning Concepts:**
@@ -2196,7 +3091,8 @@ JavaScript отвечает за взаимодействие с API, обраб
 
 ### Advanced Quiz App
 
-[![Advanced Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F98kzkz9jyfl6vjkau9z1.png)](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F98kzkz9jyfl6vjkau9z1.png)  
+![Advanced Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F98kzkz9jyfl6vjkau9z1.png "Advanced Quiz App")
+
 **Description**: This project builds upon the simple quiz app by offering more customization options. Users can set the number of questions, choose the topic, and define the difficulty level before starting the quiz.
 
 **Learning Concepts:**
