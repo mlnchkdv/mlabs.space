@@ -5,7 +5,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 15px;
         margin: 0;
         background-color: #e8f4f8;
         box-sizing: border-box;
@@ -13,7 +13,7 @@
     }
     .title {
         font-size: 2.1em;
-        padding: 5px 0;
+        line-height: 1.4;
         font-weight: bold;
         color: #333;
         margin-bottom: 20px;
@@ -33,7 +33,15 @@
         height: 40px;
         overflow: visible;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
+        .counter {
+            padding: 7px;
+            min-height: 62vh;
+        }
+        #countdown {
+            font-size: 1.2em;
+            /* margin-bottom: 30px; */
+        }
         #progress-bar-container {
             width: 100%;
         }
@@ -77,9 +85,9 @@
         <div class="tick" style="left: 50%;"></div>
         <div class="tick" style="left: 70%;"></div>
         <div class="tick" style="left: 90%;"></div>
-        <div class="milestone" style="left: 50%;">Submission</div>
-        <div class="milestone" style="left: 70%;">Pitching 1<br>23.11.24</div>
-        <div class="milestone" style="left: 90%;">Pitching 2<br>14.12.24</div>
+        <div class="milestone" style="left: 50%;"><i>Submission</i></div>
+        <div class="milestone" style="left: 70%;"><i>Pitching 1</i><br style="margin: 5px;">23.11.24</div>
+        <div class="milestone" style="left: 90%;"><i>Pitching 2</i><br style="margin: 5px;">14.12.24</div>
     </div>
 </div>
 <script>
