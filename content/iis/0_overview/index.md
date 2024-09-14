@@ -41,9 +41,11 @@ draft: false
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        padding: 20px;
         margin: 0;
         background-color: #e8f4f8;
+        box-sizing: border-box;
+        min-height: 100vh;
     }
     .title {
         font-size: 2.5em;
@@ -60,7 +62,7 @@ draft: false
     #progress-bar-container {
         width: 80%;
         background-color: #ddd;
-        border-radius: 20px;
+        border-radius: 8px;
         margin-top: 20px;
         position: relative;
         height: 40px;
@@ -70,37 +72,28 @@ draft: false
         width: 0;
         height: 100%;
         background-color: #4caf50;
-        border-radius: 20px;
+        border-radius: 8px;
         text-align: center;
         line-height: 40px;
         color: white;
         position: relative;
         transition: width 0.5s ease;
     }
-    .milestone {
-        position: absolute;
-        bottom: -20px;
-        font-size: 0.9em;
-        color: #555;
-    }
-    .milestone:nth-child(2) {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .milestone:nth-child(3) {
-        right: 0;
-    }
     .tick {
         position: absolute;
         width: 2px;
-        height: 40px;
+        height: 50px;
         background-color: #333;
+        bottom: -10px; /* Высота выступающей линии */
     }
-    .tick:first-child {
-        left: 50%;
-    }
-    .tick:last-child {
-        right: 0;
+    .milestone {
+        position: absolute;
+        bottom: -30px; /* Расстояние подписи от полосы */
+        font-size: 0.9em;
+        color: #555;
+        text-align: center;
+        width: 100px; /* Ширина для центрирования подписи */
+        transform: translateX(-50%);
     }
 </style>
 <div class="counter">
@@ -109,9 +102,9 @@ draft: false
     <div id="progress-bar-container">
         <div id="progress-bar">0%</div>
         <div class="tick" style="left: 50%;"></div>
-        <div class="tick" style="right: 0;"></div>
+        <div class="tick" style="left: 80%;"></div>
         <div class="milestone" style="left: 50%;">Питчинг 1<br>23.11.24</div>
-        <div class="milestone" style="right: 0;">Питчинг 2<br>14.12.24</div>
+        <div class="milestone" style="left: 80%;">Питчинг 2<br>14.12.24</div>
     </div>
 </div>
 <script>
@@ -135,8 +128,6 @@ draft: false
     function updateProgressBar() {
         const startDate = new Date("2024-09-01T00:00:00");
         const endDate = new Date("2024-12-23T00:00:00");
-        const milestone1 = new Date("2024-11-23T00:00:00");
-        const milestone2 = new Date("2024-12-14T00:00:00");
         const now = new Date();
         if (now < startDate) {
             document.getElementById("progress-bar").style.width = "0%";
@@ -155,6 +146,7 @@ draft: false
         updateProgressBar();
     }, 1000);
 </script>
+
 
 
 
