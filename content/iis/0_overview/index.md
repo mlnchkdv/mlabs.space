@@ -35,41 +35,85 @@ draft: false
 {{< /admonition >}}
 
 <style>
-.counter {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-#countdown {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-#progress-bar-container {
-    width: 80%;
-    background-color: #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-#progress-bar {
-    width: 0;
-    height: 30px;
-    background-color: #4caf50;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-}
+    .counter {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #e8f4f8;
+    }
+    .title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #countdown {
+        font-size: 1.8em;
+        color: #444;
+        margin-bottom: 30px;
+    }
+    #progress-bar-container {
+        width: 80%;
+        background-color: #ddd;
+        border-radius: 20px;
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+    }
+    #progress-bar {
+        width: 0;
+        height: 100%;
+        background-color: #4caf50;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        position: relative;
+        transition: width 0.5s ease;
+    }
+    .milestone {
+        position: absolute;
+        bottom: -20px;
+        font-size: 0.9em;
+        color: #555;
+    }
+    .milestone:nth-child(2) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .milestone:nth-child(3) {
+        right: 0;
+    }
+    .tick {
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        background-color: #333;
+    }
+    .tick:first-child {
+        left: 50%;
+    }
+    .tick:last-child {
+        right: 0;
+    }
 </style>
 <div class="counter">
+    <div class="title">До защиты проектов:</div>
     <div id="countdown">Загрузка...</div>
     <div id="progress-bar-container">
         <div id="progress-bar">0%</div>
+        <div class="tick" style="left: 50%;"></div>
+        <div class="tick" style="right: 0;"></div>
+        <div class="milestone" style="left: 50%;">Питчинг 1<br>23.11.24</div>
+        <div class="milestone" style="right: 0;">Питчинг 2<br>14.12.24</div>
     </div>
+</div>
 <script>
     // Функция для обновления обратного отсчета
     function updateCountdown() {
@@ -91,6 +135,8 @@ draft: false
     function updateProgressBar() {
         const startDate = new Date("2024-09-01T00:00:00");
         const endDate = new Date("2024-12-23T00:00:00");
+        const milestone1 = new Date("2024-11-23T00:00:00");
+        const milestone2 = new Date("2024-12-14T00:00:00");
         const now = new Date();
         if (now < startDate) {
             document.getElementById("progress-bar").style.width = "0%";
@@ -109,7 +155,9 @@ draft: false
         updateProgressBar();
     }, 1000);
 </script>
-</div>
+
+
+
 **Целью курса** является изучение базовых парадигм разработки интеллектуальных информационных систем (ИИС), т.е. систем обладающих способностью собирать, обрабатывать и анализировать большое количество данных, на основе которых она может автоматически принимать решения и выполнять задачи. Такие системы могут быть использованы для широкого круга задач в различных отраслях, включая финансы, здравоохранение, транспорт, производство и множество других областей.
 
 Интеллектуальные системы могут автоматизировать процессы и улучшать качество принимаемых решений. Они могут анализировать данные и выдавать рекомендации или предсказания, учитывая сложные факторы и зависимости, вычисляемые на основе статистических данных.
