@@ -45,10 +45,10 @@ draft: false
         margin: 0;
         background-color: #e8f4f8;
         box-sizing: border-box;
-        min-height: 100vh;
+        min-height: 55vh;
     }
     .title {
-        font-size: 2.5em;
+        font-size: 2.1em;
         font-weight: bold;
         color: #333;
         margin-bottom: 20px;
@@ -66,7 +66,7 @@ draft: false
         margin-top: 20px;
         position: relative;
         height: 40px;
-        overflow: hidden;
+        overflow: visible;
     }
     #progress-bar {
         width: 0;
@@ -84,15 +84,15 @@ draft: false
         width: 2px;
         height: 50px;
         background-color: #333;
-        bottom: -10px; /* Высота выступающей линии */
+        bottom: -10px;
     }
     .milestone {
         position: absolute;
-        bottom: -30px; /* Расстояние подписи от полосы */
+        top: 50px;
         font-size: 0.9em;
         color: #555;
         text-align: center;
-        width: 100px; /* Ширина для центрирования подписи */
+        width: 100px;
         transform: translateX(-50%);
     }
 </style>
@@ -102,15 +102,24 @@ draft: false
     <div id="progress-bar-container">
         <div id="progress-bar">0%</div>
         <div class="tick" style="left: 50%;"></div>
-        <div class="tick" style="left: 80%;"></div>
-        <div class="milestone" style="left: 50%;">Питчинг 1<br>23.11.24</div>
-        <div class="milestone" style="left: 80%;">Питчинг 2<br>14.12.24</div>
+        <div class="tick" style="left: 70%;"></div>
+        <div class="tick" style="left: 90%;"></div>
+        <div class="milestone" style="left: 50%;">Submission<br>проектов и команд</div>
+        <div class="milestone" style="left: 70%;">Питчинг 1<br>23.11.24</div>
+        <div class="milestone" style="left: 90%;">Питчинг 2<br>14.12.24</div>
     </div>
 </div>
 <script>
-    // Функция для обновления обратного отсчета
+    function declension(number, one, two, five) {
+        number = Math.abs(number) % 100;
+        const n1 = number % 10;
+        if (number > 10 && number < 20) return five;
+        if (n1 > 1 && n1 < 5) return two;
+        if (n1 === 1) return one;
+        return five;
+    }
     function updateCountdown() {
-        const endDate = new Date("2024-12-23T00:00:00");
+        const endDate = new Date("2024-12-23T12:00:00");
         const now = new Date();
         const timeDifference = endDate - now;
         if (timeDifference <= 0) {
@@ -121,10 +130,13 @@ draft: false
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = 
-            days + "д " + hours + "ч " + minutes + "м " + seconds + "с ";
+        const daysText = declension(days, 'день', 'дня', 'дней');
+        const hoursText = declension(hours, 'час', 'часа', 'часов');
+        const minutesText = declension(minutes, 'минута', 'минуты', 'минут');
+        const secondsText = declension(seconds, 'секунда', 'секунды', 'секунд');
+        document.getElementById("countdown").innerHTML = days + " " + daysText + " " + hours + " " + hoursText + " " +
+            minutes + " " + minutesText;
     }
-    // Функция для обновления полосы загрузки
     function updateProgressBar() {
         const startDate = new Date("2024-09-01T00:00:00");
         const endDate = new Date("2024-12-23T00:00:00");
@@ -140,12 +152,12 @@ draft: false
         document.getElementById("progress-bar").style.width = progressPercentage + "%";
         document.getElementById("progress-bar").innerHTML = Math.floor(progressPercentage) + "%";
     }
-    // Обновляем счетчик и полосу загрузки каждую секунду
-    setInterval(function() {
+    setInterval(function () {
         updateCountdown();
         updateProgressBar();
     }, 1000);
 </script>
+
 
 
 
