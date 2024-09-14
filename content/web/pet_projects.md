@@ -3029,78 +3029,92 @@ JavaScript реализует логику перевода текста в аз
 
 {{< admonition info "Идеи для улучшения" false >}}
 
-### 1. **Реализация поддержки различных языков**
+#### 1. **Реализация поддержки различных языков**
 
 - **Описание:** Добавить возможность перевода текста на разных языках в азбуку Морзе и обратно.
 - **Цель:** Изучение работы с различными языковыми наборами и их соответствием азбуке Морзе.
 - **Реализация:** Добавить переключатель языка и расширить логику преобразования, чтобы поддерживать различные алфавиты (например, кириллицу, латиницу).
 
-### 2. **Добавление функции аудиовоспроизведения кода Морзе**
+#### 2. **Добавление функции аудиовоспроизведения кода Морзе**
+
 - **Описание:** Возможность воспроизведения кода Морзе с помощью звуковых сигналов (точек и тире).
 - **Цель:** Изучение работы с Web Audio API для создания и управления аудиосигналами.
 - **Реализация:** Создать функцию, которая преобразует текст в звуковые сигналы, используя `OscillatorNode` для воспроизведения коротких и длинных сигналов.
 
-### 3. **Поддержка визуального воспроизведения кода Морзе (световой сигнал)**
+#### 3. **Поддержка визуального воспроизведения кода Морзе (световой сигнал)**
+
 - **Описание:** Реализовать функцию, которая использует визуальные индикаторы (например, мигающий свет) для отображения кода Морзе.
 - **Цель:** Закрепление навыков работы с CSS-анимациями и JavaScript для управления анимацией.
 - **Реализация:** Создать элемент (например, кружок), который будет менять цвет или яркость в зависимости от длины сигнала.
 
-### 4. **Добавление функции обучения азбуке Морзе**
+#### 4. **Добавление функции обучения азбуке Морзе**
+
 - **Описание:** Реализовать режим обучения, который помогает пользователю запомнить символы азбуки Морзе.
 - **Цель:** Изучение работы с динамическим созданием элементов и обработкой событий.
 - **Реализация:** Добавить режим, где пользователю показывается случайный символ в Морзе, и он должен ввести соответствующую букву или символ.
 
-### 5. **Создание клавиатуры для ввода кода Морзе**
+#### 5. **Создание клавиатуры для ввода кода Морзе**
+
 - **Описание:** Создать виртуальную клавиатуру для ввода кода Морзе с помощью точек и тире.
 - **Цель:** Закрепление навыков работы с событиями мыши и клавиатуры, а также взаимодействием с DOM.
 - **Реализация:** Добавить виртуальную клавиатуру с кнопками для ввода точек и тире, а также кнопкой для удаления символов и разделителей.
 
-### 6. **Добавление функции перевода текстовых файлов в азбуку Морзе и обратно**
+#### 6. **Добавление функции перевода текстовых файлов в азбуку Морзе и обратно**
+
 - **Описание:** Возможность загружать текстовые файлы и преобразовывать их содержимое в азбуку Морзе или наоборот.
 - **Цель:** Изучение работы с файловыми API, чтением файлов и их содержимого в JavaScript.
 - **Реализация:** Добавить элемент `<input type="file">` для загрузки файлов и функцию для их чтения с использованием `FileReader`.
 
-### 7. **Интеграция с браузерными уведомлениями**
+#### 7. **Интеграция с браузерными уведомлениями**
+
 - **Описание:** Использовать уведомления для отправки переведенного текста или напоминаний пользователю.
 - **Цель:** Изучение работы с Web Notifications API.
 - **Реализация:** Отправлять уведомление с результатом перевода, например, когда пользователь завершает ввод.
 
-### 8. **Добавление кнопки "Скопировать/Очистить" для удобства пользователя**
+#### 8. **Добавление кнопки "Скопировать/Очистить" для удобства пользователя**
+
 - **Описание:** Добавить кнопки для копирования переведенного текста в буфер обмена и очистки всех полей ввода.
 - **Цель:** Закрепление навыков работы с буфером обмена и манипуляцией DOM.
 - **Реализация:** Создать кнопки "Скопировать" и "Очистить" с соответствующими обработчиками событий для выполнения этих действий.
 
-### 9. **Реализация функции сохранения истории переводов**
+#### 9. **Реализация функции сохранения истории переводов**
+
 - **Описание:** Хранить историю всех переводов, чтобы пользователь мог вернуться к предыдущим переводам.
 - **Цель:** Практика работы с `localStorage` или `sessionStorage` для сохранения данных на стороне клиента.
 - **Реализация:** Сохранять каждый перевод в `localStorage` и предоставлять пользователю интерфейс для просмотра или удаления истории переводов.
 
-### 10. **Реализация поддержки темной и светлой темы интерфейса**
+#### 10. **Реализация поддержки темной и светлой темы интерфейса**
+
 - **Описание:** Возможность переключения между светлой и темной темами интерфейса.
 - **Цель:** Закрепление навыков работы с темами и изменением CSS-переменных или классов.
 - **Реализация:** Добавить переключатель темы на странице, который будет изменять тему с помощью CSS-переменных или добавления/удаления классов.
 
-### 11. **Добавление функции "Перевод из аудиовхода"**
+#### 11. **Добавление функции "Перевод из аудиовхода"**
+
 - **Описание:** Возможность записи аудиосигналов с микрофона и их расшифровки в текст.
 - **Цель:** Изучение работы с Web Audio API и распознаванием звуковых сигналов.
 - **Реализация:** Использовать API для записи аудио и алгоритмы для распознавания частоты звуковых сигналов (точек и тире).
 
-### 12. **Поддержка морзе-чатов**
+#### 12. **Поддержка морзе-чатов**
+
 - **Описание:** Создание функции обмена сообщениями в реальном времени, где текст автоматически переводится в код Морзе.
 - **Цель:** Практика работы с WebSockets или Firebase для создания реального чата.
 - **Реализация:** Реализовать интерфейс чата, где пользователи могут отправлять сообщения, которые будут автоматически переводиться в Морзе.
 
-### 13. **Добавление режима тестирования на скорость перевода**
+#### 13. **Добавление режима тестирования на скорость перевода**
+
 - **Описание:** Добавить режим тестирования, где пользователи могут соревноваться, кто быстрее переведет текст в код Морзе или наоборот.
 - **Цель:** Практика работы с таймерами, управлением состоянием игры и манипуляцией DOM.
 - **Реализация:** Создать режим игры, где пользователь видит таймер и случайный текст или код Морзе для перевода.
 
-### 14. **Добавление функции преобразования текста в изображения для визуального кода Морзе**
+#### 14. **Добавление функции преобразования текста в изображения для визуального кода Морзе**
+
 - **Описание:** Возможность преобразования текста в изображения кода Морзе для сохранения или отправки.
 - **Цель:** Закрепление навыков работы с HTML5 Canvas API.
 - **Реализация:** Создать изображение кода Морзе, используя Canvas API, и позволить пользователю скачать его.
 
-### 15. **Реализация адаптивного дизайна**
+#### 15. **Реализация адаптивного дизайна**
+
 - **Описание:** Сделать интерфейс приложения адаптивным для разных устройств, включая мобильные телефоны и планшеты.
 - **Цель:** Закрепление навыков работы с Flexbox, Grid и медиа-запросами в CSS.
 - **Реализация:** Оптимизировать макет для разных размеров экранов, чтобы интерфейс оставался удобным и функциональным на любом устройстве.
@@ -3113,12 +3127,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Normal Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqpgq9hnt59vlcaz8r0zx.png "Calculator")
 
-**Description**: This project builds upon the basic calculator by offering a more comprehensive user experience for standard mathematical calculations. It caters to users familiar with basic calculator functionalities.
+**Описание:** Этот проект развивает концепцию базового калькулятора, предоставляя более полный и удобный пользовательский интерфейс для стандартных математических вычислений. Проект ориентирован на пользователей, знакомых с функциями обычного калькулятора.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Building upon existing projects: Demonstrates expanding on the basic calculator concept to create a more user-friendly and feature-rich calculator.
--   Enhanced user interaction: Introduces techniques for improving user interaction with the calculator, such as handling decimal inputs or incorporating memory functions.
+-   Расширение существующих проектов: Показывает, как можно усовершенствовать базовый калькулятор, чтобы создать более удобное и функциональное приложение.
+-   Улучшенное взаимодействие с пользователем: Включает техники, направленные на повышение удобства использования калькулятора, такие как работа с десятичными числами или добавление функций памяти.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3146,12 +3160,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Scientific Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4taeew6vv1ublamhbyod.png "Scientific Calculator")
 
-**Description**: This project takes calculator functionality to the next level by offering scientific functions like trigonometry (sine, cosine, tangent), logarithms, and exponents. It caters to users who require advanced mathematical calculations.
+**Описание:** Этот проект расширяет функциональность обычного калькулятора, добавляя научные функции, такие как тригонометрия (синус, косинус, тангенс), логарифмы и степени. Он предназначен для пользователей, которым требуются расширенные математические вычисления.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Building complex applications: Demonstrates creating a more intricate application with advanced scientific functionalities.
--   Mathematical functions in JavaScript: Introduces using JavaScript's built-in math functions for advanced calculations
+-   Создание сложных приложений: Показывает, как разработать более сложное приложение с использованием научных функций.
+-   Математические функции в JavaScript: Включает использование встроенных математических функций JavaScript для выполнения сложных вычислений.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3179,13 +3193,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![Simple Todo App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F55d842o20i8j528q2maz.png "Simple Todo App")
 
-**Description**: This project is a basic to-do list application. Users can add new tasks, mark them as completed, and delete them from the list. It demonstrates managing and keeping track of tasks.
+**Описание:** Этот проект представляет собой простое приложение для управления списком задач (to-do list). Пользователи могут добавлять новые задачи, отмечать их как выполненные и удалять из списка. Проект демонстрирует процесс управления задачами и отслеживания их выполнения.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: This project reinforces practices of adding, removing, and modifying list items in the HTML dynamically using JavaScript.
--   Arrays: It demonstrates storing and managing task data using arrays in JavaScript.
--   User interface updates: Explores how to update the visual representation of the to-do list (adding, completing, deleting tasks) based on user interactions.
+-   Манипулирование DOM: Проект закрепляет навыки динамического добавления, удаления и изменения элементов списка в HTML с помощью JavaScript.
+-   Массивы: Показано, как использовать массивы в JavaScript для хранения и управления данными о задачах.
+-   Обновление пользовательского интерфейса: Исследуется, как обновлять визуальное отображение списка задач (добавление, выполнение, удаление задач) в зависимости от взаимодействий пользователя.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3213,13 +3227,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![Profile Form & Card](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F13yidfqfe156556rky87.png "Profile Form & Card")
 
-**Description**: This project allows users to create dynamic profile cards with a form. Users can enter their information, and upon submission, a new profile card is created and displayed on the page. It also includes functionality to delete existing profile cards.
+**Описание:** Этот проект позволяет пользователям создавать динамические карточки профиля с помощью формы. Пользователи вводят свои данные, и после отправки формы на странице создается и отображается новая карточка профиля. Также реализована возможность удаления существующих карточек.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Form handling: This project builds upon concepts from form validation (project 3) by focusing on capturing form data and utilizing it for further actions.
--   DOM creation and manipulation: It goes beyond basic DOM manipulation by dynamically creating new HTML elements (profile cards) based on user input.
--   Event handling: Continues practicing capturing user interactions with the form and delete buttons and triggering appropriate actions.
+-   Обработка форм: Проект развивает навыки работы с формами, акцентируя внимание на захвате данных из формы и их использовании для создания профилей.
+-   Создание и манипуляция DOM-элементами: Проект расширяет практику работы с DOM, демонстрируя динамическое создание новых HTML-элементов (карточек профиля) на основе пользовательского ввода.
+-   Обработка событий: Проект закрепляет навыки обработки взаимодействий пользователя с формой и кнопками удаления, вызывая соответствующие действия.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3247,13 +3261,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![PC Component Filtering](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftxtgpqu4t0zbi2mcovbo.png "PC Component Filtering")
 
-**Description**: This project allows users to filter computer parts based on their selections. Users can choose from various options like CPU brand, RAM size, graphics card type, etc., and the displayed list of components will update dynamically to reflect the chosen filters.
+**Описание:** Этот проект позволяет пользователям фильтровать комплектующие для компьютеров в зависимости от выбранных параметров. Пользователь может выбрать различные опции, такие как бренд процессора, объем оперативной памяти, тип видеокарты и другие, а отображаемый список компонентов будет автоматически обновляться в соответствии с заданными фильтрами.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: Similar to previous projects, this project practices updating the displayed component list dynamically based on user selections.
--   Arrays and data filtering: Explores using arrays to store computer part data and implements filtering logic in JavaScript to match user selections.
--   User interface updates: Focuses on updating the visual representation of the component list based on the applied filters.
+-   Манипуляция DOM: Проект продолжает практику динамического обновления отображаемого списка компонентов на основе выбора пользователя.
+-   Массивы и фильтрация данных: Изучается использование массивов для хранения данных о комплектующих и реализация логики фильтрации в JavaScript для соответствия выбору пользователя.
+-   Обновление пользовательского интерфейса: Проект сосредоточен на обновлении визуального отображения списка компонентов в зависимости от примененных фильтров.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3281,13 +3295,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![Weather App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl4tjhdmz5xlpxia218lp.png "Weather App")
 
-**Description**: This project is a weather application that allows users to search for current weather information by city name. It utilizes an external weather API to fetch data and displays details like temperature, humidity, and weather conditions on the screen.
+**Описание:** Этот проект представляет собой приложение для получения информации о погоде, которое позволяет пользователям искать текущие погодные данные по названию города. Приложение использует внешний API для получения данных о погоде и отображает такие параметры, как температура, влажность и погодные условия.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Asynchronous programming: Similar to projects like DadJokes, this project reinforces concepts of handling asynchronous operations for fetching weather data.
--   Fetch API: Continues practicing using tools for making HTTP requests to APIs and retrieving weather data.
--   Working with APIs: Further explores interacting with external APIs to access weather information.
+-   Асинхронное программирование: Проект укрепляет навыки работы с асинхронными операциями при получении данных о погоде.
+-   Fetch API: Продолжает практику использования инструментов для выполнения HTTP-запросов к API и получения данных о погоде.
+-   Работа с API: Проект углубляет знания взаимодействия с внешними API для доступа к информации о погоде.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3305,12 +3319,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Testimonial Slider](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsroguxb8914j1dv65fpw.png "Testimonial Slider")
 
-**Description**: This project creates a testimonial section with a slider functionality. It displays quotes or testimonials from users, and users can navigate through them using a slider control.
+**Описание:** Этот проект создает секцию отзывов с функцией слайдера. В секции отображаются цитаты или отзывы пользователей, а навигация по ним осуществляется с помощью элемента управления слайдером.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: Demonstrates manipulating the visibility of testimonial elements based on the slider position.
--   Event handling: Captures user interactions with the slider control and triggers the sliding animation.
+-   Манипуляция DOM: Показано, как изменять видимость элементов отзывов в зависимости от положения слайдера.
+-   Обработка событий: Рассматривается захват взаимодействий пользователя с элементом управления слайдером и запуск анимации переключения.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3337,12 +3351,12 @@ JavaScript реализует логику перевода текста в аз
 ### Animation on Scroll
 
 ![Animation on Scroll](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o5psut9f3d5cmns3ld3.png "Animation on Scroll") 
-**Description**: This project incorporates animations that are triggered as you scroll down the page. As the user scrolls, different elements on the web page become animated, adding visual interest and interactivity.
+**Описание:** Этот проект включает анимации, которые активируются при прокрутке страницы. По мере прокрутки пользователем различные элементы на веб-странице становятся анимированными, добавляя визуальный интерес и интерактивность.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   CSS animations: Explores using CSS animations to create visual effects that activate based on scroll position.
--   JavaScript for scroll events: Introduces using JavaScript to detect scroll events and trigger animations accordingly.
+-   Анимации на CSS: Изучается использование анимаций на CSS для создания визуальных эффектов, которые активируются в зависимости от положения прокрутки.
+-   JavaScript для обработки событий прокрутки: Вводится работа с JavaScript для обнаружения событий прокрутки и запуска анимаций.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3370,12 +3384,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Search Field Reveal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fawycht9282x9n35gyy5j.png "Search Field Reveal")
 
-**Description**: This project utilizes animations to enhance the user experience. It creates a search field that reveals itself with an animation upon user interaction (e.g., clicking a button).
+**Описание:** Этот проект использует анимации для улучшения пользовательского опыта. При взаимодействии с пользователем (например, нажатии кнопки) появляется поле поиска, сопровождающееся анимационным эффектом.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   CSS animations: Introduces using CSS animations to create dynamic visual effects for the search field reveal.
--   Event handling: Covers capturing user interactions (eg. button clicks) and using JavaScript to trigger the animations.
+-   Анимации на CSS: Рассматривается использование CSS-анимаций для создания динамических визуальных эффектов при появлении поля поиска.
+-   Обработка событий: Охватывается обработка взаимодействий пользователя (например, нажатий кнопок) и запуск анимаций с помощью JavaScript.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3403,12 +3417,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Question List & Progress](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1p6unngf1az0084i3tnb.png "Question List & Progress")
 
-**Description**: This project demonstrates common DOM manipulation techniques in JavaScript. It features a list of questions and a progress indicator that updates as the user answers the questions.
+**Описание:** Этот проект демонстрирует распространенные техники манипуляции DOM в JavaScript. В проекте реализован список вопросов и индикатор прогресса, который обновляется по мере того, как пользователь отвечает на вопросы.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: This project emphasizes manipulating elements like the progress indicator based on user interaction with the questions.
--   Event handling: Captures user interactions with the question elements and triggers actions like updating the progress indicator.
+-   Манипуляция DOM: Проект акцентирует внимание на изменении элементов, таких как индикатор прогресса, в зависимости от взаимодействия пользователя с вопросами.
+-   Обработка событий: Рассматривается захват взаимодействий пользователя с элементами вопросов и выполнение действий, например, обновление индикатора прогресса.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3435,12 +3449,12 @@ JavaScript реализует логику перевода текста в аз
 ### Modal
 
 ![Modal](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq0b06e0fi84z7wqsjev4.png "Modal") 
-**Description**: This project creates a modal window, which is a popup element that overlays the main content of the page. It's commonly used for things like login forms, signup prompts, or alert messages.
+**Описание:** Этот проект создает модальное окно — всплывающий элемент, который накладывается поверх основного содержимого страницы. Модальное окно часто используется для отображения форм входа, предложений регистрации или уведомлений.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: Focuses on showing and hiding the modal window element based on user interaction.
--   Event handling: Captures clicks on the trigger element and the modal's close button to control its visibility.
+-   Манипуляция DOM: Рассматривается управление отображением и скрытием модального окна в зависимости от действий пользователя.
+-   Обработка событий: Охватывается обработка кликов по элементу, который вызывает модальное окно, и кнопке закрытия для контроля его видимости.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3468,12 +3482,12 @@ JavaScript реализует логику перевода текста в аз
 
 ![Advanced Todo](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8baq9a3n6qdwlookd338.png "Advanced Todo")
 
-**Description**: This project builds upon the simple to-do app (project 8) by offering advanced functionalities like filtering, editing, and deleting tasks. Users can categorize tasks, edit existing ones, and delete unwanted tasks from the list.
+**Описание:** Этот проект расширяет функционал простого приложения для списка дел, добавляя возможности фильтрации, редактирования и удаления задач. Пользователи могут классифицировать задачи, редактировать уже существующие и удалять ненужные из списка.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Building upon existing projects: Similar to the scientific calculator (project 7), this project demonstrates expanding on a basic concept (to-do list) to create a more advanced application.
--   User interface updates: Extends the concept of updating the to-do list to include functionalities like filtering, editing task content, and removing tasks.
+-   Расширение существующих проектов: Как и в проекте с научным калькулятором, здесь демонстрируется развитие базовой концепции (списка дел) для создания более сложного приложения.
+-   Обновление пользовательского интерфейса: Проект добавляет к функционалу списка дел такие возможности, как фильтрация, редактирование содержания задач и их удаление.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3501,13 +3515,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![Retro Calculator](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthdpc8rzcppjfhlw8aru.png "Retro Calculator")
 
-**Description**: This project implements a classic calculator design with a physical keyboard support for input. It allows users to enter numbers and perform calculations using a layout resembling a traditional calculator.
+**Описание:** Этот проект реализует классический дизайн калькулятора с поддержкой ввода с физической клавиатуры. Пользователи могут вводить числа и выполнять вычисления с использованием интерфейса, напоминающего традиционный калькулятор.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Event handling: Similar to other projects, this project focuses on capturing user interactions, but in this case, it includes handling both clicks on calculator buttons and key presses from the keyboard.
--   DOM manipulation: Updates the calculator display based on user input and calculation results.
--   Object-oriented programming: This project introduces concepts of object-oriented programming (OOP) in JavaScript for creating a more modular and reusable calculator functionality.
+-   Обработка событий: Проект уделяет внимание захвату пользовательских взаимодействий, включая обработку как кликов по кнопкам калькулятора, так и нажатий клавиш на клавиатуре.
+-   Манипуляция DOM: Обновляет отображение калькулятора в зависимости от пользовательского ввода и результатов вычислений.
+-   Объектно-ориентированное программирование: Вводит концепции объектно-ориентированного программирования (ООП) в JavaScript для создания более модульной и повторно используемой функциональности калькулятора.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3534,11 +3548,11 @@ JavaScript реализует логику перевода текста в аз
 ### Simple Quiz App
 
 ![Simple Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhvz1xnzfvusxb8hvwrh.png "Simple Quiz App")
-**Description**: This project creates a simple quiz application where users can answer questions and see their results. It includes a timer for each question to add a time pressure element.
+**Описание:** Этот проект представляет собой простое приложение для викторины, в котором пользователи могут отвечать на вопросы и видеть свои результаты. Для каждой вопроса предусмотрен таймер, чтобы добавить элемент временного давления.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   DOM manipulation: Updates the quiz interface to display questions, handle answer selections, and show the final
+-   Манипуляция DOM: Обновляет интерфейс викторины для отображения вопросов, обработки выбора ответов и показа итоговых результатов.
 
 {{< admonition info "Пример реализации" false >}}
 
@@ -3566,13 +3580,13 @@ JavaScript реализует логику перевода текста в аз
 
 ![Advanced Quiz App](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F98kzkz9jyfl6vjkau9z1.png "Advanced Quiz App")
 
-**Description**: This project builds upon the simple quiz app by offering more customization options. Users can set the number of questions, choose the topic, and define the difficulty level before starting the quiz.
+**Описание:** Этот проект расширяет функционал простого приложения для викторины, добавляя возможности для настройки. Пользователи могут задать количество вопросов, выбрать тему и определить уровень сложности перед началом викторины.
 
-**Learning Concepts:**
+**Концепции обучения:**
 
--   Building upon existing projects: Similar to other projects (scientific calculator, advanced to-do list), this project demonstrates extending a basic concept with additional features.
--   User input validation: It introduces concepts of validating user input for the customization options (e.g., ensuring a valid number of questions is chosen).
--   Conditional statements: Plays a more prominent role in this project as JavaScript logic needs to adapt the quiz based on user-defined parameters.
+-   Расширение существующих проектов: Как и в других проектах (научный калькулятор, улучшенный список дел), здесь демонстрируется, как можно развить базовую концепцию, добавив новые функции.
+-   Валидация пользовательского ввода: Вводит концепции проверки правильности пользовательского ввода для параметров настройки (например, проверка корректности выбранного количества вопросов).
+-   Условные операторы: Играют более важную роль, так как логика JavaScript должна адаптировать викторину в зависимости от заданных пользователем параметров.
 
 {{< admonition info "Пример реализации" false >}}
 
