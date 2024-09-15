@@ -169,12 +169,12 @@ draft: false
     <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar-semester2">0%</div>
         <div class="tick" style="left: 10%;"></div>
-        <div class="tick" style="left: 25%;"></div>
-        <div class="tick" style="left: 65%;"></div>
+        <div class="tick" style="left: 30%;"></div>
+        <div class="tick" style="left: 55%;"></div>
         <div class="tick" style="left: 75%;"></div>
         <div class="tick" style="left: 95%;"></div>
         <div class="milestone" style="left: 10%;"><b><i>Interim Assessment</i></b></div>
-        <div class="milestone" style="left: 25%;"><i>Pitching 2</i></div>
+        <div class="milestone" style="left: 30%;"><i>Pitching 2</i></div>
         <div class="milestone" style="left: 55%;"><i>Pitching 3</i></div>
         <div class="milestone" style="left: 75%;"><b><i style="color: red;">Final Assessment</i></b></div>
         <div class="milestone" style="left: 95%;"><i>Project Defense</i></div>
