@@ -65,7 +65,183 @@ draft: false
 
 
 
-<iframe src="./counter.html"></iframe>
+<style>
+    .counter {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        margin: 0;
+        background-color: #e8f4f8;
+        box-sizing: border-box;
+        min-height: 80vh;
+    }
+    .title {
+        font-size: 2.1em;
+        line-height: 1.1;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #countdown {
+        font-size: 1.6em;
+        color: #444;
+        margin-bottom: 30px;
+    }
+    .semester-label {
+        font-size: 1.4em;
+        color: #333;
+        margin: 10px 0 5px;
+    }
+    .progress-bar-container {
+        width: 85%;
+        background-color: #ddd;
+        border-radius: 8px;
+        margin-top: 10px;
+        position: relative;
+        height: 40px;
+        overflow: visible;
+    }
+    @media (max-width: 500px) {
+        .counter {
+            padding: 7px;
+            min-height: 90vh;
+        }
+        #countdown {
+            font-size: 1.2em;
+        }
+        .progress-bar-container {
+            width: 100%;
+        }
+    }
+    .progress-bar {
+        width: 0;
+        height: 100%;
+        background-color: #4caf50;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        position: relative;
+        transition: width 0.5s ease;
+    }
+    .tick {
+        position: absolute;
+        width: 2px;
+        height: 50px;
+        background-color: #333;
+        bottom: -10px;
+    }
+    .milestone {
+        position: absolute;
+        top: 50px;
+        font-size: 0.7em;
+        color: #555;
+        text-align: center;
+        width: 70px;
+        transform: translateX(-50%);
+    }
+    .milestone br {
+        margin: 1px;
+    }
+</style>
+<div class="counter">
+    <div class="title">До защиты проектов:</div>
+    <div id="countdown">Загрузка...</div>
+    <!-- Первая полоса загрузки -->
+    <div class="semester-label">Семестр 1</div>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar-semester1">0%</div>
+        <div class="tick" style="left: 50%;"></div>
+        <div class="tick" style="left: 70%;"></div>
+        <div class="tick" style="left: 90%;"></div>
+        <div class="milestone" style="left: 50%;"><b><i>Initial Assessment</i></b></div>
+        <div class="milestone" style="left: 70%;"><i>Submission</i></div>
+        <div class="milestone" style="left: 90%;"><i>Pitching 1</i></div>
+    </div>
+    <!-- Вторая полоса загрузки -->
+    <br><br>
+    <div class="semester-label">Семестр 2</div>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar-semester2">0%</div>
+        <div class="tick" style="left: 10%;"></div>
+        <div class="tick" style="left: 30%;"></div>
+        <div class="tick" style="left: 60%;"></div>
+        <div class="tick" style="left: 80%;"></div>
+        <div class="tick" style="left: 97%;"></div>
+        <div class="milestone" style="left: 10%;"><b><i>Interim Assessment</i></b></div>
+        <div class="milestone" style="left: 30%;"><i>Pitching 2</i></div>
+        <div class="milestone" style="left: 60%;"><i>Pitching 3</i></div>
+        <div class="milestone" style="left: 80%;"><b><i style="color: red;">Final Assessment</i></b></div>
+        <div class="milestone" style="left: 97%;"><i>Project Defense</i></div>
+    </div>
+</div>
+<script>
+    function declension(number, one, two, five) {
+        number = Math.abs(number) % 100;
+        const n1 = number % 10;
+        if (number > 10 && number < 20) return five;
+        if (n1 > 1 && n1 < 5) return two;
+        if (n1 === 1) return one;
+        return five;
+    }
+    function updateCountdown() {
+        const endDate = new Date("2025-05-22T12:00:00");
+        const now = new Date();
+        const timeDifference = endDate - now;
+        if (timeDifference <= 0) {
+            document.getElementById("countdown").innerHTML = "Срок достигнут!";
+            return;
+        }
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        const daysText = declension(days, 'день', 'дня', 'дней');
+        const hoursText = declension(hours, 'час', 'часа', 'часов');
+        const minutesText = declension(minutes, 'минута', 'минуты', 'минут');
+        const secondsText = declension(seconds, 'секунда', 'секунды', 'секунд');
+        document.getElementById("countdown").innerHTML = days + " " + daysText + " " + hours + " " + hoursText + " " +
+            minutes + " " + minutesText;
+    }
+    function updateProgressBar() {
+        const startDate1 = new Date("2024-09-16T00:00:00");
+        const endDate1 = new Date("2024-12-01T00:00:00");
+        const startDate2 = new Date("2025-02-01T00:00:00");
+        const endDate2 = new Date("2025-05-01T00:00:00");
+        const now = new Date();
+        // Обновление первой полосы загрузки
+        if (now < startDate1) {
+            document.getElementById("progress-bar-semester1").style.width = "0%";
+            document.getElementById("progress-bar-semester1").innerHTML = "0%";
+        } else {
+            const totalDuration1 = endDate1 - startDate1;
+            const elapsed1 = now - startDate1;
+            const progressPercentage1 = Math.min((elapsed1 / totalDuration1) * 100, 100);
+            document.getElementById("progress-bar-semester1").style.width = progressPercentage1 + "%";
+            document.getElementById("progress-bar-semester1").innerHTML = Math.floor(progressPercentage1) + "%";
+        }
+        // Обновление второй полосы загрузки
+        if (now < startDate2) {
+            document.getElementById("progress-bar-semester2").style.width = "0%";
+            document.getElementById("progress-bar-semester2").innerHTML = "0%";
+        } else {
+            const totalDuration2 = endDate2 - startDate2;
+            const elapsed2 = now - startDate2;
+            const progressPercentage2 = Math.min((elapsed2 / totalDuration2) * 100, 100);
+            document.getElementById("progress-bar-semester2").style.width = progressPercentage2 + "%";
+            document.getElementById("progress-bar-semester2").innerHTML = Math.floor(progressPercentage2) + "%";
+        }
+    }
+    setInterval(function () {
+        updateCountdown();
+        updateProgressBar();
+    }, 1000);
+</script>
+
 
 
 
