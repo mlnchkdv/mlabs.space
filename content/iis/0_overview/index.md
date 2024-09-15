@@ -45,7 +45,7 @@ draft: false
         margin: 0;
         background-color: #e8f4f8;
         box-sizing: border-box;
-        min-height: 80vh;
+        min-height: 60vh;
     }
     .title {
         font-size: 2.1em;
@@ -60,16 +60,11 @@ draft: false
         color: #444;
         margin-bottom: 30px;
     }
-    .semester-label {
-        font-size: 1.4em;
-        color: #333;
-        margin: 10px 0 5px;
-    }
-    .progress-bar-container {
+    #progress-bar-container {
         width: 85%;
         background-color: #ddd;
         border-radius: 8px;
-        margin-top: 10px;
+        margin-top: 20px;
         position: relative;
         height: 40px;
         overflow: visible;
@@ -77,16 +72,17 @@ draft: false
     @media (max-width: 500px) {
         .counter {
             padding: 7px;
-            min-height: 90vh;
+            min-height: 62vh;
         }
         #countdown {
             font-size: 1.2em;
+            /* margin-bottom: 30px; */
         }
-        .progress-bar-container {
+        #progress-bar-container {
             width: 100%;
         }
     }
-    .progress-bar {
+    #progress-bar {
         width: 0;
         height: 100%;
         background-color: #4caf50;
@@ -110,9 +106,8 @@ draft: false
         font-size: 0.7em;
         color: #555;
         text-align: center;
-        width: 70px;
+        width: 100px;
         transform: translateX(-50%);
-        line-height: 1.1;
     }
     .milestone br {
         margin: 1px;
@@ -121,32 +116,14 @@ draft: false
 <div class="counter">
     <div class="title">До защиты проектов:</div>
     <div id="countdown">Загрузка...</div>
-    <!-- Первая полоса загрузки -->
-    <div class="semester-label">Семестр 1</div>
-    <div class="progress-bar-container">
-        <div class="progress-bar" id="progress-bar-semester1">0%</div>
+    <div id="progress-bar-container">
+        <div id="progress-bar">0%</div>
         <div class="tick" style="left: 50%;"></div>
         <div class="tick" style="left: 70%;"></div>
         <div class="tick" style="left: 90%;"></div>
-        <div class="milestone" style="left: 50%;"><b><i style="color: red;">Initial Assessment</i></b></div>
-        <div class="milestone" style="left: 70%;"><i>Submission</i></div>
-        <div class="milestone" style="left: 90%;"><i>Pitching 1</i></div>
-    </div>
-    <!-- Вторая полоса загрузки -->
-    <br><br>
-    <div class="semester-label">Семестр 2</div>
-    <div class="progress-bar-container">
-        <div class="progress-bar" id="progress-bar-semester2">0%</div>
-        <div class="tick" style="left: 10%;"></div>
-        <div class="tick" style="left: 30%;"></div>
-        <div class="tick" style="left: 55%;"></div>
-        <div class="tick" style="left: 75%;"></div>
-        <div class="tick" style="left: 95%;"></div>
-        <div class="milestone" style="left: 10%;"><b><i style="color: red;">Interim Assessment</i></b></div>
-        <div class="milestone" style="left: 30%;"><i>Pitching 2</i></div>
-        <div class="milestone" style="left: 55%;"><i>Pitching 3</i></div>
-        <div class="milestone" style="left: 75%;"><b><i style="color: red;">Final Assessment</i></b></div>
-        <div class="milestone" style="left: 95%;"><i>Project Defense</i></div>
+        <div class="milestone" style="left: 50%;"><i>Submission</i></div>
+        <div class="milestone" style="left: 70%;"><i>Pitching 1</i><br style="margin: 5px;">23.11.24</div>
+        <div class="milestone" style="left: 90%;"><i>Pitching 2</i><br style="margin: 5px;">14.12.24</div>
     </div>
 </div>
 <script>
@@ -159,7 +136,7 @@ draft: false
         return five;
     }
     function updateCountdown() {
-        const endDate = new Date("2025-05-22T12:00:00");
+        const endDate = new Date("2024-12-23T12:00:00");
         const now = new Date();
         const timeDifference = endDate - now;
         if (timeDifference <= 0) {
@@ -178,39 +155,26 @@ draft: false
             minutes + " " + minutesText;
     }
     function updateProgressBar() {
-        const startDate1 = new Date("2024-09-16T00:00:00");
-        const endDate1 = new Date("2024-12-01T00:00:00");
-        const startDate2 = new Date("2025-02-01T00:00:00");
-        const endDate2 = new Date("2025-05-01T00:00:00");
+        const startDate = new Date("2024-09-01T00:00:00");
+        const endDate = new Date("2024-12-23T00:00:00");
         const now = new Date();
-        // Обновление первой полосы загрузки
-        if (now < startDate1) {
-            document.getElementById("progress-bar-semester1").style.width = "0%";
-            document.getElementById("progress-bar-semester1").innerHTML = "0%";
-        } else {
-            const totalDuration1 = endDate1 - startDate1;
-            const elapsed1 = now - startDate1;
-            const progressPercentage1 = Math.min((elapsed1 / totalDuration1) * 100, 100);
-            document.getElementById("progress-bar-semester1").style.width = progressPercentage1 + "%";
-            document.getElementById("progress-bar-semester1").innerHTML = Math.floor(progressPercentage1) + "%";
+        if (now < startDate) {
+            document.getElementById("progress-bar").style.width = "0%";
+            document.getElementById("progress-bar").innerHTML = "0%";
+            return;
         }
-        // Обновление второй полосы загрузки
-        if (now < startDate2) {
-            document.getElementById("progress-bar-semester2").style.width = "0%";
-            document.getElementById("progress-bar-semester2").innerHTML = "0%";
-        } else {
-            const totalDuration2 = endDate2 - startDate2;
-            const elapsed2 = now - startDate2;
-            const progressPercentage2 = Math.min((elapsed2 / totalDuration2) * 100, 100);
-            document.getElementById("progress-bar-semester2").style.width = progressPercentage2 + "%";
-            document.getElementById("progress-bar-semester2").innerHTML = Math.floor(progressPercentage2) + "%";
-        }
+        const totalDuration = endDate - startDate;
+        const elapsed = now - startDate;
+        const progressPercentage = Math.min((elapsed / totalDuration) * 100, 100);
+        document.getElementById("progress-bar").style.width = progressPercentage + "%";
+        document.getElementById("progress-bar").innerHTML = Math.floor(progressPercentage) + "%";
     }
     setInterval(function () {
         updateCountdown();
         updateProgressBar();
     }, 1000);
 </script>
+
 
 
 
@@ -572,6 +536,7 @@ draft: false
   - <button class="role-button">📊 Аналитик данных</button> – анализирует финансовые данные, готовит датасеты для обучения моделей, проводит визуализацию результатов.
   - <button class="role-button">✅ Тестировщик/менеджер проекта</button> – тестирует производительность и точность модели, отвечает за координацию команды и управление сроками.
   
+
 </div>
 
 <div class="project-card">
@@ -588,6 +553,7 @@ draft: false
   - <button class="role-button">🎨 Разработчик фронтенда</button> – создает интерфейс для отображения рекомендаций пользователям, улучшает визуальное восприятие.
   - <button class="role-button">✅ Тестировщик/аналитик данных</button> – проводит тестирование системы, оценивает качество рекомендаций и предлагает улучшения.
   
+
 </div>
 
 <div class="project-card">
@@ -604,6 +570,7 @@ draft: false
   - <button class="role-button">📊 Аналитик данных</button> – анализирует данные из социальных сетей и источников по туризму, использует модели анализа тональности.
   - <button class="role-button">✅ Тестировщик/менеджер проекта</button> – проводит тестирование системы, управляет процессами разработки и сроками.
   
+
 </div>
 
 <div class="project-card">
@@ -620,6 +587,7 @@ draft: false
   - <button class="role-button">📊 Аналитик данных</button> – анализирует данные о движении транспорта, разрабатывает стратегии для оптимизации пассажиропотока.
   - <button class="role-button">✅ Тестировщик/UX/UI дизайнер</button> – тестирует интерфейс, улучшает пользовательский опыт и разрабатывает макеты.
   
+
 </div>
 
 <div class="project-card">
@@ -638,6 +606,7 @@ draft: false
   - <button class="role-button">📊 Аналитик данных</button> – анализирует данные с датчиков, готовит их для обучения моделей.
   - <button class="role-button">✅ Тестировщик/менеджер проекта</button> – проверяет производительность системы, управляет задачами и сроками выполнения.
   
+
 </div>
 
 {{< /admonition >}}

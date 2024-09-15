@@ -159,7 +159,7 @@ draft: false
         <div class="tick" style="left: 50%;"></div>
         <div class="tick" style="left: 70%;"></div>
         <div class="tick" style="left: 90%;"></div>
-        <div class="milestone" style="left: 50%;"><b><i>Initial Assessment</i></b></div>
+        <div class="milestone" style="left: 50%;"><b><i style="color: red;">Initial Assessment</i></b></div>
         <div class="milestone" style="left: 70%;"><i>Submission</i></div>
         <div class="milestone" style="left: 90%;"><i>Pitching 1</i></div>
     </div>
@@ -173,7 +173,7 @@ draft: false
         <div class="tick" style="left: 55%;"></div>
         <div class="tick" style="left: 75%;"></div>
         <div class="tick" style="left: 95%;"></div>
-        <div class="milestone" style="left: 10%;"><b><i>Interim Assessment</i></b></div>
+        <div class="milestone" style="left: 10%;"><b><i style="color: red;">Interim Assessment</i></b></div>
         <div class="milestone" style="left: 30%;"><i>Pitching 2</i></div>
         <div class="milestone" style="left: 55%;"><i>Pitching 3</i></div>
         <div class="milestone" style="left: 75%;"><b><i style="color: red;">Final Assessment</i></b></div>
