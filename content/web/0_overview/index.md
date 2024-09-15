@@ -252,11 +252,25 @@ draft: false
 - [:(fa-solid fa-code): HTML и структура Web-документа](../html)
 - [:(fa-solid fa-ellipsis): Глобальные атрибуты HTML](../attributes/)
 - [:(fa-solid fa-palette): Основы CSS](../css/)
-- [:(fa-solid fa-border-top-left): Отображения элементов, Единицы измерения, Работа с цветом](../units/), [:(fa-brands fa-codepen): Блочные-элементы](https://codepen.io/mlnchkdv/full/rNbyQNa), [:(fa-brands fa-codepen): Flex-элементы](https://codepen.io/mlnchkdv/full/KKYWrPY), [:(fa-brands fa-codepen): Список всех именнованных цветов](https://codepen.io/mlnchkdv/full/LYvWgJZ),[:(fa-brands fa-codepen): Отсортированные цвета в CSS](https://codepen.io/mlnchkdv/full/abxJRQO)
-- [:(fa-solid fa-text-height): Оформление текста](../text_style), [:(fa-brands fa-codepen): Базовые CSS-свойства для фона](https://codepen.io/mlnchkdv/full/eYovPyo)
-- [:(fa-solid fa-table-columns): Позиционирование](../position), [:(fa-brands fa-codepen): Позиционирование блоков](https://codepen.io/mlnchkdv/full/gOymByv), [:(fa-brands fa-codepen): CSS-свойства position](https://codepen.io/mlnchkdv/full/poBexMm)
+- [:(fa-solid fa-border-top-left): Отображения элементов, Единицы измерения, Цвет](../units/)
+    -  [:(fa-brands fa-codepen): Блочные-элементы](https://codepen.io/mlnchkdv/full/rNbyQNa),
+    - [:(fa-brands fa-codepen): Flex-элементы](https://codepen.io/mlnchkdv/full/KKYWrPY),
+    - [:(fa-brands fa-codepen): Список всех именнованных цветов](https://codepen.io/mlnchkdv/full/LYvWgJZ),
+    - [:(fa-brands fa-codepen): Отсортированные цвета в CSS](https://codepen.io/mlnchkdv/full/abxJRQO)
+
+- [:(fa-solid fa-text-height): Оформление текста](../text_style)
+    -  [:(fa-brands fa-codepen): Базовые CSS-свойства для фона](https://codepen.io/mlnchkdv/full/eYovPyo)
+
+- [:(fa-solid fa-table-columns): Позиционирование](../position)
+    - [:(fa-brands fa-codepen): Позиционирование блоков](https://codepen.io/mlnchkdv/full/gOymByv),
+    -  [:(fa-brands fa-codepen): CSS-свойства position](https://codepen.io/mlnchkdv/full/poBexMm)
+
 - [:(fa-solid fa-display): Адаптивность](../adaptive)
-- [:(fa-solid fa-clapperboard): Анимации](../animation), [:(fa-brands fa-codepen): CSS-свойства Transform](https://codepen.io/mlnchkdv/full/XWQMxVL), [:(fa-brands fa-codepen): 1 Пример анимаций в интерфейсе](https://codepen.io/mlnchkdv/pen/zYXZMxr), [:(fa-brands fa-codepen): 2 Пример анимаций в интерфейсе](https://codepen.io/mlnchkdv/pen/MWRpzag)
+- [:(fa-solid fa-clapperboard): Анимации](../animation)
+    - [:(fa-brands fa-codepen): CSS-свойства Transform](https://codepen.io/mlnchkdv/full/XWQMxVL),
+    - [:(fa-brands fa-codepen): 1 Пример анимаций в интерфейсе](https://codepen.io/mlnchkdv/pen/zYXZMxr),
+    - [:(fa-brands fa-codepen): 2 Пример анимаций в интерфейсе](https://codepen.io/mlnchkdv/pen/MWRpzag)
+
 - [:(fa-solid fa-images): Форматы изображений](../image_formats)
 
 ## Семестр 2 (Цифровой дизайн)
