@@ -143,6 +143,7 @@ draft: false
         text-align: center;
         width: 70px;
         transform: translateX(-50%);
+        line-height: 1.1;
     }
     .milestone br {
         margin: 1px;
@@ -241,6 +242,7 @@ draft: false
         updateProgressBar();
     }, 1000);
 </script>
+
 
 
 
