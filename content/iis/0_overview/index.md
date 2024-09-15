@@ -49,7 +49,7 @@ draft: false
     }
     .title {
         font-size: 2.1em;
-        line-height: 1.4;
+        line-height: 1.1;
         font-weight: bold;
         color: #333;
         margin-bottom: 20px;
@@ -110,7 +110,7 @@ draft: false
         transform: translateX(-50%);
     }
     .milestone br {
-        margin: 7px;
+        margin: 1px;
     }
 </style>
 <div class="counter">
@@ -174,6 +174,7 @@ draft: false
         updateProgressBar();
     }, 1000);
 </script>
+
 
 
 
