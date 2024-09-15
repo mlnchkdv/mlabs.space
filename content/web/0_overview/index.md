@@ -63,6 +63,12 @@ draft: false
 
 -->
 
+
+
+<iframe src="./counter.html"></iframe>
+
+
+
 ## Семестр 1 (HTML&CSS)
 
 - [:(fa-solid fa-code): HTML и структура Web-документа](../html)
@@ -89,8 +95,8 @@ draft: false
 - [:(fa-solid fa-circle-exclamation): Инструкция по выполнению ВКР](../readme)
 - [:(fa-solid fa-file-word): Шаблон выпускной работы](../files/Шаблон-ИФиЖ.docx) и [:(fa-solid fa-quote-left): пример ВКР](../files/Пример_ВКР_(ycadm.ru).docx)
 - [:(fa-brands fa-codepen): Примеры лэндингов](../examples)
-<!-- - [:(fa-brands fa-readme): Глоссарий](../glossary) -->
-- [:(fa-solid fa-list-check): Проекты для портфолио](../projects)
+- [:(fa-brands fa-readme): Глоссарий](../glossary)
+- [:(fa-solid fa-briefcase): Проекты для портфолио](../projects)
 
 ## Источники
 
