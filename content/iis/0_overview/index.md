@@ -1156,32 +1156,35 @@ legend:
   data:
     - Этапы проекта
 grid:
-  left: 100
+  left: 120
 right: 50
 bottom: 100
 containLabel: true
 xAxis:
   type: time
-  boundaryGap: false
+  min: "2024-09-01"
+  max: "2024-12-31"
+  axisLabel:
+    formatter: '{yyyy-MM-dd}'
 yAxis:
   type: category
   data:
-    - Финальная защита
+    - Защита
     - Финальная разработка
-    - Второй питчинг
-    - Разработка и тестирование
-    - Первый питчинг
+    - Питчинг 2
+    - Разработка и тесты
+    - Питчинг 1
     - Формирование команды
-    - Выбор темы проекта
+    - Выбор темы
 series:
   - name: Этапы проекта
     type: bar
-    stack: total
+    barWidth: 20
     label:
       show: true
       position: inside
     data:
-      - name: "Выбор темы проекта"
+      - name: "Выбор темы"
         value: ["2024-09-01", "2024-09-14"]
         itemStyle:
           color: '#5470c6'
@@ -1189,15 +1192,15 @@ series:
         value: ["2024-09-15", "2024-09-28"]
         itemStyle:
           color: '#91cc75'
-      - name: "Первый питчинг"
+      - name: "Питчинг 1"
         value: ["2024-09-29", "2024-10-05"]
         itemStyle:
           color: '#fac858'
-      - name: "Разработка и тестирование"
+      - name: "Разработка и тесты"
         value: ["2024-10-06", "2024-11-16"]
         itemStyle:
           color: '#ee6666'
-      - name: "Второй питчинг"
+      - name: "Питчинг 2"
         value: ["2024-11-17", "2024-11-23"]
         itemStyle:
           color: '#73c0de'
@@ -1205,7 +1208,7 @@ series:
         value: ["2024-11-24", "2024-12-07"]
         itemStyle:
           color: '#3ba272'
-      - name: "Финальная защита"
+      - name: "Защита"
         value: ["2024-12-08", "2024-12-14"]
         itemStyle:
           color: '#fc8452'
