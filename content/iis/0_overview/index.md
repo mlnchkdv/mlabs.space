@@ -1149,61 +1149,42 @@ series:
 {{< echarts >}}
 
 title:
-  text: План работы над проектом на академический семестр
+  text: Этапы работы над проектом
 tooltip:
   trigger: axis
 legend:
   data:
-    - Этапы проекта
+    - План
 xAxis:
   type: category
-  boundaryGap: false
   data:
-    - Сентябрь
-    - Октябрь
-    - Ноябрь
-    - Декабрь
+    - Сентябрь (Недели 1-2)
+    - Сентябрь (Недели 3-4)
+    - Октябрь (Недели 1-2)
+    - Октябрь (Недели 3-4)
+    - Ноябрь (Недели 1-2)
+    - Ноябрь (Недели 3-4)
+    - Декабрь (Недели 1-2)
+    - Декабрь (Недели 3-4)
 yAxis:
   type: value
+  name: Продолжительность (недели)
 series:
-  - name: Этапы проекта
-    type: bar
-    stack: total
-    label:
-      show: true
-    emphasis:
-      focus: series
+  - name: План
+    type: line
     data:
-      - value: 1
-        name: "Выбор темы проекта"
-        itemStyle:
-          color: '#5470c6'
-      - value: 2
-        name: "Формирование команды"
-        itemStyle:
-          color: '#91cc75'
-      - value: 1
-        name: "Первый питчинг"
-        itemStyle:
-          color: '#fac858'
-      - value: 4
-        name: "Разработка и тестирование"
-        itemStyle:
-          color: '#ee6666'
-      - value: 1
-        name: "Второй питчинг"
-        itemStyle:
-          color: '#73c0de'
-      - value: 2
-        name: "Финальная разработка"
-        itemStyle:
-          color: '#3ba272'
-      - value: 1
-        name: "Финальная защита"
-        itemStyle:
-          color: '#fc8452'
+      - 1  # Выбор темы проекта
+      - 2  # Формирование команды
+      - 3  # Первый питчинг
+      - 5  # Разработка и тестирование
+      - 6  # Второй питчинг
+      - 8  # Финальная разработка
+      - 9  # Подготовка к защите
+      - 10 # Финальная защита
+    areaStyle: {}
 
 {{< /echarts >}}
+
 
 
 ## Рекомендации
