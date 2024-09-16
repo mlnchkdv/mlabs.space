@@ -1146,75 +1146,22 @@ series:
 {{< /admonition >}}
 
 
-{{< echarts >}}
+{{< mermaid >}}
+gantt
+    title План работы над проектом
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d-%m
 
-title:
-  text: План работы над проектом
-tooltip:
-  trigger: item
-formatter: '{b}: {c}'
-legend:
-  data:
-    - Этапы проекта
-grid:
-  left: 120
-right: 50
-bottom: 100
-containLabel: true
-xAxis:
-  type: time
-  min: "2024-09-01"
-  max: "2024-12-31"
-  axisLabel:
-    formatter: '{yyyy-MM}'
-yAxis:
-  type: category
-  data:
-    - Защита
-    - Финальная разработка
-    - Питчинг 2
-    - Разработка и тесты
-    - Питчинг 1
-    - Формирование команды
-    - Выбор темы
-series:
-  - name: Этапы проекта
-    type: custom
-    renderItem: (params, api) => {
-      const categoryIndex = api.value(0);
-      const start = api.coord([api.value(1), categoryIndex]);
-      const end = api.coord([api.value(2), categoryIndex]);
-      const height = api.size([0, 1])[1] * 0.6;
-      return {
-        type: 'rect',
-        shape: echarts.graphic.clipRectByRect({
-          x: start[0],
-          y: start[1] - height / 2,
-          width: end[0] - start[0],
-          height: height
-        }, {
-          x: params.coordSys.x,
-          y: params.coordSys.y,
-          width: params.coordSys.width,
-          height: params.coordSys.height
-        }),
-        style: api.style()
-      };
-    },
-    encode: {
-      x: [1, 2],
-      y: 0
-    },
-    data:
-      - [0, "2024-09-01", "2024-09-14"]
-      - [1, "2024-09-15", "2024-09-28"]
-      - [2, "2024-09-29", "2024-10-05"]
-      - [3, "2024-10-06", "2024-11-16"]
-      - [4, "2024-11-17", "2024-11-23"]
-      - [5, "2024-11-24", "2024-12-07"]
-      - [6, "2024-12-08", "2024-12-14"]
-      
-{{< /echarts >}}
+    section Этапы проекта
+    Выбор темы          :done,    des1, 2024-09-01, 14d
+    Формирование команды :active,  des2, 2024-09-15, 14d
+    Питчинг 1            :        des3, 2024-09-29, 7d
+    Разработка и тесты   :        des4, 2024-10-06, 42d
+    Питчинг 2            :        des5, 2024-11-17, 7d
+    Финальная разработка :        des6, 2024-11-24, 14d
+    Защита               :        des7, 2024-12-08, 7d
+{{< /mermaid >}}
+
 
 
 
