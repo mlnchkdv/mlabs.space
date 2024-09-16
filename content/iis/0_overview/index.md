@@ -1152,6 +1152,7 @@ title:
   text: План работы над проектом
 tooltip:
   trigger: item
+formatter: '{b}: {c}'
 legend:
   data:
     - Этапы проекта
@@ -1165,7 +1166,7 @@ xAxis:
   min: "2024-09-01"
   max: "2024-12-31"
   axisLabel:
-    formatter: '{yyyy-MM-dd}'
+    formatter: '{yyyy-MM}'
 yAxis:
   type: category
   data:
@@ -1178,43 +1179,42 @@ yAxis:
     - Выбор темы
 series:
   - name: Этапы проекта
-    type: bar
-    barWidth: 20
-    label:
-      show: true
-      position: inside
+    type: custom
+    renderItem: (params, api) => {
+      const categoryIndex = api.value(0);
+      const start = api.coord([api.value(1), categoryIndex]);
+      const end = api.coord([api.value(2), categoryIndex]);
+      const height = api.size([0, 1])[1] * 0.6;
+      return {
+        type: 'rect',
+        shape: echarts.graphic.clipRectByRect({
+          x: start[0],
+          y: start[1] - height / 2,
+          width: end[0] - start[0],
+          height: height
+        }, {
+          x: params.coordSys.x,
+          y: params.coordSys.y,
+          width: params.coordSys.width,
+          height: params.coordSys.height
+        }),
+        style: api.style()
+      };
+    },
+    encode: {
+      x: [1, 2],
+      y: 0
+    },
     data:
-      - name: "Выбор темы"
-        value: ["2024-09-01", "2024-09-14"]
-        itemStyle:
-          color: '#5470c6'
-      - name: "Формирование команды"
-        value: ["2024-09-15", "2024-09-28"]
-        itemStyle:
-          color: '#91cc75'
-      - name: "Питчинг 1"
-        value: ["2024-09-29", "2024-10-05"]
-        itemStyle:
-          color: '#fac858'
-      - name: "Разработка и тесты"
-        value: ["2024-10-06", "2024-11-16"]
-        itemStyle:
-          color: '#ee6666'
-      - name: "Питчинг 2"
-        value: ["2024-11-17", "2024-11-23"]
-        itemStyle:
-          color: '#73c0de'
-      - name: "Финальная разработка"
-        value: ["2024-11-24", "2024-12-07"]
-        itemStyle:
-          color: '#3ba272'
-      - name: "Защита"
-        value: ["2024-12-08", "2024-12-14"]
-        itemStyle:
-          color: '#fc8452'
-
+      - [0, "2024-09-01", "2024-09-14"]
+      - [1, "2024-09-15", "2024-09-28"]
+      - [2, "2024-09-29", "2024-10-05"]
+      - [3, "2024-10-06", "2024-11-16"]
+      - [4, "2024-11-17", "2024-11-23"]
+      - [5, "2024-11-24", "2024-12-07"]
+      - [6, "2024-12-08", "2024-12-14"]
+      
 {{< /echarts >}}
-
 
 
 
