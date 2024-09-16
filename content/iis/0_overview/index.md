@@ -1145,69 +1145,180 @@ series:
   - Примеры успешных защит и выступлений можно найти на [YouTube](https://www.youtube.com/) или [SlideShare](https://www.slideshare.net/).
 {{< /admonition >}}
 
-{{< echarts >}}
 
-title:
-  text: План работы над проектом
-tooltip:
-  trigger: item
-legend:
-  data:
-    - Этапы проекта
-grid:
-  left: '15%'
-  right: '15%'
-  bottom: '20%'
-  containLabel: true
-xAxis:
-  type: time
-  min: "2024-09-01"
-  max: "2024-12-31"
-  axisLabel:
-    formatter: "{yyyy-MM-dd}"
-yAxis:
-  type: category
-  data:
-    - Защита
-    - Финальная разработка
-    - Питчинг 2
-    - Разработка
-    - Питчинг 1
-    - Формирование команды
-    - Выбор темы
-series:
-  - name: Этапы проекта
-    type: custom
-    renderItem: |
-      function (params, api) {
-        const categoryIndex = api.value(0);
-        const start = api.coord([api.value(1), categoryIndex]);
-        const end = api.coord([api.value(2), categoryIndex]);
-        const height = api.size([0, 1])[1] * 0.6;
-        return {
-          type: 'rect',
-          shape: {
-            x: start[0],
-            y: start[1] - height / 2,
-            width: end[0] - start[0],
-            height: height
-          },
-          style: api.style()
-        };
-      }
-    encode:
-      x: [1, 2]
-      y: 0
-    data:
-      - [0, "2024-09-01", "2024-09-28"]
-      - [1, "2024-09-29", "2024-10-05"]
-      - [2, "2024-10-06", "2024-10-12"]
-      - [3, "2024-10-13", "2024-11-23"]
-      - [4, "2024-11-24", "2024-11-30"]
-      - [5, "2024-12-01", "2024-12-05"]
-      - [6, "2024-12-06", "2024-12-14"]
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<style>
+    .bar {
+        stroke: #333;
+        stroke-width: 1px;
+        opacity: 0.8;
+        cursor: pointer;
+        transition: fill 0.3s;
+        rx: 5; /* Округление углов */
+        ry: 5; /* Округление углов */
+    }
+    .bar:hover {
+        fill: #ffcc80; /* Изменение цвета при наведении */
+    }
+    .axis path, .axis line {
+        fill: none;
+        stroke: #333;
+        shape-rendering: crispEdges;
+    }
+    .x-axis text {
+        font-size: 12px;
+        transform: rotate(45deg);
+        text-anchor: start;
+    }
+    .current-time-line {
+        stroke: red;
+        stroke-width: 2px;
+        stroke-dasharray: 4;
+    }
+    .grid line {
+        stroke: #ddd;
+        stroke-width: 1px;
+    }
+    .grid path {
+        stroke-width: 0;
+    }
+    .chart-container {
+        max-width: 100%;
+        overflow-x: auto;
+        background-color: #f5f5f5; /* Фон */
+        padding: 10px;
+        display: flex;
+        justify-content: center; /* Центрирование содержимого */
+    }
+    .bar-label {
+        font-size: 12px;
+        fill: rgb(47, 45, 45);
+        dominant-baseline: middle;
+        text-anchor: middle;
+    }
+    .bar-label-outside {
+        font-size: 12px;
+        fill: black;
+        dominant-baseline: middle;
+        text-anchor: start;
+    }
+    .event-line {
+        stroke: rgb(255, 0, 0);
+        stroke-width: 2px;
+    }
+    .event-label {
+        font-size: 12px;
+        fill: #333;
+        text-anchor: middle;
+    }
+</style>
+<div class="chart-container">
+    <svg id="ganttChart" width="100%" height="300" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet"></svg>
+</div>
+<script>
+    // Данные этапов проекта с настройкой событий "Питчинг" и "Защита"
+    const tasks = [
+        { name: "Формирование команды", startDate: new Date("2024-09-01"), endDate: new Date("2024-09-21"), color: "#FFD6BA" },
+        { name: "Выбор темы", startDate: new Date("2024-09-21"), endDate: new Date("2024-10-10"), color: "#A3C4BC" },
+        { name: "Разработка", startDate: new Date("2024-10-10"), endDate: new Date("2024-11-30"), color: "#FCD5CE" },
+        { name: "Финальная разработка", startDate: new Date("2024-11-30"), endDate: new Date("2024-12-21"), color: "#A2D2FF" }
+    ];
+    // Данные для событий (Питчинг и Защита)
+    const events = [
+        { name: "Питчинг 1", date: new Date("2024-10-10"), color: "#FFB5A7" },
+        { name: "Питчинг 2", date: new Date("2024-11-30"), color: "#BDE0FE" },
+        { name: "Защита", date: new Date("2024-12-21"), color: "#CDB4DB" }
+    ];
+    // Текущее время
+    const currentTime = new Date();
+    // Настройки размеров диаграммы
+    const svg = d3.select("#ganttChart");
+    const margin = { top: 30, right: 20, bottom: 30, left: 20 };
+    const width = 900 - margin.left - margin.right;
+    const height = 300 - margin.top - margin.bottom;
+    const x = d3.scaleTime()
+        .domain([new Date("2024-09-01"), new Date("2024-12-25")])
+        .range([0, width]);
+    const y = d3.scaleBand()
+        .domain(["Этапы"]) // Один уровень
+        .range([0, height / 2])
+        .padding(0.1);
+    const chartGroup = svg.append("g")
+        .attr("transform", `translate(${margin.left},${margin.top + height / 2})`); // Центрирование по вертикали
+    // Создание осей
+    chartGroup.append("g")
+        .attr("class", "x axis")
+        .attr("transform", `translate(0, ${height / 4})`) // Сдвиг по вертикали
+        .call(d3.axisBottom(x).ticks(d3.timeWeek.every(1)))
+        .selectAll("text")
+        .attr("class", "x-axis")
+        .style("text-anchor", "start")
+        .attr("transform", "rotate(45)");
+    // Создание сетки
+    chartGroup.append("g")
+        .attr("class", "grid")
+        .call(d3.axisBottom(x)
+            .ticks(d3.timeWeek.every(1))
+            .tickSize(-height / 2)
+            .tickFormat(""))
+        .attr("transform", `translate(0, ${height / 4})`);
+    // Вертикальная линия для текущего времени
+    chartGroup.append("line")
+        .attr("class", "current-time-line")
+        .attr("x1", x(currentTime))
+        .attr("y1", -height / 4)
+        .attr("x2", x(currentTime))
+        .attr("y2", height / 4);
+    // Создание блоков для этапов
+    const bars = chartGroup.selectAll(".bar")
+        .data(tasks)
+        .enter()
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.startDate))
+        .attr("y", -y.bandwidth() / 2) // Центрирование по вертикали
+        .attr("width", d => x(d.endDate) - x(d.startDate))
+        .attr("height", y.bandwidth())
+        .attr("fill", d => d.color)
+        .on("click", d => alert(`Этап: ${d.name}\nНачало: ${d.startDate.toDateString()}\nКонец: ${d.endDate.toDateString()}`));
+    // Добавление названий этапов внутри или сбоку блоков
+    chartGroup.selectAll(".bar-label")
+        .data(tasks)
+        .enter()
+        .append("text")
+        .attr("x", d => x(d.startDate) + (x(d.endDate) - x(d.startDate)) / 2)
+        .attr("y", 0) // Центрирование по вертикали
+        .attr("class", d => (x(d.endDate) - x(d.startDate) > 70 ? "bar-label" : "bar-label-outside"))
+        .text(d => d.name)
+        .attr("dx", d => (x(d.endDate) - x(d.startDate) > 70 ? 0 : 5))
+        .style("font-size", function () {
+            return window.innerWidth < 600 ? "10px" : "13px"; // адаптивный размер текста
+        });
+    // Добавление вертикальных линий для событий "Питчинг" и "Защита"
+    chartGroup.selectAll(".event-line")
+        .data(events)
+        .enter()
+        .append("line")
+        .attr("class", "event-line")
+        .attr("x1", d => x(d.date))
+        .attr("y1", -height / 4)
+        .attr("x2", d => x(d.date))
+        .attr("y2", height / 4)
+        .attr("stroke", d => d.color);
+    // Подписи для событий "Питчинг" и "Защита"
+    chartGroup.selectAll(".event-label")
+        .data(events)
+        .enter()
+        .append("text")
+        .attr("x", d => x(d.date))
+        .attr("y", -height / 4 - 10)
+        .attr("class", "event-label")
+        .text(d => d.name)
+        .style("font-size", function () {
+            return window.innerWidth < 600 ? "10px" : "13px"; // адаптивный размер текста
+        });
+</script>
 
-{{< /echarts >}}
 
 
 
