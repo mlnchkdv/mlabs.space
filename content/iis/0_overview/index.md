@@ -1145,21 +1145,69 @@ series:
   - Примеры успешных защит и выступлений можно найти на [YouTube](https://www.youtube.com/) или [SlideShare](https://www.slideshare.net/).
 {{< /admonition >}}
 
-{{< mermaid >}}
-gantt
-    title План работы над проектом
-    dateFormat  YYYY-MM-DD
-    axisFormat  %d-%m
+{{< echarts >}}
 
-    Выбор темы           :done,    des1, 2024-09-01, 28d
-    Формирование команды :active,  des2, 2024-09-15, 21d
-    Питчинг 1            :        des3, 2024-09-29, 7d
-    Разработка           :        des4, 2024-10-06, 42d
-    Питчинг 2            :        des5, 2024-11-14, 6d
-    Разработка           :        des6, 2024-11-17, 19d
-    Защита               :        des7, 2024-12-06, 7d
-{{< /mermaid >}}
+title:
+  text: План работы над проектом
+tooltip:
+  trigger: item
+legend:
+  data:
+    - Этапы проекта
+grid:
+  left: '15%'
+  right: '15%'
+  bottom: '20%'
+  containLabel: true
+xAxis:
+  type: time
+  min: "2024-09-01"
+  max: "2024-12-31"
+  axisLabel:
+    formatter: "{yyyy-MM-dd}"
+yAxis:
+  type: category
+  data:
+    - Защита
+    - Финальная разработка
+    - Питчинг 2
+    - Разработка
+    - Питчинг 1
+    - Формирование команды
+    - Выбор темы
+series:
+  - name: Этапы проекта
+    type: custom
+    renderItem: |
+      function (params, api) {
+        const categoryIndex = api.value(0);
+        const start = api.coord([api.value(1), categoryIndex]);
+        const end = api.coord([api.value(2), categoryIndex]);
+        const height = api.size([0, 1])[1] * 0.6;
+        return {
+          type: 'rect',
+          shape: {
+            x: start[0],
+            y: start[1] - height / 2,
+            width: end[0] - start[0],
+            height: height
+          },
+          style: api.style()
+        };
+      }
+    encode:
+      x: [1, 2]
+      y: 0
+    data:
+      - [0, "2024-09-01", "2024-09-28"]
+      - [1, "2024-09-29", "2024-10-05"]
+      - [2, "2024-10-06", "2024-10-12"]
+      - [3, "2024-10-13", "2024-11-23"]
+      - [4, "2024-11-24", "2024-11-30"]
+      - [5, "2024-12-01", "2024-12-05"]
+      - [6, "2024-12-06", "2024-12-14"]
 
+{{< /echarts >}}
 
 
 
