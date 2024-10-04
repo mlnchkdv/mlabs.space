@@ -307,7 +307,9 @@ draft: false
 
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
 
-5. Основы машинного обучения: <a href="../tasks/6_ml_classic.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+<!-- 5. Основы машинного обучения: <a href="../tasks/6_ml_classic.ipynb" download>:(fa-solid fa-file-code): Notebook</a> -->
+
+5. Основы машинного обучения: <a href="../tasks/6_ml_classic_base_(upd_2024).ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 6. Деревья решений (Decision Tree): <a href="../tasks/7_decision_tree-2.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): ans data](../data/ans.csv), [:(fa-solid fa-database): train data](../data/train.csv), [:(fa-solid fa-database): test data](../data/test.csv)
 
