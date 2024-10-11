@@ -303,25 +303,24 @@ draft: false
 
 <!-- 3. Линейное программирование: -->
 
+4. Временные ряды, часть 1:  <a href="../tasks/7_timeseries_2024.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Market data](../data/MarketArrivals_Ind.csv), [:(fa-solid fa-database): BTC data](../data/BTC_5min_sample.csv)
 4. Алгоритмы на графах: <a href="../tasks/4_graph.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
 
 [**ML**] Классификация и описание моделей и их метрик в машинном обучении.
 
 <!-- 5. Основы машинного обучения: <a href="../tasks/6_ml_classic.ipynb" download>:(fa-solid fa-file-code): Notebook</a> -->
 
-5. Основы машинного обучения: <a href="../tasks/6_ml_classic_base_(upd_2024).ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+6. Основы машинного обучения: <a href="../tasks/6_ml_classic_base_(upd_2024).ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+7. Деревья решений (Decision Tree): <a href="../tasks/7_decision_tree-2.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): ans data](../data/ans.csv), [:(fa-solid fa-database): train data](../data/train.csv), [:(fa-solid fa-database): test data](../data/test.csv)
 
-6. Деревья решений (Decision Tree): <a href="../tasks/7_decision_tree-2.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): ans data](../data/ans.csv), [:(fa-solid fa-database): train data](../data/train.csv), [:(fa-solid fa-database): test data](../data/test.csv)
-
-    <!--5. Рекомендательные системы: -->
+<!--5. Рекомендательные системы: -->
 
 [**NLP**] Техники и Модели обработки естественного языка (NLP).
 
-7. Word Embeddings: <a href="../tasks/8_torch_intro.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
-
-8. Streamlit: <a href="../tasks/9_streamlit_example.py" download>:(fa-solid fa-file-code): Notebook</a>
-9. Латентное размещение Дирихле (LDA): <a href="../tasks/LDA_topic_models.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Elon Musk data](../data/data_elonmusk.csv)
-10. Анализ текста: <a href="../tasks/10_text_analysis_part1.ipynb" download>:(fa-solid fa-file-code): Notebook 1</a>, <a href="../tasks/10_text_analysis_part2.ipynb" download>:(fa-solid fa-file-code): Notebook 2</a>, [:(fa-solid fa-database): Text data](../data/texts.zip)
+8. Word Embeddings: <a href="../tasks/8_torch_intro.ipynb" download>:(fa-solid fa-file-code): Notebook</a>
+9. Streamlit: <a href="../tasks/9_streamlit_example.py" download>:(fa-solid fa-file-code): Notebook</a>
+10. Латентное размещение Дирихле (LDA): <a href="../tasks/LDA_topic_models.ipynb" download>:(fa-solid fa-file-code): Notebook</a>, [:(fa-solid fa-database): Elon Musk data](../data/data_elonmusk.csv)
+11. Анализ текста: <a href="../tasks/10_text_analysis_part1.ipynb" download>:(fa-solid fa-file-code): Notebook 1</a>, <a href="../tasks/10_text_analysis_part2.ipynb" download>:(fa-solid fa-file-code): Notebook 2</a>, [:(fa-solid fa-database): Text data](../data/texts.zip)
 
 ## Проекты
 
