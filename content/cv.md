@@ -153,6 +153,30 @@ Mathematical support and administration of information systems
 
 ---
 
+With extensive teaching experience, I have supervised over **20 bachelor's and master's theses **in Business Informatics. All graduates are employed in leading companies in Russia and abroad.
+
+<!-- 
+
+Варианты на русском:
+
+1. **Обладаю многолетним опытом преподавания и руководства выпускными проектами по направлению "Бизнес-информатика". Под моим научным руководством успешно защитились более 20 бакалавров и магистров, все из которых работают в ведущих российских и международных компаниях.**
+
+2. **Имею значительный педагогический опыт в сфере бизнес-информатики. Руководил выпускными проектами более 20 студентов, которые в дальнейшем трудоустроились по специальности в ведущие компании России и мира.**
+
+3. **Под моим научным руководством более 20 студентов успешно защитили дипломные и магистерские работы в области бизнес-информатики. Все выпускники работают в крупных российских и международных компаниях.**
+
+Варианты на английском:
+
+1. **With extensive teaching experience, I have supervised over 20 bachelor's and master's theses in Business Informatics. All graduates are employed in leading companies in Russia and abroad.**
+
+2. **I possess significant pedagogical experience in Business Informatics, having guided more than 20 students through their graduation projects. All graduates have secured positions in top companies both in Russia and internationally.**
+
+3. **As an academic advisor, I have successfully supervised over 20 graduates in Business Informatics. All of them are now employed by leading companies in Russia and around the world.** 
+
+These versions are more concise while effectively conveying the key information for a resume.
+
+ -->
+
 ...
 
 <br/>
@@ -208,7 +232,7 @@ Mathematical support and administration of information systems
 
 ---
 
-Author of more than 30 articles and publications:
+Author of more than **30 articles and publications**:
 
 - [:(fa-solid fa-e): elibrary.ru](https://www.elibrary.ru/author_profile.asp?authorid=1021510)
 - [:(fab fa-orcid): orcid.org](https://orcid.org/0000-0002-6689-8904)
@@ -242,7 +266,7 @@ Author of more than 30 articles and publications:
 
 <br/>
 
-:(fa-solid fa-id-card-clip): Organizer of many international conferences ([CMDM](https://risk2023.sgu.ru/), [Saratov Winter School](https://school-22.sgu.ru/)) on mathematics and applied machine learning.
+:(fa-solid fa-id-card-clip): Organizer of many international conferences ([CMDM](https://risk.sgu.ru/), [Saratov Winter School](https://school-22.sgu.ru/)) on mathematics and applied machine learning.
 
 <br/>
 
@@ -280,6 +304,10 @@ Author of more than 30 articles and publications:
 
 ## Certificates
 
+---
+
+CB RF: 
+
 stepik.org: [Анализ данных в R](https://stepik.org/cert/215698)
 
 stepik.org: [Основы статистики](https://stepik.org/cert/214053)
@@ -291,6 +319,8 @@ stepik.org: [Основы статистики. Часть 2](https://stepik.org
  <br/>
 
 ## Other
+
+---
 
 Hobbies: sport jogging, cross-country skiing
 
@@ -305,3 +335,4 @@ Links:
 ·    [researchgate.net](https://www.researchgate.net/profile/Dmitriy_Melnichuk)
 
  <br/>
+
