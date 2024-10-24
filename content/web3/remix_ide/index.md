@@ -1,5 +1,4 @@
 ---
-
 weight: 1
 title: Развертывание и взаимодействие со смарт-контрактами
 description: Пошаговая инструкция по созданию смарт-контракта
@@ -45,7 +44,7 @@ draft: false
 
 После загрузки среды вы увидите следующий интерфейс:
 
-![Интерфейс Remix-IDE](https://media.geeksforgeeks.org/wp-content/uploads/20200423221352/one12.png)
+![Интерфейс Remix-IDE](https://media.geeksforgeeks.org/wp-content/uploads/20200423221352/one12.png "")
 
 #### Шаг 3: Откройте файловый менеджер
 
@@ -55,7 +54,7 @@ draft: false
 
 Выберите **Solidity** в разделе Environment и нажмите на знак **\+** справа от браузера:
 
-![Настройка среды Solidity](https://media.geeksforgeeks.org/wp-content/uploads/20200423221403/two10-300x284.png)
+![Настройка среды Solidity](https://media.geeksforgeeks.org/wp-content/uploads/20200423221403/two10-300x284.png "")
 
 #### Шаг 5: Создайте файл контракта
 
@@ -76,7 +75,7 @@ contract HelloWorld {
 
 Нажмите на иконку под **“File Explorer”** как показано на изображении ниже:
 
-![Раздел для компиляции](https://media.geeksforgeeks.org/wp-content/uploads/20200423221343/five2-300x292.png)
+![Раздел для компиляции](https://media.geeksforgeeks.org/wp-content/uploads/20200423221343/five2-300x292.png "")
 
 #### Шаг 7: Компиляция контракта
 
@@ -86,7 +85,7 @@ contract HelloWorld {
 
 После успешной компиляции нажмите на иконку под разделом **“Solidity Compiler”**, которая называется **“Deploy and run transactions”**. Вам будет представлена следующая страница:
 
-![Развертывание контракта](https://media.geeksforgeeks.org/wp-content/uploads/20200423221354/seven1-238x300.png)
+![Развертывание контракта](https://media.geeksforgeeks.org/wp-content/uploads/20200423221354/seven1-238x300.png "")
 
 Не меняя никаких значений, нажмите на кнопку **“Deploy”** для развертывания вашего умного контракта.
 
@@ -94,7 +93,7 @@ contract HelloWorld {
 
 После развертывания вы найдете ваш контракт в разделе **“Deployed Contracts”**. Нажмите на стрелку рядом с вашим контрактом, и вы увидите кнопку **“get”** (так как наш контракт содержит функцию get). Нажмите на кнопку **“get”**, и вы получите результат: 
 
-![Результат выполнения](https://media.geeksforgeeks.org/wp-content/uploads/20200423221349/nine1-300x150.png)
+![Результат выполнения](https://media.geeksforgeeks.org/wp-content/uploads/20200423221349/nine1-300x150.png "")
 
 ### Пример с геттерами и сеттерами
 
@@ -120,11 +119,11 @@ contract HelloWorld {
 
 1. Нажмите стрелку в разделе **“Deployed Contracts”**. Откроется выпадающее меню, которое будет содержать два метода: **set** и **get**.
 
-![Меню с методами](https://media.geeksforgeeks.org/wp-content/uploads/20230310204002/solidity_1.JPG)
+![Меню с методами](https://media.geeksforgeeks.org/wp-content/uploads/20230310204002/solidity_1.JPG "")
 
 2. В поле рядом с методом **set** введите строку, которую хотите отобразить. После этого нажмите на кнопку **set**. После успешной транзакции нажмите на кнопку **get**, и введённая строка отобразится ниже:
 
-![Результат работы сеттера и геттера](https://media.geeksforgeeks.org/wp-content/uploads/20230310204256/solidity_2.JPG)
+![Результат работы сеттера и геттера](https://media.geeksforgeeks.org/wp-content/uploads/20230310204256/solidity_2.JPG "")
 
 ### Улучшение навыков разработки смарт-контрактов: 
 
