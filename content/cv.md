@@ -24,6 +24,18 @@ draft: false
 
 <br/>
 
+## Skills
+
+---
+
+:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow`, `Keras` `PyTorch`, `TabPy`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `JavaScript`(`React`), `HTML`, `CSS`, `LaTeX`
+
+:(fa-solid fa-laptop-code): **Software**: `Tableau`, `Linux` (`bash`), `Docker`, `Airflow`, `Luigi`, `Git`
+
+:(fa-solid fa-glasses): **Area of interest**: `economic analysis`, `business analytics`
+
+<br/>
+
 ## Education
 
 ---
@@ -71,8 +83,6 @@ Advisor: Prof. Andreichenko D.K.
 </div>
 
 Mathematical support and administration of information systems
-
-<br/>
 
 <br/>
 
@@ -153,7 +163,7 @@ Mathematical support and administration of information systems
 
 ---
 
-With extensive teaching experience, I have supervised over **20 bachelor's and master's theses **in Business Informatics. All graduates are employed in leading companies in Russia and abroad.
+With extensive teaching experience, I have supervised over **20 bachelor's and master's theses**. All graduates are employed in leading companies in Russia and abroad.
 
 <!-- 
 
@@ -181,12 +191,38 @@ These versions are more concise while effectively conveying the key information 
 
 <br/>
 
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Innopolis University</b> & <b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Sep 2023 - present</span> </div>
+
+**Associate Professor**, Federal project “[Development of HR potential of the IT industry](https://www.sgu.ru/cifrovaya-kafedra)”
+
+- [Modern Web-design](https://mlabs.space/web/overview/), lectures and workshops
+
+<br/>
+
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">May 2023 - present</span> </div>
+
+**Associate Professor**, Department of Function Theory and Stochastic Analysis
+
+- [Intelligent information systems](https://mlabs.space/iis/overview/), lectures and workshops
+- Economic analysis with OSINT, lectures and workshops
+- Smart contract design and development, lectures and workshops
+
+<br/>
+
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Oct 2019 - May 2023</span> </div>
+
+**Teaching Assistant**, Department of Function Theory and Stochastic Analysis
+
+- Machine learning in R, lectures and workshops
+
+<br/>
+
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Feb 2019 - Jun 2019</span> </div>
 
 **Teaching Assistant**, Department of Mathematic Cybernetics and Computer Sciences 
 
-- Data Structures and Algorithms, labs and grading
-- Modern information technology, labs and grading
+- Data Structures and Algorithms, workshops
+- Modern information technology, workshops
 
 <br/>
 
@@ -289,18 +325,6 @@ Author of more than **30 articles and publications**:
 :(fa-solid fa-language): **Czech**: Pre-Intermediate
 
  <br/>
-
-## Skills
-
----
-
-:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow` 2.0, `Keras`, `PyTorch`, `TabPy`, `Pandas`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `JavaScript`, `HTML`, `CSS`, `LaTeX`
-
-:(fa-solid fa-laptop-code): **Software**: `Microsoft Excel`, `Tableau`, `Linux` (`bash`), `Docker`, `Airflow`, `Luigi`, `Git`
-
-:(fa-solid fa-glasses): **Area of interest**: `statistics`, `economic analysis`, `business analytics`
-
-<br/>
 
 ## Certificates
 
