@@ -28,7 +28,7 @@ draft: false
 
 ---
 
-:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow`, `Keras` `PyTorch`, `TabPy`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `JavaScript`(`React`), `HTML`, `CSS`, `LaTeX`
+:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow`, `Keras` `PyTorch`, `TabPy`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `Solidity`, `JavaScript`(`React`), `HTML`, `CSS`, `LaTeX`
 
 :(fa-solid fa-laptop-code): **Software**: `Tableau`, `Linux` (`bash`), `Docker`, `Airflow`, `Luigi`, `Git`
 
@@ -187,15 +187,13 @@ These versions are more concise while effectively conveying the key information 
 
  -->
 
-...
-
 <br/>
 
-<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Innopolis University</b> & <b>Saratov State University</b>, Saratov, Russia</span>     <span style="text-align: center;">Sep 2023 - present</span> </div>
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Innopolis</b> & <b>Saratov State University</b>, Russia</span>     <span style="text-align: center;">Sep 2023 - present</span> </div>
 
 **Associate Professor**, Federal project “[Development of HR potential of the IT industry](https://www.sgu.ru/cifrovaya-kafedra)”
 
-- [Modern Web-design](https://mlabs.space/web/overview/), lectures and workshops
+- [Modern Web design and development](https://mlabs.space/web/overview/), lectures and workshops
 
 <br/>
 
@@ -330,7 +328,7 @@ Author of more than **30 articles and publications**:
 
 ---
 
-CB RF: 
+cbr.ru: [Практические сценарии применения смарт-контрактов](./files/Сертификат_теор_модуль_Смарт_контракты_Дмитрий_Мельничук.pdf)
 
 stepik.org: [Анализ данных в R](https://stepik.org/cert/215698)
 
@@ -346,9 +344,7 @@ stepik.org: [Основы статистики. Часть 2](https://stepik.org
 
 ---
 
-Hobbies: sport jogging, cross-country skiing
-
- <br/>
+Hobbies: sport jogging, cross-country skiing.
 
 Links:
 
