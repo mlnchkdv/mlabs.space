@@ -4,7 +4,7 @@ title: Введение в Tailwind CSS
 description: Tailwind CSS - CSS-фреймворк для адаптивных сайтов и интерфейсов
 author: MLabs
 authorLink: null
-date: 2023-09-04T14:48:57.920Z
+date: 2023-08-04T14:48:57.920Z
 lastmod: null
 slug: tailwind
 categories:

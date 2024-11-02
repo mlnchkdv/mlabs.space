@@ -4,7 +4,7 @@ title: Введение в Bootstrap
 description: Bootstrap - CSS-фреймворк для создания адаптивных сайтов
 author: MLabs
 authorLink: null
-date: 2023-09-04T14:48:57.920Z
+date: 2023-08-03T14:48:57.920Z
 lastmod: null
 slug: bootstrap
 categories:
