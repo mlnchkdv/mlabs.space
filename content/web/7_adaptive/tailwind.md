@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: Введение в Tailwind CSS
-description:Tailwind CSS - CSS-фреймворк для адаптивных сайтов и интерфейсов
+description: Tailwind CSS - CSS-фреймворк для адаптивных сайтов и интерфейсов
 author: MLabs
 authorLink: null
 date: 2023-09-04T14:48:57.920Z
