@@ -422,6 +422,280 @@ vk_df.to_csv("vk_data.csv")
 
 {{< /admonition >}}
 
+{{< admonition info "Метрики вовлеченности" false >}}
+
+
+
+{{< /admonition >}}
+
+## GoogleNews & GoogleSearh
+
+{{< admonition info "GoogleNews" false >}}
+
+{{< /admonition >}}
+
+{{< admonition info "GoogleSearh" false >}}
+
+{{< /admonition >}}
+
+## Telegram
+
+{{< admonition info "Подключение к Telegram" false >}}
+
+Чтобы использовать Pyrogram для взаимодействия с Telegram, вы должны выполнить несколько шагов. Pyrogram — это мощная библиотека, которая позволяет вам создавать клиенты или боты для Telegram. Вот пошаговая инструкция для начала работы с Pyrogram:
+
+#### Шаг 1: Установка Pyrogram
+
+Первым делом вам нужно установить `Pyrogram`. Вы можете сделать это, используя `pip`:
+
+```bash
+pip install pyrogram
+```
+
+#### Шаг 2: Получение API ID и API Hash
+
+Для работы с Telegram API через Pyrogram вам потребуется [API ID и API Hash](https://pythonbot.tilda.ws/about_api). Вот как их получить:
+
+1. Перейдите на [Telegram API](https://my.telegram.org/) и войдите в свою учётную запись Telegram.
+2. После входа в систему выберите `API development tools`.
+3. Заполните необходимую информацию для создания нового приложения (Application name, Short name, URL, если есть).
+4. После отправки формы вы получите свой `API ID` и `API Hash`.
+
+#### Шаг 3: Создание клиента Pyrogram
+
+Теперь, когда у вас есть API ID и API Hash, вы можете создать клиента Pyrogram. Вот примерный код:
+
+```python
+from pyrogram import Client
+
+api_id = 'YOUR_API_ID'     # Замените на ваш API ID
+api_hash = 'YOUR_API_HASH' # Замените на ваш API Hash
+
+app = Client("my_account", api_id=api_id, api_hash=api_hash)
+
+# Далее идёт ваш код для взаимодействия с Telegram
+```
+
+#### Шаг 4: Работа с Pyrogram
+
+Теперь вы можете использовать Pyrogram для различных задач, таких как отправка сообщений, получение сообщений из чатов, работы с каналами и многое другое. Пример получения истории чата:
+
+```python
+import asyncio
+
+async def main():
+    async with app:
+        async for message in app.get_chat_history('username'):
+            print(message.text)
+
+asyncio.run(main())
+```
+
+#### Документация и ресурсы
+
+- **Официальная документация Pyrogram**: Вы можете найти подробную документацию и примеры использования на [официальном сайте Pyrogram](https://docs.pyrogram.org/).
+- **Руководства и примеры**: Рекомендую обратиться к разделу [руководств](https://docs.pyrogram.org/start/examples) на сайте Pyrogram для примеров и подробных инструкций.
+- **Исходный код Pyrogram**: Изучение исходного кода на [GitHub](https://github.com/pyrogram/pyrogram) может помочь в понимании работы библиотеки.
+
+Эти ресурсы помогут вам начать работу с Pyrogram и использовать Telegram API для создания различных интересных проектов!
+
+{{< /admonition >}}
+
+{{< admonition info "Програмная реализация" false >}}
+
+```python
+import pandas as pd
+from pyrogram import Client
+import nest_asyncio
+import asyncio
+from datetime import datetime, timedelta
+
+api_id = 'YOUR_ID'
+api_hash = 'YOUR_HASH'
+
+# Применяем nest_asyncio
+nest_asyncio.apply()
+
+# Функция для получения количества подписчиков канала
+async def get_channel_subscribers(app, channel):
+    chat = await app.get_chat(channel)
+    return chat.members_count if chat.members_count else 0
+
+# Функция для поиска сообщений по ключевому слову и каналу
+async def search_messages(app, keyword, channels, start_date):
+    messages_list = []
+    for channel in channels:
+        subscribers_count = await get_channel_subscribers(app, channel)
+        async for message in app.search_messages(chat_id=channel, query=keyword, limit=100):
+            if message.text and message.date > start_date:  # Убедимся, что text не пустой и дата сообщения позже start_date
+                messages_list.append({
+                    'channel': channel,
+                    'subscribers': subscribers_count,
+                    'date': message.date,
+                    'message_id': message.id,
+                    'text': message.text,
+                    'views': message.views,
+                    'forward_from': message.forward_from,
+                    'reply_to_message_id': message.reply_to_message_id,
+                    'edit_date': message.edit_date
+                })
+
+    df = pd.DataFrame(messages_list)
+    # Удаление строк с пустыми текстами
+    df = df[df['text'].notna()]
+    return df
+
+# Основная асинхронная функция для работы с Pyrogram
+async def main():
+    channels = ["@yourai"]
+    keyword = "ai"
+    start_date = datetime(2021, 1, 1)  # начальная дата
+
+    async with Client("my_account", api_id, api_hash) as app:
+        df = await search_messages(app, keyword, channels, start_date)
+        df = df[df['text'].notna()]  # Удаление строк с пустыми текстами
+        print(df)
+        # df.to_csv("telegram_messages.csv", index=False)  # Сохраняем данные в CSV файл
+
+# Запускаем асинхронный код
+asyncio.run(main())
+```
+
+
+
+{{< /admonition >}}
+
+## BeautifulSoup
+
+{{< admonition info "Програмная реализация" false >}}
+
+Для выгрузки данных с сайта с использованием Python и `BeautifulSoup` и сохранения результатов в таблицу с помощью библиотеки `pandas`, а также обработкой исключений, можно модифицировать предыдущий код следующим образом:
+
+#### Шаг 1: Установка необходимых библиотек
+
+Убедитесь, что у вас установлены библиотеки `requests`, `beautifulsoup4`, и `pandas`. Если нет, установите их с помощью pip:
+
+```bash
+pip install requests beautifulsoup4 pandas
+```
+
+#### Шаг 2: Модифицированный скрипт для скрапинга
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+def scrape_site_catalog(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Поднимает исключение при ошибке HTTP
+    except requests.RequestException as e:
+        print(f"Ошибка при запросе к {url}: {e}")
+        return pd.DataFrame()
+
+    try:
+        soup = BeautifulSoup(response.content, 'html.parser')
+        products = []
+
+        # Найти элементы каталога на странице (зависит от структуры сайта)
+        for product in soup.find_all('div', class_='product-item'):  # Примерный класс, требует уточнения
+            title = product.find('div', class_='title').get_text(strip=True)  # Примерный класс, требует уточнения
+            price = product.find('div', class_='price').get_text(strip=True)  # Примерный класс, требует уточнения
+            products.append([title, price])
+
+        return pd.DataFrame(products, columns=["Название", "Цена"])
+    except Exception as e:
+        print(f"Ошибка при обработке HTML: {e}")
+        return pd.DataFrame()
+
+def save_to_csv(dataframe, filename):
+    try:
+        dataframe.to_csv(filename, index=False, encoding='utf-8-sig')
+        print(f"Данные сохранены в {filename}")
+    except Exception as e:
+        print(f"Ошибка при сохранении файла: {e}")
+
+url = "https://example.ru/catalog/"  # URL каталога
+products_df = scrape_site_catalog(url)
+if not products_df.empty:
+    save_to_csv(products_df, "products.csv")
+```
+
+#### Как это работает:
+
+1. **Запрос к сайту**. Скрипт делает HTTP-запрос к сайту. В случае возникновения ошибки при запросе (например, сайт не отвечает), скрипт выведет сообщение об ошибке.
+
+2. **Парсинг HTML и заполнение DataFrame**. Данные о товарах извлекаются и сохраняются в DataFrame библиотеки pandas. При возникновении ошибок при обработке HTML выводится соответствующее сообщение.
+
+3. **Сохранение в CSV**. Извлеченные данные сохраняются в файл CSV с использованием функций pandas. В случае ошибки при сохранении файла выводится сообщение об ошибке.
+
+#### Важные замечания:
+
+- Классы HTML-элементов (`product-item`, `title`, `price`) в примере кода являются предположительными. Вам нужно проверить реальную структуру HTML на сайте kover.ru и соответственно адаптировать код.
+- Убедитесь, что скрапинг не нарушает правила использования сайта. Многие сайты имеют ограничения на автоматическое извлечение данных.
+- DataFrame `pandas` предоставляет удобные функции для анализа и обработки данных после извлечения.
+
+Этот пример дает базовое представление о том, как можно организовать скрапинг данных с сайта, обработку исключений и сохранение результатов в удобном формате.
+
+{{< /admonition >}}
+
+## archive.org
+
+{{< admonition info "Подключение к Internet Archive Wayback Machine" false >}}
+
+Выгрузка данных с веб-архива (например, с [Internet Archive Wayback Machine](https://archive.org/web/)) можно выполнить с помощью Python. Один из способов — использование библиотеки `requests` для отправки HTTP-запросов к API веб-архива. Ниже представлен примерный код, который может помочь вам начать работу:
+
+#### Шаг 1: Установка необходимых библиотек
+
+Убедитесь, что у вас установлены библиотеки `requests` и `json`. Если нет, установите их с помощью pip:
+
+```bash
+pip install requests
+```
+
+#### Шаг 2: Получение данных с помощью API Wayback Machine
+
+Вы можете использовать API Wayback Machine для получения данных о конкретном URL. Вот пример функции на Python для этого:
+
+```python
+import requests
+import json
+
+def fetch_wayback_machine_data(url):
+    api_url = f"http://archive.org/wayback/available?url={url}"
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        return "Error: Unable to fetch data"
+
+# Пример использования
+url = "http://example.com"  # замените на интересующий вас URL
+data = fetch_wayback_machine_data(url)
+print(json.dumps(data, indent=4))
+```
+
+Этот код отправляет запрос к API Wayback Machine для указанного URL и выводит полученные данные.
+
+#### Шаг 3: Дальнейшая обработка данных
+
+Полученные данные могут содержать информацию о различных архивных копиях указанной веб-страницы. Вы можете дополнительно обработать эти данные для извлечения нужной информации, например, даты архивации, URL конкретной архивной копии и т.д.
+
+#### Дополнительные замечания
+
+- API Wayback Machine предоставляет ограниченную информацию и не позволяет напрямую скачать содержимое веб-страницы из архива. Для этого вам придется вручную обращаться к соответствующим архивным URL.
+- Если вам нужно автоматизировать процесс скачивания страниц из архива, потребуется реализовать дополнительную логику, которая будет обрабатывать архивные URL и скачивать содержимое.
+
+Этот подход подходит для базовой выгрузки данных из Wayback Machine. Если вам нужны более сложные функции, возможно, придется написать более продвинутый код или использовать дополнительные инструменты.
+
+{{< /admonition >}}
+
+{{< admonition info "Програмная реализация" false >}}
+
+{{< /admonition >}}
+
 ## SWOT и PEST анализ
 
 {{< admonition info "SWOT-анализ" false >}}
