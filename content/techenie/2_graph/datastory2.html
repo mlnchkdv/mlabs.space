@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datastory Example</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .intro {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro h1 {
+        text-align: center;
+    }
+
+    #scroll {
+        position: relative;
+        margin-left: 50%;
+        width: 50%;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 50px;
+        box-sizing: border-box;
+        background: #ffffff;
+    }
+
+    .step {
+        margin: 0 auto;
+        padding: 50px 0;
+        font-size: 18px;
+        max-width: 600px;
+    }
+
+    #graphic {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        #graphic {
+            position: static;
+            width: 100%;
+            height: 400px;
+        }
+
+        .step {
+            padding: 30px 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Welcome</h1>
+        <p>Text</p>
+    </div>
+    <div id="scroll">
+        <div class="step" data-step="1">
+            <p>Welcome to this datastory. Scroll down to see how the data changes dynamically.</p>
+        </div>
+        <div class="step" data-step="2">
+            <p>Here we see the data shifting in the first chart.</p>
+        </div>
+        <div class="step" data-step="3">
+            <p>As we continue, the data evolves to show new insights.</p>
+        </div>
+        <div class="step" data-step="4">
+            <p>The chart continues to evolve. Notice the new proportions.</p>
+        </div>
+        <div class="step" data-step="5">
+            <p>Finally, we conclude our story with the last transformation.</p>
+        </div>
+    </div>
+    <div id="graphic">
+        <svg width="100%" height="100%"></svg>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+    const svg = d3.select("svg");
+    const width = parseInt(svg.style("width"));
+    const height = parseInt(svg.style("height"));
+
+    const radius = Math.min(width, height) / 2;
+    const g = svg.append("g").attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    const pie = d3.pie().value(d => d.value);
+    const arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+    const dataSteps = [
+        [{ label: 'A', value: 30 }, { label: 'B', value: 70 }],
+        [{ label: 'A', value: 20 }, { label: 'B', value: 50 }, { label: 'C', value: 30 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 30 }, { label: 'C', value: 40 }, { label: 'D', value: 20 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 20 }, { label: 'C', value: 30 }, { label: 'D', value: 20 }, { label: 'E', value: 20 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 20 }, { label: 'C', value: 25 }, { label: 'D', value: 25 }, { label: 'E', value: 20 }]
+    ];
+
+    const path = g.selectAll("path")
+        .data(pie(dataSteps[0]))
+        .enter().append("path")
+        .attr("d", arc)
+        .attr("fill", d => color(d.data.label))
+        .each(function(d) { this._current = d; });
+
+    function updateChart(data) {
+        path.data(pie(data));
+        path.transition().duration(750).attrTween("d", function(a) {
+            const i = d3.interpolate(this._current, a);
+            this._current = i(0);
+            return t => arc(i(t));
+        });
+    }
+
+    const scroller = scrollama();
+
+    scroller.setup({
+            step: ".step",
+            offset: 0.5,
+            debug: false
+        })
+        .onStepEnter(response => {
+            const data = dataSteps[response.index];
+            updateChart(data);
+        });
+
+    window.addEventListener("resize", scroller.resize);
+    </script>
+</body>
+
+</html>

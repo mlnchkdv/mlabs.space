@@ -9,7 +9,6 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0"></script>
 
@@ -73,6 +72,7 @@
             height: 16px;
             vertical-align: middle;
         }
+
     </style>
 </head>
 
@@ -191,78 +191,87 @@
             return Math.random() * (max - min) + min;
         }
 
-        // Подготовка данных для вершин и связей
+        // Подготовка данных для вершин
         const nodes = [{
                 id: "node1",
                 imageUrl: "https://rusmuseumvrm.ru/reference/classifier/author/bogolyubov_aleksey_petrovich/8156_mainfoto_02.jpg",
-                name: "Узел 1",
-                description: "Описание узла 1 с [ссылкой](https://example.com) и эмодзи 🌟"
+                name: "Денис Козюкин",
+                description: "О 1 с [ссылкой](https://example.com) и эмодзи"
             },
             {
                 id: "node2",
                 imageUrl: "https://via.placeholder.com/20x20?text=2",
-                name: "Узел 2",
-                description: "Описание узла 2 с [ссылкой](https://example.com) и эмодзи 🐱"
+                name: "Владислав Владыкин",
+                description: "Описание узла 2 с [ссылкой](https://example.com) и эмодзи 👔"
             },
             {
                 id: "node3",
                 imageUrl: "https://artchive.ru/res/media/img/ox800/work/e64/460726.jpg",
-                name: "Узел 3",
+                name: "Павел Пипуныров",
                 description: "Описание узла 3 с [ссылкой](https://example.com) и эмодзи 🌍"
             },
             {
                 id: "node4",
                 imageUrl: "https://artchive.ru/res/media/img/ox800/work/e64/460726.jpg",
-                name: "Узел 4",
+                name: "Дмитрий Мельничук",
                 description: "Описание узла 4 с [ссылкой](https://example.com) и эмодзи 🚀"
             },
             {
                 id: "node5",
                 imageUrl: "https://via.placeholder.com/20x20?text=5",
-                name: "Узел 5",
+                name: "Николай Зайцев",
                 description: "Описание узла 5 с [ссылкой](https://example.com) и эмодзи 🎉"
             },
             {
                 id: "node6",
                 imageUrl: "https://via.placeholder.com/20x20?text=6",
-                name: "Узел 6",
+                name: "Владимир Мосин",
                 description: "Описание узла 6 с [ссылкой](https://example.com) и эмодзи 🌟"
-            }
+            },
+            {
+                id: "node7",
+                imageUrl: "https://via.placeholder.com/20x20?text=7",
+                name: "",
+                description: "Описание узла 6 с [ссылкой](https://example.com) и эмодзи 🌟"
+            },
+            {
+                id: "node8",
+                imageUrl: "https://via.placeholder.com/20x20?text=8",
+                name: "",
+                description: "Описание узла 6 с [ссылкой](https://example.com) и эмодзи 🌟"
+            },
+            {
+                id: "node9",
+                imageUrl: "https://via.placeholder.com/20x20?text=9",
+                name: "",
+                description: "Описание узла 6 с [ссылкой](https://example.com) и эмодзи 🌟"
+            },
+            {
+                id: "node10",
+                imageUrl: "https://via.placeholder.com/20x20?text=10",
+                name: "",
+                description: "Описание узла 6 с [ссылкой](https://example.com) и эмодзи 🌟"
+            }            
         ];
 
-        const links = [{
-                source: "node1",
-                target: "node2"
-            },
-            {
-                source: "node2",
-                target: "node3"
-            },
-            {
-                source: "node1",
-                target: "node3"
-            },
-            {
-                source: "node1",
-                target: "node4"
-            },
-            {
-                source: "node3",
-                target: "node5"
-            },
-            {
-                source: "node4",
-                target: "node6"
-            },
-            {
-                source: "node5",
-                target: "node6"
-            },
-            {
-                source: "node2",
-                target: "node6"
+        // Генерация случайных связей
+        const numLinks = 25; // Количество связей
+        const links = [];
+
+        for (let i = 0; i < numLinks; i++) {
+            const sourceIndex = Math.floor(Math.random() * nodes.length);
+            let targetIndex = Math.floor(Math.random() * nodes.length);
+
+            // Убедиться, что source и target не одинаковые
+            while (sourceIndex === targetIndex) {
+                targetIndex = Math.floor(Math.random() * nodes.length);
             }
-        ];
+
+            links.push({
+                source: nodes[sourceIndex].id,
+                target: nodes[targetIndex].id
+            });
+        }
 
         // Получение размеров окна браузера
         const width = window.innerWidth;
@@ -274,7 +283,7 @@
         });
 
         links.forEach(link => {
-            link.length = getRandomInRange(Math.min(width, height) / 6, Math.min(width, height) / 3);
+            link.length = getRandomInRange(Math.min(width, height) / 5, Math.min(width, height) / 2);
         });
 
         // Создание SVG элемента

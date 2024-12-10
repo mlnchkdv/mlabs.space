@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datastory Example</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .intro,
+    .conclusion {
+        background: #f0f0f0;
+        flex-shrink: 0;
+    }
+
+    #scroll-container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .scroll {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        background: #ffffff;
+    }
+
+    .steps-container {
+        width: 50%;
+        padding: 50px;
+        box-sizing: border-box;
+        background: #ffffff;
+    }
+
+    .step {
+        margin: 0 auto;
+        padding: 250px 0;
+        font-size: 18px;
+        max-width: 600px;
+    }
+
+    #graphic {
+        position: sticky;
+        top: 25vh;
+        width: 40vw;
+        height: 99vh;
+        background: #ffffff;
+        padding: 3px;
+    }
+
+    @media (max-width: 768px) {
+        #graphic {
+            position: static;
+            width: 100%;
+            height: 400px;
+        }
+
+        .steps-container {
+            width: 100%;
+        }
+
+        .step {
+            padding: 30px 0;
+        }
+    }
+
+    path.slice {
+        stroke-width: 2px;
+    }
+
+    polyline {
+        opacity: .3;
+        stroke: black;
+        stroke-width: 2px;
+        fill: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="scroll-container">
+        <div class="section intro" id="intro">
+            <h1>Welcome</h1>
+            <p>This is the introduction to our data story. Scroll down to explore the data.</p>
+        </div>
+        <div class="scroll">
+            <div id="graphic">
+                <svg width="100%" height="100%"></svg>
+            </div>
+            <div class="steps-container">
+                <div class="step" id="step-1" data-step="1">
+                    <p>Welcome to this data story. Scroll down to see how the data changes dynamically.</p>
+                </div>
+                <div class="step" id="step-2" data-step="2">
+                    <p>Here we see the data shifting in the first chart.</p>
+                </div>
+                <div class="step" id="step-3" data-step="3">
+                    <p>As we continue, the data evolves to show new insights.</p>
+                </div>
+                <div class="step" id="step-4" data-step="4">
+                    <p>The chart continues to evolve. Notice the new proportions.</p>
+                </div>
+                <div class="step" id="step-5" data-step="5">
+                    <p>Finally, we conclude our story with the last transformation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section conclusion" id="conclusion">
+            <h1>Conclusion</h1>
+            <p>This is the conclusion of our data story. Thank you for following along.</p>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+    // Создаем контейнеры для графика, подписей и линий
+    const svg = d3.select("svg").append("g");
+    svg.append("g").attr("class", "slices");
+    svg.append("g").attr("class", "labels");
+    svg.append("g").attr("class", "lines");
+
+    // Устанавливаем размеры и радиус графика
+    const width = 480,
+        height = 360,
+        radius = Math.min(width, height) / 2;
+
+    // Определяем функции для построения графика
+    const pie = d3.pie().sort(null).value(d => d.value);
+    const arc = d3.arc().outerRadius(radius * 0.8).innerRadius(radius * 0.4);
+    const outerArc = d3.arc().innerRadius(radius * 0.9).outerRadius(radius * 0.9);
+
+    // Центрируем график по вертикали
+    svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+    // Задаем цветовую схему для графика
+    const color = d3.scaleOrdinal().domain(["A", "B", "C", "D", "E"])
+        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+    // Функция для вычисления средней угловой позиции сегмента
+    function midAngle(d) {
+        return d.startAngle + (d.endAngle - d.startAngle) / 2;
+    }
+
+    // Функция для обновления графика
+    function updateChart(data) {
+        // Обновляем сегменты графика
+        const slice = svg.select(".slices").selectAll("path.slice").data(pie(data));
+
+        slice.enter()
+            .append("path")
+            .attr("class", "slice")
+            .style("fill", d => color(d.data.label));
+
+        slice.transition().duration(1000)
+            .attrTween("d", function(d) {
+                this._current = this._current || d;
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => arc(interpolate(t));
+            });
+
+        slice.exit().remove();
+
+        // Обновляем текстовые метки
+        const text = svg.select(".labels").selectAll("text").data(pie(data));
+
+        text.enter()
+            .append("text")
+            .attr("dy", ".35em")
+            .text(d => d.data.label);
+
+        text.transition().duration(1000)
+            .attrTween("transform", function(d) {
+                this._current = this._current || d;
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => {
+                    const d2 = interpolate(t);
+                    const pos = outerArc.centroid(d2);
+                    pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
+                    return `translate(${pos})`;
+                };
+            })
+            .styleTween("text-anchor", function(d) {
+                this._current = this._current || d;
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => {
+                    const d2 = interpolate(t);
+                    return midAngle(d2) < Math.PI ? "start" : "end";
+                };
+            });
+
+        text.exit().remove();
+
+        // Обновляем линии, соединяющие сегменты и метки
+        const polyline = svg.select(".lines").selectAll("polyline").data(pie(data));
+
+        polyline.enter()
+            .append("polyline");
+
+        polyline.transition().duration(1000)
+            .attrTween("points", function(d) {
+                this._current = this._current || d;
+                const interpolate = d3.interpolate(this._current, d);
+                this._current = interpolate(0);
+                return t => {
+                    const d2 = interpolate(t);
+                    const pos = outerArc.centroid(d2);
+                    pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+                    return [arc.centroid(d2), outerArc.centroid(d2), pos];
+                };
+            });
+
+        polyline.exit().remove();
+    }
+
+    // Данные для различных шагов графика
+    const dataSteps = [
+        [{ label: 'A', value: 30 }, { label: 'B', value: 70 }, { label: 'C', value: 0 }, { label: 'D', value: 0 }, { label: 'E', value: 0 }],
+        [{ label: 'A', value: 20 }, { label: 'B', value: 50 }, { label: 'C', value: 30 }, { label: 'D', value: 0 }, { label: 'E', value: 0 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 30 }, { label: 'C', value: 40 }, { label: 'D', value: 20 }, { label: 'E', value: 0 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 20 }, { label: 'C', value: 30 }, { label: 'D', value: 20 }, { label: 'E', value: 20 }],
+        [{ label: 'A', value: 10 }, { label: 'B', value: 20 }, { label: 'C', value: 25 }, { label: 'D', value: 25 }, { label: 'E', value: 20 }]
+    ];
+
+    // Инициализация графика с первыми данными
+    updateChart(dataSteps[0]);
+
+    // Настройка скроллера
+    const scroller = scrollama();
+
+    scroller.setup({
+            step: ".step",
+            offset: 0.5,
+            debug: false
+        })
+        .onStepEnter(response => {
+            const data = dataSteps[response.index];
+            updateChart(data);
+        });
+
+    // Обработчик изменения размера окна
+    window.addEventListener("resize", () => {
+        const container = d3.select("#graphic").node();
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        svg.attr("width", width).attr("height", height);
+
+        const radius = Math.min(width, height) / 2;
+        arc.outerRadius(radius * 0.8).innerRadius(radius * 0.4);
+        outerArc.innerRadius(radius * 0.9).outerRadius(radius * 0.9);
+
+        svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        updateChart(dataSteps[0]);
+    });
+
+    // Переменные для навигации по секциям
+    const sections = ['intro', 'step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'conclusion'];
+    let currentSectionIndex = 0;
+
+    // Функция для навигации к конкретной секции
+    function navigateToSection(index) {
+        if (index >= 0 && index < sections.length) {
+            document.getElementById(sections[index]).scrollIntoView({ behavior: 'smooth' });
+            currentSectionIndex = index;
+        }
+    }
+
+    // Обработчик событий для клавиш стрелок
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            navigateToSection(currentSectionIndex + 1);
+        } else if (e.key === 'ArrowLeft') {
+            navigateToSection(currentSectionIndex - 1);
+        }
+    });
+
+    // Обновление скроллера при изменении размера окна
+    window.addEventListener("resize", () => {
+        scroller.resize();
+    });
+    </script>
+</body>
+
+</html>
