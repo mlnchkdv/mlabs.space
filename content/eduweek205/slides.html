@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/theme/white.min.css">
+
+    <style>
+        .prompt-container {
+            position: relative;
+            margin: 15px 0;
+            padding-top: 25px;
+            /* Место для кнопки */
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 1.8em;
+            right: 4.6em;
+            padding: 4px 12px;
+            background: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.35em;
+            transition: 0.3s;
+            z-index: 100;
+        }
+
+        pre {
+            padding: 15px !important;
+            margin: 0 !important;
+            position: relative;
+            overflow: visible;
+            /* Важно! */
+        }
+
+        .gif-slide-content code {
+            background: rgb(255, 255, 255);
+            /* padding: 20px !important; */
+            /* border-radius: 10px; */
+            /* box-shadow: 0 0 20px rgba(0,0,0,0.3); */
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            /* margin: 20px auto; */
+        }
+
+        .speed-controls {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .speed-btn {
+            padding: 8px 15px;
+            background: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h2>Бесплатные нейросети в образовании</h2>
+                <h4>Практика, кейсы, инструменты</h4>
+                <p style="margin-top: 40px;">🎓 Для учителей школ и преподавателей вузов.</p>
+                <br>
+                <br>
+                <p style="font-size: 0.6em;"><em>Саратов, 12-я неделя педобразования в СГУ, <br> 25 марта 2025 г.</em>
+                </p>
+            </section>
+
+            <section>
+                <h2>QR</h2>
+            </section>
+
+            <section>
+                <h3>Зачем нейросети педагогу?</h3>
+                <div class="fragment" style="text-align: left;">
+                    <p>🔹 Генерация идей для уроков за минуты</p>
+                    <p>🔹 Создание иллюстраций и инфографики</p>
+                    <p>🔹 Анализ работ учеников</p>
+                    <p>🔹 Персонализация материалов</p>
+                </div>
+                <div class="fragment" style="margin-top: 20px; font-size: 0.8em;">
+                    <p>72% учителей тратят > 5 часов/неделю на рутину<br>
+                        <em>исследование EdWeek (2023), <a href="https://ya.ru/ai/stat">Нейростат</a></em>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <section>
+                    <h3>🧠 Что такое нейросети?</h3>
+                    <div class="fragment">
+                        <p>Алгоритмы, которые:</p>
+                        <ul>
+                            <li>Понимают и генерируют текст</li>
+                            <li>Создают изображения</li>
+                            <li>Анализируют аудио/видео</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div class="fragment" style="margin-top: 20px;">
+                        <img src="https://static.tildacdn.com/tild6638-3132-4332-b166-313235663739/ai-education.png"
+                            style="height: 180px; border: none; box-shadow: none;">
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h3>🛠 Бесплатные инструменты</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div class="fragment" style="text-align: left;">
+                        <p>🤖 <a href="https://giga.chat/" target="_blank">GigaChat</a></p>
+                        <p>🐋 <a href="https://chat.deepseek.com/" target="_blank">DeepSeek</a></p>
+                        <p>🎨 <a href="https://www.sberbank.com/promo/kandinsky/" target="_blank">Kandinsky</a></p>
+                        <!-- <p>📊 Canva Magic</p> -->
+                    </div>
+                    <div class="fragment" style="text-align: left;">
+                        <p>📝 <a href="https://chat.qwen.ai/" target="_blank">Qwen</a></p>
+                        <p>🔍 <a href="https://monica.im/tools/ai-mind-map-maker" target="_blank">Monica Mind-Map</a>
+                        </p>
+                        <!-- <p>📱 Tome.ai</p> -->
+                        <p>🧑‍💻 <a href="https://www.blackbox.ai/" target="_blank">BlackBox</a></p>
+                    </div>
+                </div>
+                <p class="fragment" style="margin-top: 20px; font-size: 0.7em;">Работают даже на смартфоне!</p>
+            </section>
+
+            <section data-background-color="#f3f4f6">
+                <h3>❗ Главное правило</h3>
+                <p class="fragment" style="font-size: 1.2em;">
+                    Нейросеть — <span style="color: #2563eb;">цифровой ассистент</span>,<br>
+                    а не замена педагогу
+                </p>
+                <div class="fragment" style="margin-top: 30px;">
+                    <p style="font-size: 0.8em;">Ваша роль:</p>
+                    <p>🎭 Творчество → вместо рутины</p>
+                    <p>👥 Живое общение → вместо шаблонов</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Создание учебных материалов</h3>
+                <p class="fragment">Инструменты:
+                    <span style="color: #3B82F6;">GigaChat</span>,
+                    <span style="color: #10B981;">DeepSeek</span>,
+                    <span style="color: #F59E0B;">Kandinsky</span>
+                </p>
+                <!-- <div class="fragment" style="margin-top: 30px;">
+                    <img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/2d3/687/5f1/2d36875f1a3a0d5b0fdeb9384e6e2d4e.gif"
+                        style="height: 200px; border: none;">
+                </div> -->
+            </section>
+
+
+            <section>
+                <section>
+                    <h4>Генерация заданий</h4>
+                    <div class="fragment">
+                        🤖 <a href="https://giga.chat/" target="_blank">GigaChat</a> или 🐋 <a
+                            href="https://chat.deepseek.com/" target="_blank">DeepSeek</a>:
+                        <div class="prompt-container">
+                            <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                            <pre><code class="language-plaintext" data-trim>
+Создай 5 задач по дробям для 5 класса: 
+2 базовых, 2 сложных, 1 олимпиадный
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section data-background="./img/deepseek_math.gif"
+                     data-background-size="cover"
+                     data-background-position="center"
+                     data-background-repeat="no-repeat">
+                    <div class="gif-slide-content">
+                        <h3>Нейросети в действии</h3>
+                        <p>Пример генерации контента в реальном времени</p>
+                        <ul>
+                            <li>Создание заданий</li>
+                            <li>Визуализация данных</li>
+                            <li>Анализ текстов</li>
+                        </ul>
+                    </div>
+                </section> -->
+                <section>
+                    <!-- <h3>Пример генерации контента</h3> -->
+                    <div class="video-container">
+                        <video id="demoVideo" controls width="100%">
+                            <source src="./img/deepseek_math.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео тег.
+                        </video>
+                        <div class="speed-controls">
+                            <button class="speed-btn" onclick="changeSpeed(0.5)">0.5x</button>
+                            <button class="speed-btn" onclick="changeSpeed(1)">1x</button>
+                            <button class="speed-btn" onclick="changeSpeed(1.5)">1.5x</button>
+                            <button class="speed-btn" onclick="changeSpeed(2)">2x</button>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext" data-trim>
+### Базовые задачи:
+
+**1. Задача на вычитание дробей**  
+**Условие:**  
+У Маши было \(\frac{5}{8}\) пиццы. Она съела \(\frac{3}{8}\) пиццы. Сколько пиццы осталось?  
+**Решение:**  
+\(\frac{5}{8} - \frac{3}{8} = \frac{2}{8} = \frac{1}{4}\).  
+**Ответ:** \(\frac{1}{4}\) пиццы.
+
+---
+
+**2. Задача на сравнение дробей**  
+**Условие:**  
+Расставьте дроби в порядке возрастания: \(\frac{1}{2}\), \(\frac{2}{3}\), \(\frac{5}{6}\).  
+**Решение:**  
+Приведём дроби к общему знаменателю 6:  
+\(\frac{1}{2} = \frac{3}{6}\), \(\frac{2}{3} = \frac{4}{6}\), \(\frac{5}{6}\) остаётся без изменений.  
+Порядок: \(\frac{3}{6} < \frac{4}{6} < \frac{5}{6}\), то есть \(\frac{1}{2} < \frac{2}{3} < \frac{5}{6}\).  
+**Ответ:** \(\frac{1}{2}\); \(\frac{2}{3}\); \(\frac{5}{6}\).
+
+---
+
+### Сложные задачи:
+
+**3. Задача на умножение дробей**  
+**Условие:**  
+Длина прямоугольника \(\frac{3}{5}\) м, ширина \(\frac{2}{3}\) м. Найдите его площадь.  
+**Решение:**  
+Площадь = длина × ширина = \(\frac{3}{5} \times \frac{2}{3} = \frac{6}{15} = \frac{2}{5}\).  
+**Ответ:** \(\frac{2}{5}\) м².
+
+---
+
+**4. Задача на сложение дробей**  
+**Условие:**  
+Ваня прочитал в первый день \(\frac{1}{2}\) книги, во второй день — \(\frac{1}{3}\) книги. Какую часть книги он прочитал за два дня?  
+**Решение:**  
+Общий знаменатель 6:  
+\(\frac{1}{2} = \frac{3}{6}\), \(\frac{1}{3} = \frac{2}{6}\).  
+Сумма: \(\frac{3}{6} + \frac{2}{6} = \frac{5}{6}\).  
+**Ответ:** \(\frac{5}{6}\) книги.
+
+---
+
+### Олимпиадная задача:
+
+**5. Задача на последовательное выделение долей**  
+**Условие:**  
+Три друга разделили деньги. Первый получил \(\frac{1}{3}\) всей суммы, второй — \(\frac{1}{4}\) остатка, а третий — оставшиеся 60 рублей. Какова была исходная сумма?  
+**Решение:**  
+Пусть исходная сумма \(S\).  
+1. Первый друг получил: \(\frac{1}{3}S\), осталось: \(S - \frac{1}{3}S = \frac{2}{3}S\).  
+2. Второй друг получил: \(\frac{1}{4} \times \frac{2}{3}S = \frac{2}{12}S = \frac{1}{6}S\).  
+3. Третий друг получил: \(\frac{2}{3}S - \frac{1}{6}S = \frac{4}{6}S - \frac{1}{6}S = \frac{3}{6}S = \frac{1}{2}S\).  
+По условию: \(\frac{1}{2}S = 60 \Rightarrow S = 120\).  
+**Ответ:** 120 рублей.
+                        </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Визуализация концепций</h4>
+                    <div class="fragment">
+                        🎨 <a href="https://www.sberbank.com/promo/kandinsky/" target="_blank">Kandinsky</a> или 📝 <a
+                            href="https://chat.qwen.ai/" target="_blank">Qwen</a>:
+                        <div class="prompt-container">
+                            <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                            <pre><code class="language-plaintext" data-trim>
+Схема круговорота азота в стиле инфографики
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h5>😵‍💫 Пример галлюцинирования</h5>
+                    <div class="fragment">
+                        <img src="./img/img_galucination.png" alt="">
+                    </div>
+                </section>
+                <section>
+                    <h5>🧑‍💻 Лучшая практика</h5>
+                    <p style="text-align: justify;">
+                        Использовать нейросети для генерации тематических фонов и иллюстраций, куда позже вручную
+                        добавляются текст, схемы и задания. Это решает две проблемы:
+                    <ul class="fragment">
+                        <li>Избегаем ошибок в надписях</li>
+                        <li>Минимизируем галлюцинации за счет простых элементов</li>
+                    </ul>
+                    </p>
+                </section>
+                <section>
+                    Рабочий лист по биологии
+                    <div class="fragment">
+                        <div class="prompt-container">
+                            <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                            <pre><code class="language-plaintext" data-trim>
+Набор иконок для урока биологии в плоском стиле:  
+1. Микроскоп (силуэт, без деталей)  
+2. Клетка растения (упрощенная схема)  
+3. Капля воды  
+4. Солнце с лучами  
+Цвета: #27AE60, #2980B9, белый.  
+Стиль: контурные линии толщиной 3px.  
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <img src="./img/img_bio.png" alt="">
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>🪄 Ментальные карты (Mind-Map)</h4>
+                    <div class="fragment" style="display: flex; gap: 20px;">
+                        <div>
+                            <p><a href="https://monica.im/tools/ai-mind-map-maker" target="_blank">Monica Mind-Map</a>:
+                            </p>
+                            <ul style="font-size: 0.7em;">
+                                <li>Автоматическая структуризация</li>
+                                <li>Экспорт в PDF/PNG</li>
+                            </ul>
+                        </div>
+                        <img src="https://assets.monica.im/tools-web/_next/static/media/mindmapCover.05df219e.webp"
+                            style="height: 250px;">
+                    </div>
+                </section>
+
+                <section>
+                    <img src="https://assets.monica.im/tools-web/_next/static/media/mindMapIntro1.c4fc7c47.webp"
+                        style="width: 100%;">
+                </section>
+
+                <section>
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext" data-trim>
+Урок по физике в 8 классе на тему: Тепловое движение. Температура
+                        </code></pre>
+                    </div>
+                    <img src="./img/Урок по физике в 8 классе.png" alt="">
+                </section>
+
+                <section>
+                    <a href="https://ru.wikipedia.org/wiki/Тепловое_движение" target="_blank">Википедия: Тепловое
+                        движение</a>
+                    <img src="./img/wiki Тепловое движение.png" alt="">
+                </section>
+            </section>
+
+            <section data-background="#e6f4ea">
+                <h4>❗Советы для эффективности</h4>
+                <div class="fragment" style="text-align: left; font-size: 0.8em;">
+                    <p>✅ Шаблон запроса:<br>
+                        <code>"Создай [тип] по [теме] для [класса]. Особенности: [требования]"</code>
+                    </p>
+
+                    <p>❌ Чего избегать:<br>
+                        - Полного копирования без проверки<br>
+                        - Сложных терминов без пояснений</p>
+                </div>
+            </section>
+
+            <section>
+                <section data-transition="convex">
+                    <h3>✔️ Проверка работ и обратная связь</h3>
+                    <div class="fragment">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1067/1067555.png"
+                            style="height: 150px; border: none;">
+                        <p>Инструменты: DeepSeek, GigaChat, Blackbox</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4>Автоматизация проверки</h4>
+                    Математика
+                    <div class="fragment">
+                        <div class="prompt-container">
+                            <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                            <pre><code class="language-plaintext">
+Проверь решения задач по алгебре. Условия:  
+1. Задача: {вставить условие}  
+2. Ответ ученика: {вставить текст}  
+Критерии:  
+- Правильность вычислений  
+- Логика рассуждений  
+- Наличие промежуточных шагов  
+Формат вывода:  
+✔️/❌ по каждому критерию + краткий комментарий.  
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    Английском язык
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext">
+Проверь эссе на английском языке (тема: "Environmental Protection").  
+Ученик: 8 класс, уровень B1.  
+Проверь:  
+1. Грамматические ошибки  
+2. Соответствие структуре (введение-тезисы-заключение)  
+3. Уместность лексики.  
+Вывод: таблица с ошибками и вариантами исправлений.  
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    Шаблон проверка эссе
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext">
+Проверь эссе по критериям {школа/вуз}:  
+1. {критерий 1}  
+2. {критерий 2}  
+...  
+
+Формат ответа:  
+- Ошибки с примерами  
+- Рекомендации по улучшению  
+- Оценка по шкале {указать}  
+                        </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h4>Анализ уникальности и поиск плагиата</h4>
+                <div class="fragment">
+                    Промт для Blackbox (проверка кода): 
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Сравни код студента с примерами из GitHub.  
+Найди:  
+1. Заимствования без ссылок  
+2. Использование чужих функций  
+3. Идентичные решения в группе.  
+Вывод: процент уникальности + подозрительные фрагменты.  
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>Персонализированная обратная связь</h4>
+                <div class="fragment">
+                    Промт для GigaChat, DeepSeek: 
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Сгенерируй обратную связь для ученика 6 класса по сочинению "Мое лето".  
+Требования:  
+1. Начни с позитивного комментария  
+2. Укажи 1 сильную сторону  
+3. Предложи 2 конкретных улучшения  
+4. Сохрани дружелюбный тон  
+5. Максимум 150 слов.  
+Пример:  
+"Отлично, что ты описал поход в горы! Совет: добавь описание запахов и звуков..."  
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+                    <!-- <section data-background="#fff3cd">
+                        <h4 style="color: #856404;">Поиск плагиата</h4>
+                        <div class="fragment" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <p>Исходный код:</p>
+                                <pre><code class="language-python">
+def sum(a, b):
+    return a + b
+                    </code></pre>
+                            </div>
+                            <div>
+                                <p>Работа студента:</p>
+                                <pre><code class="language-python">
+def add(x, y):
+    return x + y
+                    </code></pre>
+                            </div>
+                        </div>
+                        <p class="fragment" style="color: #dc3545;">Совпадение: 92%</p>
+                    </section> -->
+
+                <!-- <section data-transition="zoom">
+                    <h4>Интеграция с LMS</h4>
+                    <div style="display: flex; gap: 30px; align-items: center;">
+                        <div class="fragment">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Moodle-logo.svg/2560px-Moodle-logo.svg.png"
+                                style="height: 80px;">
+                        </div>
+                        <div class="fragment">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2702/2702069.png" style="height: 150px;">
+                        </div>
+                    </div>
+                </section> -->
+
+                <section data-background="#f8d7da">
+                    <h4 style="color: #721c24;">Ограничения и этика</h4>
+                    <div class="fragment" style="text-align: left; font-size: 0.8em;">
+                        <p>🚫 Нельзя доверять ИИ:</p>
+                        <ul>
+                            <li>Субъективную оценку творчества</li>
+                            <li>Психологический анализ</li>
+                            <li>Выставление итоговых оценок</li>
+                        </ul>
+                        <div class="fragment" style="margin-top: 20px;">
+                            <p>✅ Чек-лист безопасности:</p>
+                            <ul>
+                                <li>Анонимизация данных</li>
+                                <li>Проверка в разных сервисах</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section data-transition="convex">
+                    <h3>👩‍🏫 Персонализация обучения</h3>
+                    <div class="fragment">
+                        <p>Инструменты: DeepSeek, GigaChat, Blackbox</p>
+                    </div>
+                </section>
+
+                <section>
+                    Адаптация материалов под уровень знаний
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Переработай материал о фотосинтезе для:  
+- Ученика 7 класса с низкой успеваемостью  
+- Упрости термины  
+- Добавь аналогии из повседневной жизни  
+- Создай 3 проверочных вопроса с подсказками  
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    Адаптация материалов под уровень знаний
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Усложни задачу по физике для одаренного ученика:  
+Исходное условие: "Тело массой 2 кг движется со скоростью 5 м/с. Найти кинетическую энергию."  
+Требования:  
+- Добавить переменное ускорение  
+- Ввести силу трения  
+- Предложить два метода решения  
+                        </code></pre>
+                    </div>
+                    <div class="fragment">
+                        Вывод:
+                        <pre><code>
+Автомобиль массой 1.5 т разгоняется с a(t)=0.2t м/с².  
+Учесть силу трения Fтр=0.05mg.  
+Рассчитать работу двигателя за первые 10 секунд:  
+а) Через интеграл  
+б) Через кинематические уравнения
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    Индивидуальные учебные траектории
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Ученик А:  
+- Пропущены темы: "Дроби", "Проценты"  
+- Рекомендации:  
+    * Интерактивный тренажер с шагами  
+    * Видео-разбор от учителя-блогера  
+Ученик Б:  
+- Ошибки в задачах на логику  
+- Рекомендации:  
+    * Квест-задания в сервисе LearningApps  
+    * Работа в паре с наставником  
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    Поддержка учеников с особыми потребностями
+                    <em>Кейс для детей с дислексией:</em>
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Перепиши текст о Великой Отечественной войне:  
+- Короткие предложения (до 10 слов)  
+- Разбить на абзацы по 3 строки  
+- Заменить сложные слова: "мобилизация" → "призыв в армию"  
+                        </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    Инструменты для мониторинга прогресса
+                    <div class="prompt-container">
+                        <button class="copy-btn" onclick="copyPrompt(this)">Копировать</button>
+                        <pre><code class="language-plaintext"> 
+Проанализируй данные учеников (файл CSV):  
+1. Построй график успеваемости по темам  
+2. Выдели 3 группы:  
+    - Опережающие программу  
+    - Соответствующие норме  
+    - Требующие поддержки  
+3. Экспортируй в таблицу с цветовой маркировкой
+                        </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h4>Полезные инструменты</h4>
+                <ul>
+                    <li><a href="https://www.imagetotext.info/">Преобразовать текст на картинке в текст</a></li>
+
+                </ul>
+            </section>
+
+            <section>
+                <h1>Спасибо за внимание!</h1>
+
+                <span style="font-size: 0.5em;"><a href="https://t.me/yourai">t.me/yourai</a>😉</span>
+            </section>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            hash: true,
+            transition: 'convex',
+            plugins: []
+        });
+    </script>
+    <script>
+        function copyPrompt(button) {
+            const codeBlock = button.parentElement.querySelector('code');
+            const text = codeBlock.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                button.innerText = 'Скопировано!';
+                setTimeout(() => {
+                    button.innerText = 'Копировать';
+                }, 2000);
+            }).catch(err => {
+                console.error('Ошибка копирования:', err);
+            });
+        }
+    </script>
+    <script>
+        // Управление скоростью видео
+        const video = document.getElementById('demoVideo');
+
+        function changeSpeed(speed) {
+            video.playbackRate = speed;
+            video.play(); // Автозапуск при изменении скорости
+        }
+
+        // Автозапуск видео при переходе на слайд
+        Reveal.on('slidechanged', event => {
+            if (event.currentSlide.querySelector('#demoVideo')) {
+                video.play().catch(() => {
+                    // Обработка ошибки автовоспроизведения
+                    video.muted = true;
+                    video.play();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
