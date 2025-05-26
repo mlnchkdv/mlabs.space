@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Reveal + Prism + Copy & Lines (Fixed)</title>
+
+  <!-- Reveal.js стили -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/reveal.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/theme/white.min.css">
+
+  <!-- Prism.js тема подсветки -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+  <!-- Line Numbers plugin CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+  <!-- Toolbar (Copy) CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+
+  <style>
+    /* Мелкий шрифт в коде */
+    pre[class*="language-"] {
+      font-size: 0.8em;
+    }
+    /* Уменьшаем кнопку Copy */
+    .prism-toolbar .toolbar-item button {
+      font-size: 0.7em;
+      padding: 0.2em 0.4em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <!-- Добавили класс line-numbers -->
+        <pre class="line-numbers"><code class="language-python">
+def hello(name):
+    print(f"Hello, {name}!")
+
+for user in ["Alice", "Bob", "Charlie"]:
+    hello(user)
+        </code></pre>
+      </section>
+    </div>
+  </div>
+
+  <!-- Prism.js core + Python component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <!-- Line Numbers plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <!-- Toolbar + Copy-to-Clipboard plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+  <!-- Reveal.js скрипт -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.0/reveal.min.js"></script>
+  <script>
+    // Инициализируем Reveal
+    Reveal.initialize();
+
+    // Принудительно пересветить все блоки,
+    // чтобы плагин line-numbers добавил номера
+    Prism.highlightAll();
+  </script>
+</body>
+</html>
