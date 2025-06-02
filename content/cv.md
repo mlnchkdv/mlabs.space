@@ -244,6 +244,12 @@ These versions are more concise while effectively conveying the key information 
 
 ---
 
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Russian Foundation for Basic Research (RFBR)</b></span>     <span style="text-align: center;">2025</span> </div>
+
+**25-28-01261**: “*Family memory of the Great Patriotic War of 1941-1945 in the modern media environment*”.
+
+<br/>
+
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Russian Foundation for Basic Research (RFBR)</b></span>     <span style="text-align: center;">2022 - 2024</span> </div>
 
 **22-18-00153**: “*The Image of the USSR in Historical Memory: A Study of Media Strategies for Reproducing Representations of the Past in Russia and Foreign Countries*”.
