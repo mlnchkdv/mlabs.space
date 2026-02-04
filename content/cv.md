@@ -16,7 +16,7 @@ draft: false
 
 :(fab fa-telegram): *Tg*: [@dm_ml](https://t.me/dm_ml)
 
-:(fas fa-globe): *Web*: [mlabs.space](https://mlabs.space/), [sgu.ru](https://www.sgu.ru/person/melnichuk-dmitriy-vadimovich)
+:(fas fa-globe): *Web*: [mlabs.space](https://mlabs.space/), [sgu.ru](https://www.sgu.ru/person/melnichuk-dmitriy-vadimovich), [cdti.tech](https://cdti.tech/participants)
 
 :(far fa-envelope): *Email*: mlnchkdv@gmail.com
 
@@ -28,7 +28,7 @@ draft: false
 
 ---
 
-:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow`, `Keras` `PyTorch`, `TabPy`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `Solidity`, `JavaScript`(`React`), `HTML`, `CSS`, `LaTeX`
+:(fa-solid fa-code): **Programming**: `Python`(`scikit-learn`, `TensorFlow`, `Keras` `PyTorch`, `TabPy`), `R`(`tsibble`, `anomalize`, `shiny`, `ggplot2`), `SQL`, `Solidity`, `JavaScript`(`React`), `HTML`, `CSS`(`Tailwind`), `LaTeX`
 
 :(fa-solid fa-laptop-code): **Software**: `Tableau`, `Linux` (`bash`), `Docker`, `Airflow`, `Luigi`, `Git`
 
@@ -244,6 +244,12 @@ These versions are more concise while effectively conveying the key information 
 
 ---
 
+<div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Ministry of Science and Higher Education of the Russian Federation</b></span>     <span style="text-align: center;">2026-2029</span> </div>
+
+**FSRR-2026-0003**: *part of the state assignment*.
+
+<br/>
+
 <div style="display: flex; justify-content: space-between;">     <span style="text-align: left;"><b>Russian Foundation for Basic Research (RFBR)</b></span>     <span style="text-align: center;">2025</span> </div>
 
 **25-28-01261**: “*Family memory of the Great Patriotic War of 1941-1945 in the modern media environment*”.
@@ -297,6 +303,10 @@ Author of more than **30 articles and publications**:
 ## Public Activities
 
 ---
+
+:(fa-solid fa-staff-snake): Deputy Chairman of the [Committee for the Development of Digital Technologies and Innovations](https://cdti.tech/), Chamber of Commerce and Industry of the Saratov Region.
+
+<br/>
 
 :(fa-solid fa-square-root-variable): Maintaining math olympiads among schoolchildren in the city of Saratov.
 
